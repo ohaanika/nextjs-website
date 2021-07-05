@@ -1,9 +1,9 @@
 import Layout from "../components/Layout"
 
-const Index = () => (
+const Contact = () => (
   <Layout>
-    Index Page
+    Contact Page
   </Layout>
 )
 
-export default Index
+export default Contact
