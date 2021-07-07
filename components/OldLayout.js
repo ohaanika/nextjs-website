@@ -4,38 +4,38 @@ const OldLayout = () => (
     {/* Header */}
     <header>
       <nav>
-        <ul class="menu">
-          <li class="logo"><a href="#">ZyphrZyphr</a></li>
-          <li class="item"><a href="#services">Services</a></li>
-          <li class="item"><a href="#about-us">About Us</a></li>
-          <li class="item"><a href="#team">Team</a></li>
-          <li class="item"><a href="#portfolio">Portfolio</a></li>
-          <li class="item button"><a href="#contact-us">Contact Us</a></li>
-          <li class="toggle"><a><i class="fas fa-bars"></i></a></li>
+        <ul className="menu">
+          <li className="logo"><a href="#">ZyphrZyphr</a></li>
+          <li className="item"><a href="#services">Services</a></li>
+          <li className="item"><a href="#about-us">About Us</a></li>
+          <li className="item"><a href="#team">Team</a></li>
+          <li className="item"><a href="#portfolio">Portfolio</a></li>
+          <li className="item button"><a href="#contact-us">Contact Us</a></li>
+          <li className="toggle"><a><i className="fas fa-bars"></i></a></li>
         </ul>
       </nav>
     </header>
 
     {/* Landing Page */}
-    <section class="section landing-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-12">
-            <h1 class="landing-title animate__animated animate__fadeInLeft ">
+    <section className="section landing-section">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6 col-md-12">
+            <h1 className="landing-title animate__animated animate__fadeInLeft ">
               Professional Dash Apps by the Experts
             </h1>
-            <p class="landing-paragraph animate__animated animate__fadeInLeft">
+            <p className="landing-paragraph animate__animated animate__fadeInLeft">
               With over 5 years of leading industry experience, we’re here to help you build production-ready,
               mobile-friendly, scalable Dash applications.
             </p>
-            <div class="container landing-button-container">
+            <div className="container landing-button-container">
               <a href="#contact-us">
-                <button class="button primary-button animate__animated animate__fadeInLeft">
+                <button className="button primary-button animate__animated animate__fadeInLeft">
                   Contact Us
                 </button>
               </a>
               <a href="#portfolio">
-                <button class="button secondary-button animate__animated animate__fadeInUp animate__fast">
+                <button className="button secondary-button animate__animated animate__fadeInUp animate__fast">
                   Portfolio
                 </button>
               </a>
@@ -43,26 +43,26 @@ const OldLayout = () => (
           </div>
         </div>
       </div>
-      <div class="landing-bg animate__animated animate__fadeInRight animate__fast"></div>
+      <div className="landing-bg animate__animated animate__fadeInRight animate__fast"></div>
     </section>
 
     {/* Services */}
-    <section class="services-section animate__animated animate__fadeIn animate__fast" id="services">
-      <div class="container">
-        <div class="col">
-          <div class="services-header">
+    <section className="services-section animate__animated animate__fadeIn animate__fast" id="services">
+      <div className="container">
+        <div className="col">
+          <div className="services-header">
             <h1>Our Services</h1>
             <h4>Consulting and Software Development</h4>
             <br/>
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-4 fade-in">
-            <div class="services-box">
-              <div class="services-icon">
-                <i class="fas fa-handshake"></i>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12 col-lg-4 fade-in">
+            <div className="services-box">
+              <div className="services-icon">
+                <i className="fas fa-handshake"></i>
               </div>
               <h3>Consulting</h3>
               <br/>
@@ -72,10 +72,10 @@ const OldLayout = () => (
               </p>
             </div>
           </div>
-          <div class="col-md-12 col-lg-4 fade-in">
-            <div class="services-box">
-              <div class="services-icon">
-                <i class="fas fa-laptop"></i>
+          <div className="col-md-12 col-lg-4 fade-in">
+            <div className="services-box">
+              <div className="services-icon">
+                <i className="fas fa-laptop"></i>
               </div>
               <h3>Development</h3>
               <br/>
@@ -85,10 +85,10 @@ const OldLayout = () => (
               </p>
             </div>
           </div>
-          <div class="col-md-12 col-lg-4 fade-in">
-            <div class="services-box">
-              <div class="services-icon">
-                <i class="fas fa-database"></i>
+          <div className="col-md-12 col-lg-4 fade-in">
+            <div className="services-box">
+              <div className="services-icon">
+                <i className="fas fa-database"></i>
               </div>
               <h3>Deployment</h3>
               <br/>
@@ -100,19 +100,19 @@ const OldLayout = () => (
           </div>
         </div>
       </div>
-      <div class="services-bg blur"></div>
+      <div className="services-bg blur"></div>
     </section>
 
     {/* About Us */}
-    <section class="section about-section animate__animated animate__fadeIn animate__fast" id="about-us">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-12 fade-in">
-            <div class="about-image-container">
+    <section className="section about-section animate__animated animate__fadeIn animate__fast" id="about-us">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6 col-md-12 fade-in">
+            <div className="about-image-container">
               <img src="./images/image-worktime.svg"></img>
-              <div class="about-image-stack-box">
+              <div className="about-image-stack-box">
                 <div>
-                  <i class="about-icon fas fa-mobile-alt"></i>
+                  <i className="about-icon fas fa-mobile-alt"></i>
                   <span>
                     Mobile Friendly Design
                   </span>
@@ -120,7 +120,7 @@ const OldLayout = () => (
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12 fade-in">
+          <div className="col-lg-6 col-md-12 fade-in">
             <h1>
               Put your Trust in the Experts
             </h1>
@@ -141,19 +141,19 @@ const OldLayout = () => (
     </section>
 
     {/* Team */}
-    <section class="team-section" id="team">
-      <div class="container">
-        <div class="col team-header">
+    <section className="team-section" id="team">
+      <div className="container">
+        <div className="col team-header">
           <h1>The Team</h1>
           <h4>Meet our Executive Team</h4>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-12">
-            <div class="team-box">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6 col-md-12">
+            <div className="team-box">
               <img src="./images/matt.jpg"></img>
-              <div class="team-text">
+              <div className="team-text">
                 <h3>Matthew Chan</h3>
                 <h4>CEO</h4>
                 <hr/>
@@ -171,16 +171,16 @@ const OldLayout = () => (
                 </p>
                 <div>
                   <a href="https://github.com/mtwichan">
-                    <i class="team-social fab fa-github"></i>
+                    <i className="team-social fab fa-github"></i>
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12">
-            <div class="team-box">
+          <div className="col-lg-6 col-md-12">
+            <div className="team-box">
               <img src="./images/adam-2.jpg"></img>
-              <div class="team-text">
+              <div className="team-text">
                 <h3>Adam Kulidjian</h3>
                 <h4>CTO</h4>
                 <hr/>
@@ -196,7 +196,7 @@ const OldLayout = () => (
                 </p>
                 <div>
                   <a href="https://github.com/Kully">
-                    <i class="team-social fab fa-github"></i>
+                    <i className="team-social fab fa-github"></i>
                   </a>
                 </div>
               </div>
@@ -204,26 +204,26 @@ const OldLayout = () => (
           </div>
         </div>
       </div>
-      <div class="team-bg"></div>
+      <div className="team-bg"></div>
     </section>
 
     {/* Portfolio */}
-    <section class="section portfolio-section animate__animated animate__fadeIn animate__fast" id="portfolio">
-      <div class="container">
-        <div class="col portfolio-header">
+    <section className="section portfolio-section animate__animated animate__fadeIn animate__fast" id="portfolio">
+      <div className="container">
+        <div className="col portfolio-header">
           <h1>Portfolio</h1>
           <h4>Check out some of our Interactive Apps</h4>
           <br/>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="container">
-              <div class="portfolio-grid fade-in">
-                <a href="https://minty-budget-tool.herokuapp.com/" class="portfolio-item tall active one"
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="container">
+              <div className="portfolio-grid fade-in">
+                <a href="https://minty-budget-tool.herokuapp.com/" className="portfolio-item tall active one"
                   target="_blank">
-                  <div class="text-inside-portfolio-item">
+                  <div className="text-inside-portfolio-item">
                     <h3>Minty Budget App</h3>
                     <h5>
                       Gain insights into your budgets and finances.
@@ -231,8 +231,8 @@ const OldLayout = () => (
                   </div>
                 </a>
                 <a href="https://dash-demo.plotly.host/dash-nyc-complaints/"
-                  class="portfolio-item tall active two" target="_blank">
-                  <div class="text-inside-portfolio-item">
+                  className="portfolio-item tall active two" target="_blank">
+                  <div className="text-inside-portfolio-item">
                     <h3>NYC Complaints</h3>
                     <h5>
                       Dashboard of borough complaints, with an SQL and chart editor inside.
@@ -240,15 +240,15 @@ const OldLayout = () => (
                   </div>
                 </a>
                 <a href="https://dash-demo.plotly.host/dash-admin-panel/"
-                  class="portfolio-item tall active three" target="_blank">
-                  <div class="text-inside-portfolio-item">
+                  className="portfolio-item tall active three" target="_blank">
+                  <div className="text-inside-portfolio-item">
                     <h3>Admin Panel</h3>
                     <h5>
                       Manage the overall usage metrics of your Dash Enterprise server.
                     </h5>
                   </div>
                 </a>
-                <a class="portfolio-item tall inactive four">
+                <a className="portfolio-item tall inactive four">
                   <h3>Coming Soon</h3>
                 </a>
               </div>
@@ -259,11 +259,11 @@ const OldLayout = () => (
     </section>
 
     {/* Contact Us */}
-    <section class="section contact-section" id="contact-us">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-12">
-            <div class="contact-container-header">
+    <section className="section contact-section" id="contact-us">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6 col-md-12">
+            <div className="contact-container-header">
               <h1>
                 Get in Touch
               </h1>
@@ -276,57 +276,57 @@ const OldLayout = () => (
                 app idea!
               </h5>
             </div>
-            <div class="contact-container">
-              <div class="contact-icon">
-                <i class="fas fa-calendar-alt"></i>
+            <div className="contact-container">
+              <div className="contact-icon">
+                <i className="fas fa-calendar-alt"></i>
               </div>
-              <div class="contact-content">
-                <h6 class="contact-title">Calendly</h6>
+              <div className="contact-content">
+                <h6 className="contact-title">Calendly</h6>
                 <div>
-                  <a class="contact-calendly-link" href=""
+                  <a className="contact-calendly-link" href=""
                     onclick="Calendly.initPopupWidget({url: 'https://calendly.com/zyphr-form/15min'});return false;">Schedule
                     a time with us!
                   </a>
                 </div>
               </div>
             </div>
-            <div class="contact-container">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
+            <div className="contact-container">
+              <div className="contact-icon">
+                <i className="fas fa-envelope"></i>
               </div>
-              <div class="contact-content">
-                <h6 class="contact-title">Email Address</h6>
+              <div className="contact-content">
+                <h6 className="contact-title">Email Address</h6>
                 <div>zyphr.form@gmail.com</div>
               </div>
             </div>
-            <div class="contact-container">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
+            <div className="contact-container">
+              <div className="contact-icon">
+                <i className="fas fa-map-marker-alt"></i>
               </div>
-              <div class="contact-content">
-                <h6 class="contact-title">Location</h6>
+              <div className="contact-content">
+                <h6 className="contact-title">Location</h6>
                 <div>Vancouver, Canada</div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-12">
-            <div class="contact-form">
+          <div className="col-lg-6 col-md-12">
+            <div className="contact-form">
               <h2>Contact Us</h2>
               <p>Please fill out the form below.</p>
               <form id="ajax-form" method="POST" target="hiddenFrame">
                 <input type="text" id="fName" name="firstName" placeholder="Your first name.."
-                  class="contact-form-item" required></input>
+                  className="contact-form-item" required></input>
                 <input type="text" id="lName" name="lastName" placeholder="Your last name.."
-                  class="contact-form-item" required></input>
+                  className="contact-form-item" required></input>
                 <input type="text" id="cName" name="companyName" placeholder="Your company name.."
-                  class="contact-form-item" required></input>
+                  className="contact-form-item" required></input>
                 <input type="text" id="eAddress" name="emailAddress" placeholder="Your email address.."
-                  class="contact-form-item" required></input>
+                  className="contact-form-item" required></input>
                 <textarea id="inquiry" name="inquiry" placeholder="Write something.."
-                  class="contact-form-item contact-textarea" required></textarea>
-                <input type="submit" value="submit" class="button primary-button contact-submit-button"></input>
+                  className="contact-form-item contact-textarea" required></textarea>
+                <input type="submit" value="submit" className="button primary-button contact-submit-button"></input>
               </form>
-              <div id="ajax-form-result" class="contact-form-response"></div>
+              <div id="ajax-form-result" className="contact-form-response"></div>
             </div>
           </div>
         </div>
@@ -334,9 +334,9 @@ const OldLayout = () => (
     </section>
 
     {/* Footer */}
-    <footer class="footer-section">
-      <div class="row">
-        <div class="col-12 footer-copyright">
+    <footer className="footer-section">
+      <div className="row">
+        <div className="col-12 footer-copyright">
           <p>© 2020 Zyphr Solutions Inc. All Rights Reserved.</p>
           <p>Coded with 💛 by Matthew Chan & Adam Kulidjian</p>
         </div>
