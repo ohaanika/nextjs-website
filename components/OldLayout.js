@@ -166,8 +166,9 @@ const OldLayout = () => (
                 </p>
                 <p>
                   He is currently wrapping up his BASc. in Electrical Engineering at The University of
-                  British Columbia. When given the luxury of spare time, Matthew can be found road cycling, 
-                  or planning his next adventure.
+                  British Columbia. 
+                  {/* When given the luxury of spare time, Matthew can be found road cycling, 
+                  or planning his next adventure. */}
                 </p>
                 <div>
                   <a href="https://github.com/mtwichan">
