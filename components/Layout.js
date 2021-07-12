@@ -1,5 +1,6 @@
 import Meta from "./Meta"
 import Header from "./Header"
+import Footer from "./Footer"
 
 const Layout = () => (
   <div>
@@ -324,19 +325,10 @@ const Layout = () => (
       </div>
     </section>
 
-    {/* Footer */}
-    <footer className="footer-section">
-      <div className="row">
-        <div className="col-12 footer-copyright">
-          <p>© 2020 Zyphr Solutions Inc. All Rights Reserved.</p>
-          <p>Coded with 💛 by Matthew Chan & Adam Kulidjian</p>
-        </div>
-      </div>
-    </footer>
-
     {/* Hide redirect from form */}
     {/* <iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe> */}
 
+    <Footer/>
   </div>
 )
 
