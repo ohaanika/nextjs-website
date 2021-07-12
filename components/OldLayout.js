@@ -1,5 +1,8 @@
+import Meta from "./Meta"
+
 const OldLayout = () => (
   <div>
+    <Meta/>
 
     {/* Header */}
     <header>
