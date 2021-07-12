@@ -18,16 +18,16 @@ const Index = () => (
               mobile-friendly, scalable Dash applications.
             </p>
             <div className="container landing-button-container">
-              <a href="#contact-us">
+              <Link href="#contact-us"><a>
                 <button className="button primary-button animate__animated animate__fadeInLeft">
                   Contact Us
                 </button>
-              </a>
-              <a href="#portfolio">
+              </a></Link>
+              <Link href="#portfolio"><a>
                 <button className="button secondary-button animate__animated animate__fadeInUp animate__fast">
                   Portfolio
                 </button>
-              </a>
+              </a></Link>
             </div>
           </div>
         </div>
