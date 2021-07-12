@@ -1,7 +1,7 @@
-import OldLayout from "../components/OldLayout"
+import Layout from "../components/Layout"
 
 const Index = () => (
-  <OldLayout/>
+  <Layout/>
 )
 
 export default Index
