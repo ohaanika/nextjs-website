@@ -24,7 +24,7 @@ const Contact = () => (
               <h6 className="contact-title">Calendly</h6>
               <div>
                 <a className="contact-calendly-link" href=""
-                  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/zyphr-form/15min'});return false;">Schedule
+                  onClick="Calendly.initPopupWidget({url: 'https://calendly.com/zyphr-form/15min'});return false;">Schedule
                   a time with us!
                 </a>
               </div>
