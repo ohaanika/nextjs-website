@@ -10,7 +10,7 @@ const Team = () => (
       <div className="row">
         <div className="col-lg-6 col-md-12">
           <div className="team-box">
-            <img src="./images/matt.jpg"></img>
+            <img src="./images/team/matt.jpg"></img>
             <div className="team-text">
               <h3>Matthew Chan</h3>
               <h4>CEO</h4>
@@ -38,7 +38,7 @@ const Team = () => (
         </div>
         <div className="col-lg-6 col-md-12">
           <div className="team-box">
-            <img src="./images/adam-2.jpg"></img>
+            <img src="./images/team/adam-2.jpg"></img>
             <div className="team-text">
               <h3>Adam Kulidjian</h3>
               <h4>CTO</h4>

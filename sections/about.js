@@ -4,7 +4,7 @@ const About = () => (
       <div className="row">
         <div className="col-lg-6 col-md-12 fade-in">
           <div className="about-image-container">
-            <img src="./images/image-worktime.svg"></img>
+            <img src="./images/placeholder/image-worktime.svg"></img>
             <div className="about-image-stack-box">
               <div>
                 <i className="about-icon fas fa-mobile-alt"></i>

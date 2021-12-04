@@ -223,7 +223,7 @@ nav {
     padding: 7.5px 10px 7.5px 0;
     font-size: 20px;
     font-family: 'Open Sans', 'Gothic A1', sans-serif;
-    background-image: url(../public/images/zyphr-logo-white-transparent.png);
+    background-image: url(../public/images/logo/zyphr-logo-white-transparent.png);
     background-size: auto 25px;
     background-position: center left;
     background-repeat: no-repeat;
@@ -458,7 +458,7 @@ nav {
     height: 70%;
     right: 1%;
     transform: translate(0, 10%);
-    background-image: url(../public/images/landing-page-1.png);
+    background-image: url(../public/images/placeholder/landing-page-1.png);
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 1;
@@ -596,7 +596,7 @@ nav {
 
 .services-bg {
     position: absolute;
-    background-image: url(../public/images/image-analytics.svg);
+    background-image: url(../public/images/placeholder/image-analytics.svg);
     background-position: top center;
     background-repeat: no-repeat;
     bottom: 0;
@@ -755,7 +755,7 @@ nav {
 }
 
 .portfolio-item.inactive {
-    background-image: url("../public/images/image-analytics.svg");
+    background-image: url("../public/images/placeholder/image-analytics.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -764,19 +764,19 @@ nav {
 }
 
 .portfolio-item.one {
-    background-image: url("../public/images/mint-app.png");
+    background-image: url("../public/images/portfolio/mint-app.png");
 }
 
 .portfolio-item.two {
-    background-image: url("../public/images/nyc-app.png");
+    background-image: url("../public/images/portfolio/nyc-app.png");
 }
 
 .portfolio-item.three {
-    background-image: url("../public/images/admin-app.png");
+    background-image: url("../public/images/portfolio/admin-app.png");
 }
 
 .portfolio-item.four {
-    background-image: url("../public/images/brightbuilding-cropped.jpg");
+    background-image: url("../public/images/portfolio/brightbuilding-cropped.jpg");
 }
 
 .portfolio-item.active::before {
