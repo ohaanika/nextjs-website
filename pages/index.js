@@ -1,5 +1,5 @@
-import Layout from "../components/Layout"
-import Meta from "../components/Meta"
+import Layout from "../components/layout"
+import Meta from "../components/meta"
 import Landing from "../sections/landing"
 import Services from "../sections/services"
 import About from "../sections/about"
