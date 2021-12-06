@@ -12,6 +12,11 @@ const Meta = ({
     <meta name='description' content={description}/>
     <meta name='author' content={author}/>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Avenir&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet"/>
     {/* <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'/> */}
     {/* <meta name='apple-mobile-web-app-capable' content='yes'/> */}
     {/* <meta name='apple-mobile-web-app-status-bar-style' content='black'/> */}
