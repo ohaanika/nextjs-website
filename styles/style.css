@@ -1,0 +1,149 @@
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+
+:root {
+    --color-text: #555;
+    --color-background: #fff;
+    --color-border: #ddd;
+    --color-placeholder: #ddd;
+    --color-primary: #62ad94;
+    --color-primary-light: #cde4dc;
+    --color-secondary: #5e9bd4;
+    --color-secondary-light: #cbe1f6;
+}
+
+* {
+    font-family: "Raleway", "Open Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    text-transform: none;
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.25em;
+}
+
+p {
+    font-size: 1em;
+}
+
+a {
+    font-weight: bold;
+    color: blue;
+}
+
+button {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-background);
+    background-color: var(--color-primary);
+    border: 0px solid var(--color-primary);
+    padding: 10px;
+}
+
+button a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--color-background);
+}
+
+header, footer {
+    border: 2px solid var(--color-border);
+    background-color: var(--color-background);
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+header {
+    position: fixed;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+}
+nav li {
+    display: block;
+    margin-left: 20px;
+}
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text);
+}
+nav button a {
+    color: var(--color-background);
+}
+
+section {
+    padding: 200px;
+    border-bottom: 2px solid var(--color-border);
+}
+section:last-child {
+    border-bottom: 0px solid var(--color-border);
+}
+section > div > * {
+    margin-bottom: 10px;
+}
+
+footer .icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+footer .icons > * {
+    margin-right: 15px;
+}
+footer .icons > *:last-child {
+    margin-right: 0;
+}
