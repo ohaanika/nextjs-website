@@ -10,7 +10,7 @@ const TeamInfo = [
       github: "https://github.com/mtwichan",
       linkedin: "https://www.linkedin.com/in/matthewichan/",
     },
-    img: "",
+    img: "/images/team/matt.jpg",
   },
   {
     name: "Adam Kulidjian",
@@ -21,7 +21,7 @@ const TeamInfo = [
       github: "https://github.com/Kully",
       linkedin: "https://www.linkedin.com/in/adam-kulidjian-59309467/",
     },
-    img: "",
+    img: "/images/team/adam.jpg",
   },
   {
     name: "Aanika Rahman",
@@ -32,7 +32,7 @@ const TeamInfo = [
       github: "https://github.com/ohaanika",
       linkedin: "https://www.linkedin.com/in/aanikarahman/",
     },
-    img: "",
+    img: "/images/team/aanika.jpg",
   },
 ]
 
