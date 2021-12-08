@@ -1,5 +1,41 @@
 import Link from 'next/link'
 
+const TeamInfo = [
+  {
+    name: "Matthew Chan",
+    role: "CEO",
+    bio: "",
+    icon: {
+      email: "mailto:matthew@zyphr.ca",
+      github: "https://github.com/mtwichan",
+      linkedin: "https://www.linkedin.com/in/matthewichan/",
+    },
+    img: "",
+  },
+  {
+    name: "Adam Kulidjian",
+    role: "CTO",
+    bio: "",
+    icon: {
+      email: "mailto:adam@zyphr.ca",
+      github: "https://github.com/Kully",
+      linkedin: "https://www.linkedin.com/in/adam-kulidjian-59309467/",
+    },
+    img: "",
+  },
+  {
+    name: "Aanika Rahman",
+    role: "Software Developer",
+    bio: "",
+    icon: {
+      email: "mailto:aanika@zyphr.ca",
+      github: "https://github.com/ohaanika",
+      linkedin: "https://www.linkedin.com/in/aanikarahman/",
+    },
+    img: "",
+  },
+]
+
 const Team = () => (
   <section id="team">
     <div>
