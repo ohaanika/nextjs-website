@@ -13,7 +13,7 @@ const FormFieldInfo = [
     wrapper: "input",
     type: "text",
     required: true,
-    placeholder: "Your company name...",
+    placeholder: "Your affiliation...",
   },
   {
     label: "Email",
@@ -24,12 +24,12 @@ const FormFieldInfo = [
     placeholder: "Your email address...",
   },
   {
-    label: "Inquiry",
-    id: "inquiry",
+    label: "Message",
+    id: "message",
     wrapper: "textarea",
     type: "text",
     required: true,
-    placeholder: "What's your story?",
+    placeholder: "Write your message here...",
   },
 ]
 
@@ -44,7 +44,13 @@ function displayFormField(FormField, i=null) {
         <label htmlFor={FormField.id}>{FormField.label} {label_required}</label>
       </div>
       <div className="row pb-4">
-        <FormField.wrapper id={FormField.id} name={FormField.id} type={FormField.type} required></FormField.wrapper>
+        <FormField.wrapper 
+          id={FormField.id} 
+          name={FormField.id} 
+          type={FormField.type} 
+          placeholder={FormField.placeholder}
+          required
+        />
       </div>
     </div>
   )

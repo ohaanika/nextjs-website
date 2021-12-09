@@ -13,6 +13,7 @@
     --color-secondary-light: #dae9f7;
     --color-3: #d47f5e;
     --color-3-light: #fdefe8;
+    --font-family: "Poppins", "Open Sans", sans-serif;
 }
 
 * {
@@ -22,7 +23,7 @@
 }
 
 body {
-    font-family: "Poppins", "Open Sans", sans-serif;
+    font-family: var(--font-family);
     font-weight: normal;
     font-style: normal;
     text-decoration: none;
@@ -112,12 +113,16 @@ label {
     width: 100%;
 }
 input, textarea, select {
+    font-family: var(--font-family);
     font-size: 1em;
     color: var(--color-text);
     background-color: var(--color-background);
     border: 2px solid var(--color-primary-light);
     padding: 10px;
     width: 100%;
+}
+input::placeholder, textarea::placeholder, select::placeholder {
+    opacity: 0.5;
 }
 textarea {
     min-height: calc(1em + 24px);
