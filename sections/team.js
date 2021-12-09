@@ -103,12 +103,11 @@ const Team = () => (
   <Section id="team">
     <div className="row no-gutters">
       <div className="col-lg-3 col-md-12 col-sm-12">
-        <SectionContentBlock heading="Team">
-          <p>
-            We like to do work that sparks joy for our clients and ourselves!
-            This value translates into a culture of curiosity and integrity.
-          </p>
-        </SectionContentBlock>
+        <SectionContentBlock 
+          heading="Team"
+          subheading="Our team is made of... We are curious... 
+          We have all contributed to the Plotly and Dash libraries..."
+        />
       </div>
       <div className="col-lg-9 col-md-12 col-sm-12">
         <div className="row no-gutters">

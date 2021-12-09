@@ -1,7 +1,7 @@
-const Section = (props) => (
-  <section id={props.id}>
+const Section = ({id="", backgroundColor="transparent", children}) => (
+  <section id={id} style={{backgroundColor: backgroundColor}}>
     <div className="container">
-      {props.children}
+      {children}
     </div>
   </section>
 )

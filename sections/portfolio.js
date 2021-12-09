@@ -62,7 +62,10 @@ function displayPortfolioCard(PortfolioCard, i) {
 const Portfolio = () => (
   <Section id="portfolio">
     <div className="row no-gutters">
-        <SectionContentBlock heading="Portfolio">
+        <SectionContentBlock 
+          heading="Portfolio"
+          subheading="Check out some of our Interactive Apps"
+        >
           <div className="row no-gutters">
             {PortfolioCardInfo.map((PortfolioCard, i) => displayPortfolioCard(PortfolioCard, i))}
           </div>
