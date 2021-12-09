@@ -6,7 +6,7 @@
     --color-text: #555;
     --color-background: #fff;
     --color-border: #ddd;
-    --color-placeholder: #ddd;
+    --color-placeholder: var(--color-text);
     --color-primary: #62ad94;
     --color-primary-light: #d9ebe5;
     --color-secondary: #5e9bd4;

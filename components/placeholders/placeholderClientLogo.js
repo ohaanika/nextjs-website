@@ -1,8 +1,8 @@
 import PlaceholderImage from "./placeholderImage"
 
-const PlaceholderClientLogo = () => {
+const PlaceholderClientLogo = ({color="var(--color-placeholder)"}) => {
   return (
-    <PlaceholderImage ratio={[3,1]} scale={36}/>
+    <PlaceholderImage ratio={[3,1]} scale={36} color={color}/>
   )
 }
 
