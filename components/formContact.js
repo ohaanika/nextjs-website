@@ -39,33 +39,35 @@ function displayFormField(FormField, i=null) {
   </span>
 
   return (
-    [
-      <div className="row pb-2" key={i}>
+    <div key={i}>
+      <div className="row pb-2">
         <label htmlFor={FormField.id}>{FormField.label} {label_required}</label>
-      </div>, 
-      <div className="row pb-4" key={i}>
+      </div>
+      <div className="row pb-4">
         <FormField.wrapper id={FormField.id} name={FormField.id} type={FormField.type} required></FormField.wrapper>
       </div>
-    ]
+    </div>
   )
 }
 
 const FormContact = () => {
   return (
-    <div className="p-5" style={styles.FormContact}>
+    <div className="p-5" style={styles.formContact}>
       <form name="contact-form" method="POST" action="contact/?success=true">
           {FormFieldInfo.map((FormField, i) => displayFormField(FormField, i))}
-          <div className="row pb-2">
-            <h6><label for="method">How did you hear about us?</label></h6>
-          </div>
-          <div className="row pb-4">
-            <select name="method" id="method">
-              <option disabled selected value> -- Select an Option -- </option>
-              <option value="recommendation">Recommendation</option>
-              <option value="google">Google Search</option>
-              <option value="social-media">Social Media</option>
-            </select>
+          <div>
+            <div className="row pb-2">
+              <h6><label for="method">How did you hear about us?</label></h6>
             </div>
+            <div className="row pb-4">
+              <select name="method" id="method">
+                <option disabled selected value> -- Select an Option -- </option>
+                <option value="recommendation">Recommendation</option>
+                <option value="google">Google Search</option>
+                <option value="social-media">Social Media</option>
+              </select>
+            </div>
+          </div>
           <button type="submit" value="submit">Submit</button>
       </form>
     </div>
@@ -75,7 +77,7 @@ const FormContact = () => {
 export default FormContact
 
 const styles = {
-  FormContact: {
+  formContact: {
     backgroundColor: 'var(--color-primary-light)',
     // border: '2px solid var(--color-border)',
   },
