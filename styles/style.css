@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
+    line-height: 1.1;
 }
 
 h1 {
@@ -183,7 +184,7 @@ section {
     border-top: 2px solid var(--color-border);
 }
 section:first-child {
-    padding-top: 250px;
+    padding-top: 200px;
     min-height: 100vh;
     border-top: 0px solid var(--color-border);
 }
