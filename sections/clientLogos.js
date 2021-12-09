@@ -51,7 +51,7 @@ function displayClientLogo(ClientLogo, i) {
   }
 
   return (
-    <div classname="col-2" key={i}>{image}</div>
+    <div className="col-2" key={i}>{image}</div>
   )
 }
 
