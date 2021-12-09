@@ -22,7 +22,7 @@
 }
 
 body {
-    font-family: "Raleway", "Open Sans", sans-serif;
+    font-family: "Poppins", "Open Sans", sans-serif;
     font-weight: normal;
     font-style: normal;
     text-decoration: none;
@@ -33,7 +33,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -68,7 +68,7 @@ p {
 }
 
 a {
-    font-weight: bold;
+    font-weight: 600;
     color: var(--color-primary);
 }
 a:hover {
@@ -76,12 +76,13 @@ a:hover {
 }
 
 b {
+    font-weight: 600;
     color: var(--color-primary);
 }
 
 button {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -105,12 +106,13 @@ button a:hover, button:hover a {
 }
 
 label {
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     width: 100%;
 }
 input, textarea, select {
+    font-size: 1em;
     color: var(--color-text);
     background-color: var(--color-background);
     border: 2px solid var(--color-primary-light);
