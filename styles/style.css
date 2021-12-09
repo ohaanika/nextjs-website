@@ -172,11 +172,13 @@ nav button a {
 }
 
 section {
-    padding: 200px 0;
-    border-bottom: 2px solid var(--color-border);
+    padding: 150px 0;
+    border-top: 2px solid var(--color-border);
 }
-section:last-child {
-    border-bottom: 0px solid var(--color-border);
+section:first-child {
+    padding-top: 250px;
+    min-height: 100vh;
+    border-top: 0px solid var(--color-border);
 }
 section > div > * {
     margin-bottom: 10px;
