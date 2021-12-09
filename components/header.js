@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import PlaceholderLogo from "./placeholders/placeholderLogo"
 
-const navItems = [
+const navLinkInfo = [
   {
     path: '#services',
     label: 'Services',
@@ -19,8 +19,8 @@ const navItems = [
     label: 'Portfolio',
   },
   {
-    path: '#testimonials',
-    label: 'Testimonials',
+    path: '#stories',
+    label: 'Stories',
   },
   {
     path: '#contact',
@@ -29,13 +29,13 @@ const navItems = [
   },
 ]
 
-function createNavLink(navItem, i) {
-  var navLink = <Link href={navItem.path}><a>{navItem.label}</a></Link>
-  if ('cta' in navItem && navItem.cta) {
-    navLink = <button>{navLink}</button>
+function displayNavLink(navLink, i) {
+  var link = <Link href={navLink.path}><a>{navLink.label}</a></Link>
+  if ('cta' in navLink && navLink.cta) {
+    link = <button>{link}</button>
   }
-  var navLink = <li key={i}>{navLink}</li>
-  return navLink
+  var link = <li key={i}>{link}</li>
+  return link
 }
 
 const Header = () => (
@@ -45,7 +45,7 @@ const Header = () => (
     </div>
     <nav>
       <ul>
-        {navItems.map((navItem, i) => createNavLink(navItem, i))}
+        {navLinkInfo.map((navLink, i) => displayNavLink(navLink, i))}
       </ul>
     </nav>
   </header>
