@@ -124,7 +124,6 @@ export default Team
 const styles = {
   card: {
     // backgroundColor: 'var(--color-border)',
-    padding: '0',
     transition: 'all 0.3s ease 0s',
   },
   cardImage: {
