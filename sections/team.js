@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Section from '../components/section'
 
 const TeamInfo = [
   {
@@ -37,14 +37,14 @@ const TeamInfo = [
 ]
 
 const Team = () => (
-  <section id="team">
+  <Section id="team">
     <div>
       <h3>Team</h3>
       <p>
         Placeholder section.
       </p>
     </div>
-  </section>
+  </Section>
 )
 
 export default Team

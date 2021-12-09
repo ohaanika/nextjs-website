@@ -1,14 +1,12 @@
-import Link from 'next/link'
+import Section from '../components/section'
 
 const Contact = () => (
-  <section id="contact">
-    <div>
-      <h3>Contact</h3>
-      <p>
-        Placeholder section.
-      </p>
-    </div>
-  </section>
+  <Section id="contact">
+    <h3>Contact</h3>
+    <p>
+      Placeholder section.
+    </p>
+  </Section>
 )
 
 export default Contact

@@ -1,14 +1,12 @@
-import Link from 'next/link'
+import Section from '../components/section'
 
 const ClientLogos = () => (
-  <section id="testimonials">
-    <div>
-      <h3>Client Logos</h3>
-      <p>
-        Placeholder section.
-      </p>
-    </div>
-  </section>
+  <Section>
+    <h3>Client Logos</h3>
+    <p>
+      Placeholder section.
+    </p>
+  </Section>
 )
 
 export default ClientLogos

@@ -1,14 +1,12 @@
-import Link from 'next/link'
+import Section from '../components/section'
 
 const About = () => (
-  <section id="about">
-    <div>
-      <h3>About</h3>
-      <p>
-        Placeholder section.
-      </p>
-    </div>
-  </section>
+  <Section id="about">
+    <h3>About</h3>
+    <p>
+      Placeholder section.
+    </p>
+  </Section>
 )
 
 export default About

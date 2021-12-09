@@ -126,7 +126,7 @@ nav button a {
 }
 
 section {
-    padding: 200px;
+    padding: 200px 0;
     border-bottom: 2px solid var(--color-border);
 }
 section:last-child {

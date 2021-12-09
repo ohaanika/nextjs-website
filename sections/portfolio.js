@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Section from '../components/section'
 
 const PortfolioInfo = [
   {
@@ -28,14 +28,12 @@ const PortfolioInfo = [
 ]
 
 const Portfolio = () => (
-  <section id="portfolio">
-    <div>
-      <h3>Portfolio</h3>
-      <p>
-        Placeholder section.
-      </p>
-    </div>
-  </section>
+  <Section id="portfolio">
+    <h3>Portfolio</h3>
+    <p>
+      Placeholder section.
+    </p>
+  </Section>
 )
 
 export default Portfolio

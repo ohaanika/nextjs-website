@@ -1,14 +1,12 @@
-import Link from 'next/link'
+import Section from '../components/section'
 
 const Services = () => (
-  <section id="services">
-    <div>
-      <h3>Services</h3>
-      <p>
-        Placeholder section.
-      </p>
-    </div>
-  </section>
+  <Section id="services">
+    <h3>Services</h3>
+    <p>
+      Placeholder section.
+    </p>
+  </Section>
 )
 
 export default Services
