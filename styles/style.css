@@ -8,25 +8,27 @@
     --color-border: #ddd;
     --color-placeholder: #ddd;
     --color-primary: #62ad94;
-    --color-primary-light: #cde4dc;
+    --color-primary-light: #d9ebe5;
     --color-secondary: #5e9bd4;
-    --color-secondary-light: #cbe1f6;
+    --color-secondary-light: #dae9f7;
+    --color-3: #d47f5e;
+    --color-3-light: #fdefe8;
 }
 
 * {
-    font-family: "Raleway", "Open Sans", sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 1;
-    color: var(--color-text);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    font-family: "Raleway", "Open Sans", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1;
+    color: var(--color-text);
     background-color: var(--color-background);
 }
 
@@ -37,36 +39,49 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    text-transform: none;
-    font-size: 3em;
+    font-size: 4em;
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 h4 {
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 h5 {
-    font-size: 1.25em;
+    font-size: 1.5em;
+}
+
+h6 {
+    font-size: 1em;
 }
 
 p {
     font-size: 1em;
+    line-height: 1.2;
 }
 
 a {
     font-weight: bold;
-    color: blue;
+    color: var(--color-primary);
+}
+a:hover {
+    color: var(--color-primary-light);
+}
+
+b {
+    color: var(--color-primary);
 }
 
 button {
+    font-size: 16px;
+    font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -75,11 +90,36 @@ button {
     border: 0px solid var(--color-primary);
     padding: 10px;
 }
+button:hover {
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+}
 
 button a {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--color-background);
+}
+button a:hover, button:hover a {
+    color: var(--color-primary);
+}
+
+label {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+}
+input, textarea, select {
+    color: var(--color-text);
+    background-color: var(--color-background);
+    border: 2px solid var(--color-primary-light);
+    padding: 10px;
+    width: 100%;
+}
+textarea {
+    height: 100px;
+    resize: vertical;
 }
 
 header, footer {
@@ -97,6 +137,7 @@ header, footer {
 
 header {
     position: fixed;
+    z-index: 99999;
 }
 nav {
     display: flex;
@@ -120,6 +161,10 @@ nav a {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--color-text);
+}
+nav a:hover {
+    letter-spacing: 2px;
+    color: var(--color-primary);
 }
 nav button a {
     color: var(--color-background);
