@@ -1,11 +1,18 @@
+import Link from 'next/link'
+import Image from 'next/image'
+import PlaceholderImage from '../components/placeholders/placeholderImage'
 import Section from '../components/section'
+import SectionContentBlock from '../components/sectionContentBlock'
 
-const TeamInfo = [
+const TeamCardInfo = [
   {
     name: "Matthew Chan",
     role: "CEO",
-    bio: "",
-    icon: {
+    bio: [
+      "Formerly a Solutions Engineer at Plotly, Matthew spent 2 years developing Dash applications and consulting to Fortune 500’s in industries ranging from Oil and Gas to Finance to Tech. While at the company, he led 5-figure workshops to high-value clients across the U.S. and Germany. Matthew also contributed to Plotly’s Dash Bio and Dash Enterprise.",
+      "He is currently wrapping up his BASc. in Electrical Engineering at The University of British Columbia.",
+    ],
+    icons: {
       email: "mailto:matthew@zyphr.ca",
       github: "https://github.com/mtwichan",
       linkedin: "https://www.linkedin.com/in/matthewichan/",
@@ -15,8 +22,11 @@ const TeamInfo = [
   {
     name: "Adam Kulidjian",
     role: "CTO",
-    bio: "",
-    icon: {
+    bio: [
+      "As Plotly's former lead and #2 highest contributor to Plotly's Python Library, Adam contributed many key features to the library including gantt charts, sploms, and county choropleths. He served as the core contributor of the Plotly Python library for 3 years, pushing the total downloads to over 3 million.",
+      "Adam holds a B.Sc. in Mathematics from McGill University. In his spare time, he likes to play jazz piano and draw short animations."
+    ],
+    icons: {
       email: "mailto:adam@zyphr.ca",
       github: "https://github.com/Kully",
       linkedin: "https://www.linkedin.com/in/adam-kulidjian-59309467/",
@@ -26,8 +36,11 @@ const TeamInfo = [
   {
     name: "Aanika Rahman",
     role: "Software Developer",
-    bio: "",
-    icon: {
+    bio: [
+      "Aanika has yet to figure out what to say about herself but for now...",
+      "She holds a B.Sc. in Mathematics and Computer Science from McGill University.",
+    ],
+    icons: {
       email: "mailto:aanika@zyphr.ca",
       github: "https://github.com/ohaanika",
       linkedin: "https://www.linkedin.com/in/aanikarahman/",
@@ -36,15 +49,105 @@ const TeamInfo = [
   },
 ]
 
+function displayTeamCard(TeamCard, i) {
+  let image = null
+  if (TeamCard.img == "") {
+    image = <PlaceholderImage/>
+  } else {
+    image = <Image
+      src={TeamCard.img}
+      width="100%" 
+      height="100%" 
+      layout="responsive" 
+      objectFit="cover"
+    />
+  }
+
+  let bio = null
+  if (Array.isArray(TeamCard.bio)) {
+    bio = TeamCard.bio.map((bioPara, i) => (<p key={i} style={styles.cardContentBioPara}>{bioPara}</p>))
+  }
+
+  let icons = []
+  if ('github' in TeamCard.icons && TeamCard.icons.github) {
+    icons.push(
+      <div style={{paddingRight: "1em"}}>
+        <Link href={TeamCard.icons.github}><a>GitHub</a></Link>
+      </div>
+    )
+  }
+  if ('linkedin' in TeamCard.icons && TeamCard.icons.linkedin) {
+    icons.push(
+      <div>
+        <Link href={TeamCard.icons.linkedin}><a>LinkedIn</a></Link>
+      </div>
+    )
+  }
+
+  return (
+    <div className="col-lg-4 col-md-4 col-sm-12 fade-in pl-lg-5 pr-lg-0 pl-md-3 pr-md-3 pb-md-0 pb-sm-5 p-0" style={styles.card} key={i}>
+      <div style={styles.cardImage}>
+        {image}
+      </div>
+      <div style={styles.cardContent}>
+        <h5 style={styles.cardContentName}>{TeamCard.name}</h5>
+        <h6 style={styles.cardContentRole}>{TeamCard.role}</h6>
+        {bio}
+        <div className="row no-gutters justify-content-start">{icons}</div>
+      </div>
+    </div>
+  )
+}
+
 const Team = () => (
   <Section id="team">
-    <div>
-      <h3>Team</h3>
-      <p>
-        Placeholder section.
-      </p>
+    <div className="row no-gutters">
+      <div className="col-lg-3 col-md-12 col-sm-12">
+        <SectionContentBlock heading="Team">
+          <p>
+            We like to do work that sparks joy for our clients and ourselves!
+            This value translates into a culture of curiosity and integrity.
+          </p>
+        </SectionContentBlock>
+      </div>
+      <div className="col-lg-9 col-md-12 col-sm-12">
+        <div className="row no-gutters">
+          {TeamCardInfo.map((TeamCard, i) => displayTeamCard(TeamCard, i))}
+        </div>
+      </div>
     </div>
   </Section>
 )
 
 export default Team
+
+const styles = {
+  card: {
+    // backgroundColor: 'var(--color-border)',
+    padding: '0',
+    transition: 'all 0.3s ease 0s',
+  },
+  cardImage: {
+    filter: "gray", /* IE6-9 */
+    WebkitFilter: "grayscale(1)", /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: "grayscale(1)", /* Microsoft Edge and Firefox 35+ */
+  },
+  cardContent: {
+    margin: '20px 0 0 0',
+  },
+  cardContentName: {
+    marginBottom: '5px',
+    textAlign: "center",
+  },
+  cardContentRole: {
+    marginBottom: '10px',
+    color: "var(--color-primary)",
+    textAlign: "center",
+  },
+  cardContentBioPara: {
+    marginBottom: '10px',
+  },
+  cardContentIcons: {
+    // marginBottom: '10px',
+  },
+}
