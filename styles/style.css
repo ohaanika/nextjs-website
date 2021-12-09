@@ -5,7 +5,7 @@
 :root {
     --color-text: #555;
     --color-background: #fff;
-    --color-border: #ddd;
+    --color-border: #eee;
     --color-placeholder: var(--color-text);
     --color-primary: #62ad94;
     --color-primary-light: #d9ebe5;
