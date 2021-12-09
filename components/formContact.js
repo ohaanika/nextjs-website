@@ -68,7 +68,7 @@ const FormContact = () => {
               </select>
             </div>
           </div>
-          <button type="submit" value="submit">Submit</button>
+          <button type="submit" value="submit">Send</button>
       </form>
     </div>
   )
