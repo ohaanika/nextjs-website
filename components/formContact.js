@@ -35,7 +35,7 @@ const FormFieldInfo = [
 
 function displayFormField(FormField, i=null) {
   let label_required = <span style={{color: "var(--color-primary)"}}>
-    {(FormField.required === true) ? '＊' : ''}
+    {(FormField.required === true) ? '﹡' : ''}
   </span>
 
   return (
