@@ -1,6 +1,6 @@
-const Section = ({id="", backgroundColor="transparent", children}) => (
+const Section = ({id="", backgroundColor="transparent", stretch=false, children}) => (
   <section id={id} style={{backgroundColor: backgroundColor}}>
-    <div className="container">
+    <div className={(stretch === true) ? "" : "container"}>
       {children}
     </div>
   </section>

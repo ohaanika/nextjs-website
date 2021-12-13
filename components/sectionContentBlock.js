@@ -1,4 +1,4 @@
-const SectionContentBlock = ({heading=undefined, subheading=undefined, children}) => {
+const SectionContentBlock = ({heading=undefined, subheading=undefined, stretch=false, children}) => {
   if (!(typeof heading === 'undefined')) {
     heading = <div className="row pb-2">
       <h3 style={{color: "var(--color-primary)"}}>{heading}</h3>
@@ -10,7 +10,7 @@ const SectionContentBlock = ({heading=undefined, subheading=undefined, children}
     </div>
   }
   return (
-    <div>
+    <div className={(stretch === true) ? "" : "container"}>
       {heading}
       {subheading}
       {children}
