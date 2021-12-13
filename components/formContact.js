@@ -63,7 +63,7 @@ const FormContact = () => {
           {FormFieldInfo.map((FormField, i) => displayFormField(FormField, i))}
           <div>
             <div className="row pb-2">
-              <h6><label for="method">How did you hear about us?</label></h6>
+              <h6><label htmlFor="method">How did you hear about us?</label></h6>
             </div>
             <div className="row pb-4">
               <select name="method" id="method">
