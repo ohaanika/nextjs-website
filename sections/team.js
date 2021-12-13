@@ -71,14 +71,14 @@ function displayTeamCard(TeamCard, i) {
   let icons = []
   if ('github' in TeamCard.icons && TeamCard.icons.github) {
     icons.push(
-      <div style={{paddingRight: "1em"}}>
+      <div style={{paddingRight: "1em"}} key={1}>
         <Link href={TeamCard.icons.github}><a>GitHub</a></Link>
       </div>
     )
   }
   if ('linkedin' in TeamCard.icons && TeamCard.icons.linkedin) {
     icons.push(
-      <div>
+      <div key={2}>
         <Link href={TeamCard.icons.linkedin}><a>LinkedIn</a></Link>
       </div>
     )
