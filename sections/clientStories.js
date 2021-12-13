@@ -120,10 +120,10 @@ function createClientStoryCard(ClientStoryCard, i) {
 }
 
 const ClientStories = () => (
-  <Section id="stories" stretch={true}>
+  <Section id="stories" stretch={true} backgroundColor="var(--color-border)">
     <SectionContentBlock 
-      heading="Client Stories"
-      subheading="Are we worth it? Hear what our clients have to say."
+      heading="Are we worth it?"
+      subheading="Hear what our clients have to say."
     />
     <Carousel 
       carouselCardList={clientStoryInfo.map((ClientStoryCard, i) => createClientStoryCard(ClientStoryCard, i))}
