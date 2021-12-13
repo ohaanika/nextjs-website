@@ -1,11 +1,12 @@
 import Section from '../components/section'
+import SectionContentBlock from '../components/sectionContentBlock'
 
 const Services = () => (
   <Section id="services">
-    <h3>Services</h3>
-    <p>
-      Placeholder section.
-    </p>
+    <SectionContentBlock 
+      heading="Services"
+      subheading="Placeholder section."
+    />
   </Section>
 )
 
