@@ -1,7 +1,7 @@
 import Section from '../components/section'
 import SectionContentBlock from '../components/sectionContentBlock'
 import FormContact from '../components/formContact'
-import PlaceholderImage from '../components/placeholders/placeholderImage'
+import Callout from '../components/callout'
 
 const Contact = () => (
   <Section id="contact">
@@ -11,26 +11,20 @@ const Contact = () => (
           heading="Contact Us"
           subheading="Schedule a call for a consulting estimate or send us a message about your next app idea!"
         >
-          <div className="row mt-5">
-            <div className="mr-2 flex-shrink-0"><PlaceholderImage ratio={[1,1]} scale={36}/></div>
-            <div className="flex-grow-1">
-              <h6>Calendly</h6>
-              <h6 style={{color: "var(--color-primary)"}}>Schedule a time with us!</h6>
-            </div>
+          <div className="row mt-3">
+            <Callout label="Schedule a call with us on Calendly >" link="#contact"/>
           </div>
           <div className="row mt-3">
-          <div className="mr-2 flex-shrink-0"><PlaceholderImage ratio={[1,1]} scale={36}/></div>
-            <div className="flex-grow-1">
-              <h6>Email Address</h6>
-              <h6 style={{color: "var(--color-primary)"}}>zyphr.form@gmail.com</h6>
-            </div>
+            or
           </div>
           <div className="row mt-3">
-          <div className="mr-2 flex-shrink-0"><PlaceholderImage ratio={[1,1]} scale={36}/></div>
-            <div className="flex-grow-1">
-              <h6>Location</h6>
-              <h6 style={{color: "var(--color-primary)"}}>Vancouver, Canada</h6>
-            </div>
+            <Callout label="Email us at zyphr.form@gmail.com >" link="mailto:zyphr.form@gmail.com"/>
+          </div>
+          <div className="row mt-3">
+            or
+          </div>
+          <div className="row mt-3">
+            <Callout label="Message us by filling out this form"/>
           </div>
         </SectionContentBlock>
       </div>
