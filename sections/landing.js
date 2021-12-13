@@ -10,7 +10,7 @@ const Landing = () => (
       <div className="col-lg-6 col-md-12 col-sm-12 pr-2 p-0 pt-sm-5 d-lg-block d-sm-none align-items-center">
         {/* <h3><CircleText color="var(--color-primary)">* Dash * Plotly *</CircleText></h3> */}
         <GridDots radius={4*2/3}/>
-        <div className="row align-items-end" style={{position: "absolute", top: "209px", left: "93px", gap: "16px"}}>
+        <div className="row align-items-end" style={{position: "absolute", top: "209px", left: "101px", gap: "17px"}}>
           <Bar3D color="var(--color-primary)" ratio={[1,1]}/>
           <Bar3D color="var(--color-primary)" ratio={[1,2]}/>
           <Bar3D color="var(--color-primary)" ratio={[1,3]}/>
