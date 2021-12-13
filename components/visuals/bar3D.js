@@ -89,9 +89,9 @@ const Bar3D = ({
   thickness=4,
   color="var(--color-placeholder)",
   fills={
-    top: {background: "none", pattern: "url(#patternLine)"},
-    left: {background: "none", pattern: "none"},
-    right: {background: "none", pattern: "url(#patternCircle)"},
+    top: {background: "white", pattern: "url(#patternLine)"},
+    left: {background: "white", pattern: "none"},
+    right: {background: "white", pattern: "url(#patternCircle)"},
   },
 }) => {
   let width = ratio[0] * scale
