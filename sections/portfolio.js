@@ -46,7 +46,7 @@ function displayPortfolioCard(PortfolioCard, i) {
   }
 
   return (
-    <div className="col-lg-3 col-md-3 col-sm-12 fade-in pl-md-3 pr-md-3 pt-5 p-0" style={styles.card} key={i}>
+    <div className="col-lg-3 col-md-6 col-sm-12 pl-md-3 pr-md-3 pt-sm-3 pb-sm-3" style={styles.card} key={i}>
       <div style={styles.cardImage}>
         {image}
       </div>
@@ -80,6 +80,7 @@ const styles = {
   card: {
     // backgroundColor: 'var(--color-border)',
     transition: 'all 0.3s ease 0s',
+    // flexBasis: "23%", flexGrow: 0,
   },
   cardImage: {
     border: '2px solid #eee',
