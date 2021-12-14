@@ -1,6 +1,6 @@
-const CircleText = ({diameter=400, color="var(--color-placeholder)", children}) => {
+const CircleText = ({diameter=300, color="var(--color-placeholder)", children}) => {
   let radius = diameter/2
-  let a = 4/10 * diameter
+  let a = 5/10 * diameter
   let b = 8/10 * diameter
   let c = 2/10 * diameter
   let d = 6/10 * diameter
@@ -15,11 +15,11 @@ const CircleText = ({diameter=400, color="var(--color-placeholder)", children}) 
         <defs>
           <path id="circlePath"
             d={`M ${a},${b} a ${c},${c} 0 0,1 0,-${d} a ${c},${c} 0 0,1 0,${d} Z`}
-            transform={`rotate(20,${a},${a})`}>
+            transform={`rotate(0,${a},${a})`}>
             <animateTransform
               attributeName="transform"
               begin="0s"
-              dur="30s"
+              dur="15s"
               type="rotate"
               from={`0 ${radius} ${radius}`}
               to={`360 ${radius} ${radius}`}
