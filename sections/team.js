@@ -122,7 +122,7 @@ export default Team
 
 const styles = {
   card: {
-    // backgroundColor: 'var(--color-border)',
+    // backgroundColor: 'var(--color-background-secondary)',
     transition: 'all 0.3s ease 0s',
   },
   cardImage: {

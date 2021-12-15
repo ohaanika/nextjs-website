@@ -40,8 +40,13 @@ function displayNavLink(navLink, i) {
 
 const Header = () => (
   <header>
-    <div>
-      <PlaceholderLogo/>
+    <div style={{height: "calc(var(--website-container-border) - 20px)", width: "100px", position: "relative"}}>
+      <Image
+        src={"/images/logos/logo-name-black.svg"}
+        layout="fill" 
+        objectFit="contain"
+        objectPosition="left"
+      />
     </div>
     <nav>
       <ul>

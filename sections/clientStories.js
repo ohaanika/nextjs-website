@@ -1,6 +1,8 @@
+import Image from 'next/image'
 import Section from '../components/section'
 import SectionContentBlock from '../components/sectionContentBlock'
 import Carousel from '../components/carousel/carousel'
+import PlaceholderClientLogo from '../components/placeholders/placeholderClientLogo'
 
 const clientStoryInfo = [
   {
@@ -105,6 +107,17 @@ const clientStoryInfo = [
 ]
 
 function createClientStoryCard(ClientStoryCard, i) {
+  let image = null
+  if (ClientStoryCard.logoImg == "") {
+    image = <PlaceholderClientLogo/>
+  } else {
+    image = <Image
+      src={ClientStoryCard.logoImg}
+      layout="fill" 
+      objectFit="contain"
+    />
+  }
+
   let story = null
   if (Array.isArray(ClientStoryCard.story)) {
     story = ClientStoryCard.story.map((storyPara, i) => (<p key={i} style={styles.cardContentStoryPara}>{storyPara}</p>))
@@ -115,12 +128,13 @@ function createClientStoryCard(ClientStoryCard, i) {
       <div>{story}</div>
       <h6 style={styles.cardContentName}>{ClientStoryCard.name}</h6>
       <h6 style={styles.cardContentRole}>{ClientStoryCard.role}</h6>
+      {/* <div style={styles.cardContentLogoImg}>{image}</div> */}
     </div>
   )
 }
 
 const ClientStories = () => (
-  <Section id="stories" stretch={true} backgroundColor="var(--color-border)">
+  <Section id="stories" stretch={true} backgroundColor="var(--color-background-secondary)">
     <SectionContentBlock 
       heading="Are we worth it?"
       subheading="Hear what our clients have to say."
@@ -146,4 +160,8 @@ const styles = {
   cardContentStoryPara: {
     marginBottom: "10px",
   },
+  cardContentLogoImg: {
+    height: "50px",
+    width: "auto",
+  }
 }
