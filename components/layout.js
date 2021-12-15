@@ -2,9 +2,9 @@ import Header from "./header"
 import Footer from "./footer"
 
 const Layout = props => (
-  <div>
+  <div className="layout">
     <Header/>
-    <div>{props.children}</div>
+    <main>{props.children}</main>
     <Footer/>
   </div>
 )

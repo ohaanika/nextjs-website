@@ -39,7 +39,7 @@ body {
     font-size: var(--font-size);
     line-height: 1;
     color: var(--color-text);
-    background-color: var(--color-background);
+    background-color: var(--color-background-outer);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -98,7 +98,7 @@ button {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--color-background);
+    color: var(--color-background-outer);
     background-color: var(--color-primary);
     border: 0px solid var(--color-primary);
     padding: 10px;
@@ -111,7 +111,7 @@ button:hover {
 button a {
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--color-background);
+    color: var(--color-background-outer);
 }
 button a:hover, button:hover a {
     color: var(--color-primary);
@@ -127,7 +127,7 @@ input, textarea, select {
     font-family: var(--font-family);
     font-size: 1em;
     color: var(--color-text);
-    background-color: var(--color-background);
+    background-color: var(--color-background-outer);
     border: 2px solid var(--color-primary-light);
     padding: 10px;
     width: 100%;
@@ -141,23 +141,43 @@ textarea {
     resize: vertical;
 }
 
+main {
+    background-color: var(--color-background-primary);
+    margin: var(--website-container-border);
+}
+
 header, footer {
-    border: 2px solid var(--color-border);
-    background-color: var(--color-background);
-    width: calc(100% - 20px);
-    padding: 15px;
-    margin: 10px;
+    font-size: 0.8em;
+    background-color: var(--color-background-outer);
+    height: var(--website-container-border);
+    width: calc(100% - 2 * var(--website-container-border));
+    margin: 0 var(--website-container-border);
+    position: fixed;
+    z-index: 99999;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
     align-items: center;
 }
-
 header {
-    position: fixed;
-    z-index: 99999;
+    top: 0;
 }
+footer {
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin: var(--website-container-border) 0;
+    }
+    header, footer {
+        width: 100%;
+        margin: 0;
+        padding: 0 var(--website-container-border);
+    }
+}
+
 nav {
     display: flex;
     flex-direction: column;
@@ -186,30 +206,23 @@ nav a:hover {
     color: var(--color-primary);
 }
 nav button a {
-    color: var(--color-background);
+    color: var(--color-background-outer);
 }
 
 section {
-    padding: 120px 0;
-    border-top: 2px solid var(--color-border);
+    padding: 100px 0;
 }
 section:first-child {
-    padding-top: 200px;
-    min-height: 100vh;
-    border-top: 0px solid var(--color-border);
-}
-section > div > * {
-    margin-bottom: 10px;
+    height: calc(100vh - 2 * var(--website-container-border));
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 footer .icons {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-footer .icons > * {
-    margin-right: 15px;
-}
-footer .icons > *:last-child {
-    margin-right: 0;
 }

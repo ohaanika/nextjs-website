@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import PlaceholderLogo from "./placeholders/placeholderLogo"
 
 const navLinkInfo = [
@@ -31,9 +32,12 @@ const navLinkInfo = [
 
 function displayNavLink(navLink, i) {
   var link = <Link href={navLink.path}><a>{navLink.label}</a></Link>
-  if ('cta' in navLink && navLink.cta) {
-    link = <button>{link}</button>
-  }
+  // if ('cta' in navLink && navLink.cta) {
+  //   link = <button>{link}</button>
+  // }
+  // if ('cta' in navLink && navLink.cta) {
+  //   link = <span style={{color: "var(--color-primary)"}}>{link}</span>
+  // }
   var link = <li key={i}>{link}</li>
   return link
 }
