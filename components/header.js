@@ -4,42 +4,39 @@ import PlaceholderLogo from "./placeholders/placeholderLogo"
 
 const navLinkInfo = [
   {
-    path: '#services',
+    path: '/#services',
     label: 'Services',
   },
   {
-    path: '#about',
+    path: '/#about',
     label: 'About',
   },
   {
-    path: '#team',
+    path: '/#team',
     label: 'Team',
   },
   {
-    path: '#portfolio',
+    path: '/#portfolio',
     label: 'Portfolio',
   },
   {
-    path: '#stories',
+    path: '/#stories',
     label: 'Stories',
   },
   {
-    path: '#contact',
+    path: '/#contact',
     label: 'Contact',
-    cta: true,
   },
 ]
 
 function displayNavLink(navLink, i) {
-  var link = <Link href={navLink.path}><a>{navLink.label}</a></Link>
-  // if ('cta' in navLink && navLink.cta) {
-  //   link = <button>{link}</button>
-  // }
-  // if ('cta' in navLink && navLink.cta) {
-  //   link = <span style={{color: "var(--color-primary)"}}>{link}</span>
-  // }
-  var link = <li key={i}>{link}</li>
-  return link
+  return (
+    <li key={i}>
+      <Link href={navLink.path}>
+        <a>{navLink.label}</a>
+      </Link>
+    </li>
+  )
 }
 
 const Header = () => (
