@@ -53,7 +53,7 @@ function displayClientLogo(ClientLogo, i) {
 }
 
 const ClientLogos = () => (
-  <Section backgroundColor="var(--color-background-secondary)">
+  <Section backgroundColor="var(--color-background-inner)">
     <center><h5>The Company We Keep</h5></center>
       <div className="row no-gutters justify-content-around align-content-around flex-wrap mt-5">
         {clientLogoInfo.map((ClientLogo, i) => displayClientLogo(ClientLogo, i))}

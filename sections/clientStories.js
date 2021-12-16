@@ -134,7 +134,7 @@ function createClientStoryCard(ClientStoryCard, i) {
 }
 
 const ClientStories = () => (
-  <Section id="stories" stretch={true} backgroundColor="var(--color-background-secondary)">
+  <Section id="stories" stretch={true} backgroundColor="var(--color-background-inner)">
     <SectionContentBlock 
       heading="Are we worth it?"
       subheading="Hear what our clients have to say."

@@ -85,6 +85,6 @@ export default FormContact
 const styles = {
   formContact: {
     backgroundColor: 'var(--color-primary-light)',
-    // border: '2px solid var(--color-background-secondary)',
+    // border: '2px solid var(--color-background-inner)',
   },
 }

@@ -78,7 +78,7 @@ export default Portfolio
 
 const styles = {
   card: {
-    // backgroundColor: 'var(--color-background-secondary)',
+    // backgroundColor: 'var(--color-background-inner)',
     transition: 'all 0.3s ease 0s',
     // flexBasis: "23%", flexGrow: 0,
   },
