@@ -2,16 +2,16 @@ import Layout from "../../components/layout"
 import Section from "../../components/section"
 import SectionContentBlock from "../../components/sectionContentBlock"
 
-const Portfolio = () => (
+const Blog = () => (
   <Layout>
-    <Section id="portfolio">
+    <Section id="stories">
       <div className="row no-gutters">
         <SectionContentBlock
-          heading="Portfolio"
+          heading="Client Stories"
         />
       </div>
     </Section>
   </Layout>
 )
 
-export default Portfolio
+export default Blog

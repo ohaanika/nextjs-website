@@ -144,6 +144,7 @@ textarea {
 main {
     background-color: var(--color-background-primary);
     margin: var(--website-container-border);
+    min-height: calc(100vh - 2 * var(--website-container-border));
 }
 
 header, footer {
