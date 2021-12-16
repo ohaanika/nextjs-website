@@ -5,7 +5,6 @@ const About = () => (
   <Section id="about">
     <SectionContentBlock 
       heading="About"
-      subheading="Placeholder section."
     />
   </Section>
 )

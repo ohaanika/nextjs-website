@@ -105,8 +105,7 @@ const Team = () => (
       <div className="col-lg-3 col-md-12 col-sm-12">
         <SectionContentBlock 
           heading="Team"
-          subheading="Our team is made of... We are curious... 
-          We have all contributed to the Plotly and Dash libraries..."
+          subheading="Meet the humans behind the sparkle sparkle."
         />
       </div>
       <div className="col-lg-9 col-md-12 col-sm-12">

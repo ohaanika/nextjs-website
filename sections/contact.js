@@ -9,22 +9,10 @@ const Contact = () => (
       <div className="col-lg-6 col-md-12 col-sm-12 pr-lg-5">
         <SectionContentBlock 
           heading="Contact Us"
-          subheading="Schedule a call for a consulting estimate or send us a message about your next app idea!"
+          subheading="Want to work with us? Message us here or book a call to let us know what you have in mind."
         >
           <div className="row mt-3">
-            <Callout label="Schedule a call with us on Calendly >" link="#contact"/>
-          </div>
-          <div className="row mt-3">
-            or
-          </div>
-          <div className="row mt-3">
-            <Callout label="Email us at zyphr.form@gmail.com >" link="mailto:zyphr.form@gmail.com"/>
-          </div>
-          <div className="row mt-3">
-            or
-          </div>
-          <div className="row mt-3">
-            <Callout label="Message us by filling out this form"/>
+            <Callout label="Book a call on Calendly >" link="#contact"/>
           </div>
         </SectionContentBlock>
       </div>

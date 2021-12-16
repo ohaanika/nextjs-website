@@ -64,7 +64,7 @@ const Portfolio = () => (
     <div className="row no-gutters">
         <SectionContentBlock 
           heading="Portfolio"
-          subheading="Check out some of our Interactive Apps"
+          subheading="Check out some of our interactive apps."
         >
           <div className="row no-gutters">
             {PortfolioCardInfo.map((PortfolioCard, i) => displayPortfolioCard(PortfolioCard, i))}

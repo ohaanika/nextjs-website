@@ -5,7 +5,6 @@ const Services = () => (
   <Section id="services">
     <SectionContentBlock 
       heading="Services"
-      subheading="Placeholder section."
     />
   </Section>
 )
