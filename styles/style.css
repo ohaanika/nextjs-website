@@ -20,10 +20,11 @@
     /* --color-primary: #6371bd; */
     /* --color-primary-light: #aebfe0; */
     /* --color-primary-background: #E7EBF3; */
-    --color-2: #5e9bd4;
-    --color-2-light: #c3dbf0;
-    --color-3: #d47f5e;
-    --color-3-light: #f8e1d6;
+    /* --color-secondary-background: rgb(231, 219, 241); */
+    /* --color-2: #5e9bd4; */
+    /* --color-2-light: #c3dbf0; */
+    /* --color-3: #d47f5e; */
+    /* --color-3-light: #f8e1d6; */
     --website-container-border: 50px;
     --media-sm: 576px;
     --media-md: 768px;
@@ -148,7 +149,7 @@ textarea {
 }
 
 main {
-    background-color: var(--color-primary-background);
+    background-color: var(--color-background-inner);
     margin: var(--website-container-border);
     min-height: calc(100vh - 2 * var(--website-container-border));
 }

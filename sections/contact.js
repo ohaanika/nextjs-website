@@ -4,7 +4,7 @@ import FormContact from '../components/formContact'
 import Callout from '../components/callout'
 
 const Contact = () => (
-  <Section id="contact">
+  <Section id="contact" backgroundColor="var(--color-primary-background)">
     <div className="row no-gutters">
       <div className="col-lg-6 col-md-12 col-sm-12 pr-lg-5">
         <SectionContentBlock 
