@@ -214,6 +214,7 @@ section {
     padding: 100px 0;
 }
 section:first-child {
+    min-height: 600px;
     height: calc(100vh - 2 * var(--website-container-border));
     padding: 0;
     display: flex;
