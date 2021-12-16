@@ -44,7 +44,9 @@ function displayClientLogo(ClientLogo, i) {
   }
 
   return (
-    <div className="col-md-2 col-sm-12 mt-md-0 mb-md-0 ml-sm-0 mr-sm-0 m-2 justify-content-center align-content-center align-items-center" key={i}>
+    <div key={i}
+    className="col-md-2 col-sm-12 mt-md-0 mb-md-0 ml-sm-0 mr-sm-0 m-2 justify-content-center align-content-center align-items-center"
+    style={styles.logoImage}>
       <Link href={ClientLogo.link}><a target="_blank">{image}</a></Link>
     </div>
   )
@@ -60,3 +62,11 @@ const ClientLogos = () => (
 )
 
 export default ClientLogos
+
+const styles = {
+  logoImage: {
+    filter: "gray", /* IE6-9 */
+    WebkitFilter: "grayscale(1) contrast(0) brightness(0)", /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: "grayscale(1) contrast(0) brightness(0)", /* Microsoft Edge and Firefox 35+ */
+  },
+}
