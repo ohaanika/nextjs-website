@@ -52,13 +52,24 @@ function displayEmail() {
   )
 }
 
-const Footer = () => (
-  <footer>
-    <div>{displayEmail()}</div>
-    <div className="icons">
-      {SocialMediaIconInfo.map((SocialMediaIcon, i) => displaySocialMediaIcon(SocialMediaIcon, i))}
-    </div>
-  </footer>
-)
+const Footer = () => {
+  // const handleScrollBottom = (e) => {
+  //   if(e.target.scrollTop() < 100) {
+  //       e.target.fadeOut(1000);
+  //   } else {
+  //       e.target.fadeIn(1000);
+  //   }
+  // }
+
+  return (
+    <footer>
+      <div>{displayEmail()}</div>
+      {/* <div onScroll={handleScrollBottom}>{displayCopyrightMessage()}</div> */}
+      <div className="icons">
+        {SocialMediaIconInfo.map((SocialMediaIcon, i) => displaySocialMediaIcon(SocialMediaIcon, i))}
+      </div>
+    </footer>
+  )
+}
 
 export default Footer
