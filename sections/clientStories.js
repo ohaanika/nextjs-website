@@ -115,6 +115,7 @@ function createClientStoryCard(ClientStoryCard, i) {
       src={ClientStoryCard.logoImg}
       layout="fill" 
       objectFit="contain"
+      objectPosition="left"
     />
   }
 
@@ -126,9 +127,11 @@ function createClientStoryCard(ClientStoryCard, i) {
   return (
     <div style={styles.cardContent} key={i}>
       <div>{story}</div>
-      <h6 style={styles.cardContentName}>{ClientStoryCard.name}</h6>
-      <h6 style={styles.cardContentRole}>{ClientStoryCard.role}</h6>
-      {/* <div style={styles.cardContentLogoImg}>{image}</div> */}
+      <div>
+        <h6 style={styles.cardContentName}>{ClientStoryCard.name}</h6>
+        <h6 style={styles.cardContentRole}>{ClientStoryCard.role}</h6>
+        <div style={styles.cardContentLogoImg}>{image}</div>
+      </div>
     </div>
   )
 }
@@ -150,18 +153,26 @@ export default ClientStories
 const styles = {
   cardContent: {
     margin: "20px",
-  },
-  cardContentName: {
-    marginTop: "20px",
-  },
-  cardContentRole: {
-    color: "var(--color-primary)",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
   },
   cardContentStoryPara: {
     marginBottom: "10px",
   },
+  cardContentName: {
+    marginTop: "10px",
+  },
+  cardContentRole: {
+    color: "var(--color-primary)",
+  },
   cardContentLogoImg: {
-    height: "50px",
+    position: "relative",
+    marginTop: "10px",
+    height: "calc(var(--website-container-border) - 20px)",
     width: "auto",
+    filter: "gray", /* IE6-9 */
+    WebkitFilter: "grayscale(1) contrast(0) brightness(0)", /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: "grayscale(1) contrast(0) brightness(0)", /* Microsoft Edge and Firefox 35+ */
   }
 }
