@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { getSortedPostsData } from '../../lib/posts'
+import { getSortedPostsData } from '../../utils/posts'
 import Layout, { siteTitle } from '../../components/layout'
 import Date from '../../components/posts/date'
 import postStyles from '../../components/posts/posts.module.css'
