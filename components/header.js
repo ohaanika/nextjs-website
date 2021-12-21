@@ -16,12 +16,16 @@ const navLinkInfo = [
     label: 'Team',
   },
   {
+    path: '/#stories',
+    label: 'Stories',
+  },
+  {
     path: '/#portfolio',
     label: 'Portfolio',
   },
   {
-    path: '/#stories',
-    label: 'Stories',
+    path: '/blog',
+    label: 'Blog',
   },
   {
     path: '/#contact',
