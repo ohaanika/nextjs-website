@@ -2,38 +2,35 @@ import Image from 'next/image'
 
 const SocialMediaIconInfo = [
   {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/company/zyphr-solutions-inc/",
-    img: "/images/icons/social-linkedin.svg",
+    name: 'LinkedIn',
+    link: 'https://www.linkedin.com/company/zyphr-solutions-inc/',
+    img: '/images/icons/social-linkedin.svg',
   },
   {
-    name: "Medium",
-    link: "https://medium.com/zyphr-solutions",
-    img: "/images/icons/social-medium.svg",
+    name: 'Medium',
+    link: 'https://medium.com/zyphr-solutions',
+    img: '/images/icons/social-medium.svg',
   },
   {
-    name: "GitHub",
-    link: "https://github.com/zyphr-solutions/",
-    img: "/images/icons/social-github.svg",
+    name: 'GitHub',
+    link: 'https://github.com/zyphr-solutions/',
+    img: '/images/icons/social-github.svg',
   },
 ]
 
 function displaySocialMediaIcon(SocialMediaIcon, i) {
   return (
-    <div key={i} style={{
-      position: "relative",
-      height: "1.2em",
-      width: "1.2em",
-      marginLeft: "10px",
-    }}> 
+    <div
+      key={i}
+      style={{
+        position: 'relative',
+        height: '1.2em',
+        width: '1.2em',
+        marginLeft: '10px',
+      }}
+    >
       <a href={SocialMediaIcon.link} target="_blank">
-      <Image
-        src={SocialMediaIcon.img}
-        alt={SocialMediaIcon.name}
-        layout="fill" 
-        objectFit="contain"
-        objectPosition="right"
-      />
+        <Image src={SocialMediaIcon.img} alt={SocialMediaIcon.name} layout="fill" objectFit="contain" objectPosition="right" />
       </a>
     </div>
   )
@@ -41,14 +38,14 @@ function displaySocialMediaIcon(SocialMediaIcon, i) {
 
 function displayCopyrightMessage() {
   let currentYear = new Date().getFullYear()
-  return (
-    <p>© {currentYear} Zyphr Solutions Inc. All Rights Reserved.</p>
-  )
+  return <p>© {currentYear} Zyphr Solutions Inc. All Rights Reserved.</p>
 }
 
 function displayEmail() {
   return (
-    <a style={{textDecoration: "none", color: "var(--color-text)"}} href="mailto:zyphr.form@gmail.com">zyphr.form@gmail.com</a>
+    <a style={{ textDecoration: 'none', color: 'var(--color-text)' }} href="mailto:zyphr.form@gmail.com">
+      zyphr.form@gmail.com
+    </a>
   )
 }
 
@@ -65,9 +62,7 @@ const Footer = () => {
     <footer>
       <div>{displayEmail()}</div>
       {/* <div onScroll={handleScrollBottom}>{displayCopyrightMessage()}</div> */}
-      <div className="icons">
-        {SocialMediaIconInfo.map((SocialMediaIcon, i) => displaySocialMediaIcon(SocialMediaIcon, i))}
-      </div>
+      <div className="icons">{SocialMediaIconInfo.map((SocialMediaIcon, i) => displaySocialMediaIcon(SocialMediaIcon, i))}</div>
     </footer>
   )
 }

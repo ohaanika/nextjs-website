@@ -1,6 +1,6 @@
 import styles from './carousel.module.css'
 
-const Carousel = ({carouselCardList}) => {
+const Carousel = ({ carouselCardList }) => {
   let isDown = false
   let startX
   let scrollLeft
@@ -23,7 +23,9 @@ const Carousel = ({carouselCardList}) => {
   }
 
   const handleMouseMove = (e) => {
-    if (!isDown) {return}
+    if (!isDown) {
+      return
+    }
     e.preventDefault()
     const x = e.pageX - e.target.offsetLeft
     const SCROLL_SPEED = 5
@@ -31,7 +33,7 @@ const Carousel = ({carouselCardList}) => {
     e.target.scrollLeft = scrollLeft - walk
   }
 
-  const backgroundColorOptions = ["#f6bd60", "#f7ede2", "#f5cac3", "#84a59d", "#f28482"]
+  const backgroundColorOptions = ['#f6bd60', '#f7ede2', '#f5cac3', '#84a59d', '#f28482']
 
   function displayCarouselCard(CarouselCard, i) {
     return (
@@ -46,12 +48,7 @@ const Carousel = ({carouselCardList}) => {
 
   return (
     <div>
-      <div className={styles.gallery} 
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseLeave}
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      >
+      <div className={styles.gallery} onMouseUp={handleMouseUp} onMouseLeave={handleMouseLeave} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove}>
         {carouselCardList.map((CarouselCard, i) => displayCarouselCard(CarouselCard, i))}
       </div>
     </div>

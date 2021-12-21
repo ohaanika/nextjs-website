@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import PlaceholderLogo from "./placeholders/placeholderLogo"
 
 const navLinkInfo = [
   {
@@ -45,22 +44,21 @@ function displayNavLink(navLink, i) {
 
 const Header = () => (
   <header>
-    <div style={{height: "calc(var(--website-container-border) - 20px)", width: "100px", position: "relative"}}>
+    <div
+      style={{
+        height: 'calc(var(--website-container-border) - 20px)',
+        width: '100px',
+        position: 'relative',
+      }}
+    >
       <Link href="/">
         <a>
-          <Image
-            src={"/images/logos/logo-name-black.svg"}
-            layout="fill" 
-            objectFit="contain"
-            objectPosition="left"
-          />
+          <Image src={'/images/logos/logo-name-black.svg'} layout="fill" objectFit="contain" objectPosition="left" />
         </a>
       </Link>
     </div>
     <nav>
-      <ul>
-        {navLinkInfo.map((navLink, i) => displayNavLink(navLink, i))}
-      </ul>
+      <ul>{navLinkInfo.map((navLink, i) => displayNavLink(navLink, i))}</ul>
     </nav>
   </header>
 )

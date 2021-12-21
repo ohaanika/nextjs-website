@@ -1,11 +1,11 @@
-import Header from "./header"
-import Footer from "./footer"
+import Header from './header'
+import Footer from './footer'
 
-const Layout = props => (
+const Layout = (props) => (
   <div className="layout">
-    <Header/>
+    <Header />
     <main>{props.children}</main>
-    <Footer/>
+    <Footer />
   </div>
 )
 
