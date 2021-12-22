@@ -88,6 +88,13 @@ h6 {
 p {
   font-size: 1em;
   line-height: 1.2;
+  margin: 1em 0;
+}
+p:first-child {
+  margin-top: 0;
+}
+p:last-child {
+  margin-bottom: 0;
 }
 
 a {
@@ -101,6 +108,15 @@ a:hover {
 b {
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
+}
+
+code {
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--color-primary);
+  background-color: var(--color-primary-background);
+  border-radius: 5%;
+  padding: 0.1em;
 }
 
 button {
