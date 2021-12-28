@@ -188,7 +188,7 @@ footer {
   width: calc(100% - 2 * var(--website-container-border));
   margin: 0 var(--website-container-border);
   position: fixed;
-  z-index: 99999;
+  z-index: 9998;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
