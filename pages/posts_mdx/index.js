@@ -1,16 +1,38 @@
 import Link from 'next/link'
 import { getAllPosts } from '../../utils/posts_mdx'
 import Layout from '../../components/layout'
+import Meta from '../../components/meta'
 import Section from '../../components/section'
+import SectionContentBlock from '../../components/sectionContentBlock'
 import Date from '../../components/posts/date'
 import postStyles from '../../components/posts/posts.module.css'
 
 export default function BlogList({ posts }) {
   return (
     <Layout>
+      <Meta />
       <Section>
-        <div className={`${postStyles.headingMd} ${postStyles.padding1px}`}>
-          <h2 className={postStyles.headingLg}>Blog</h2>
+        <div>
+          <h3>Blog</h3>
+          <div>
+            {posts.map((post, index) => (
+              <div key={index} style={{ margin: '20px 0', lineHeight: 1.5 }} className={postStyles.metadata}>
+                <Link href={`/posts_mdx/${post.slug}`}>
+                  <a style={{ fontSize: '1rem', fontWeight: 'var(--font-weight-normal)', textDecoration: 'none', color: 'var(--color-text)' }}>
+                    <div className="row" style={{ fontSize: '1.25em', fontWeight: 'var(--font-weight-bold)', color: 'var(--color-primary)' }}>
+                      {post.frontmatter.title}
+                    </div>
+                    <div className="row" style={{}}>
+                      <Date dateString={post.frontmatter.date} />
+                    </div>
+                  </a>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* <div className={`${postStyles.headingMd} ${postStyles.padding1px}`}>
+          <h2>Blog</h2>
           <ul className={postStyles.list}>
             {posts.map((post, index) => (
               <li className={postStyles.listItem} key={index}>
@@ -24,7 +46,7 @@ export default function BlogList({ posts }) {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </Section>
     </Layout>
     // <div className="wrapper">

@@ -5,6 +5,7 @@ import { getMDXComponent } from 'mdx-bundler/client'
 import { getAllPosts, getSinglePost } from '../../utils/posts_mdx'
 import Head from 'next/head'
 import Layout from '../../components/layout'
+import Meta from '../../components/meta'
 import Date from '../../components/posts/date'
 import postStyles from '../../components/posts/posts.module.css'
 
@@ -24,14 +25,16 @@ const Post = ({ code, frontmatter }) => {
   const Component = React.useMemo(() => getMDXComponent(code), [code])
   return (
     <Layout>
-      <Head>
-        <title>{frontmatter.title}</title>
-      </Head>
+      <Meta title={frontmatter.title} description={frontmatter.title} />
       <article>
-        <h1 className={postStyles.headingXl}>{frontmatter.title}</h1>
-        <div className={postStyles.lightText}>
-          <Date dateString={frontmatter.date} />
+        <div className={postStyles.metadata}>
+          <h1 className={postStyles.title}>{frontmatter.title}</h1>
+          <div className={postStyles.date}>
+            <Date dateString={frontmatter.date} />
+          </div>
         </div>
+        <br />
+        <hr />
         <Component
           components={{
             a: CustomLink,

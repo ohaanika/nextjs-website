@@ -3,7 +3,10 @@
 */
 
 :root {
-  --font-family: 'Poppins', 'Open Sans', sans-serif;
+  --font-family: var(--font-family-sans-serif);
+  --font-family-serif: 'Georgia', serif;
+  --font-family-sans-serif: 'Poppins', 'Open Sans', sans-serif;
+  --font-family-monospace: 'Source Code Pro', monospace;
   --font-size: 14px;
   --font-weight-normal: 300;
   --font-weight-bold: 600;
@@ -108,15 +111,6 @@ a:hover {
 b {
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
-}
-
-code {
-  font-weight: var(--font-weight-bold);
-  line-height: 1.2;
-  color: var(--color-primary);
-  background-color: var(--color-primary-background);
-  border-radius: 5%;
-  padding: 0.1em;
 }
 
 button {
@@ -256,6 +250,39 @@ section:first-child {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+}
+
+article {
+  font-family: var(--font-family);
+  font-size: 1.3em;
+  line-height: 1.5em;
+  padding: 200px 20%;
+}
+article p {
+  line-height: 1.5em;
+}
+article h1 {
+  font-size: 2em;
+  font-weight: var(--font-weight-bold);
+}
+article h2 {
+  font-size: 1.5em;
+  font-weight: var(--font-weight-normal);
+}
+article h3,
+article h4,
+article h5,
+article h6 {
+  font-size: 1em;
+  font-weight: var(--font-weight-bold);
+}
+article code {
+  font-family: var(--font-family-monospace);
+  font-weight: 500;
+  color: var(--color-primary);
+  background-color: var(--color-primary-background);
+  border-radius: 0.5em;
+  padding: 0.2em;
 }
 
 footer .icons {
