@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { getMDXComponent } from 'mdx-bundler/client'
 import { getAllPosts, getSinglePost } from '../../utils/posts_mdx'
 import Head from 'next/head'
@@ -13,6 +14,10 @@ const CustomLink = ({ as, href, ...otherProps }) => {
       <a {...otherProps} className="custom-link" />
     </Link>
   )
+}
+
+const CustomImage = ({ src, ...otherProps }) => {
+  return <Image src={src} {...otherProps} />
 }
 
 const Post = ({ code, frontmatter }) => {
@@ -30,6 +35,7 @@ const Post = ({ code, frontmatter }) => {
         <Component
           components={{
             a: CustomLink,
+            img: CustomImage,
           }}
         />
         {/* <div dangerouslySetInnerHTML={{ __html: frontmatter.contentHtml }} /> */}

@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { bundleMDX } from 'mdx-bundler'
+import { remarkMdxImages } from 'remark-mdx-images'
 
 export const POSTS_PATH = path.join(process.cwd(), 'data', 'posts_mdx')
 
@@ -33,6 +34,17 @@ export const getSinglePost = async (slug) => {
   const { code, frontmatter } = await bundleMDX({
     source: source,
     cwd: path.join(POSTS_PATH, slug),
+    xdmOptions: (options) => {
+      options.remarkPlugins = [...(options.remarkPlugins ?? []), remarkMdxImages]
+      return options
+    },
+    esbuildOptions: (options) => {
+      options.loader = {
+        ...options.loader,
+        '.png': 'dataurl',
+      }
+      return options
+    },
   })
 
   return {
