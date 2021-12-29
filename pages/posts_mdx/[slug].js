@@ -11,7 +11,7 @@ import postStyles from '../../components/posts/posts.module.css'
 const CustomLink = ({ as, href, ...otherProps }) => {
   return (
     <Link as={as} href={href}>
-      <a {...otherProps} className="custom-link" />
+      <a {...otherProps} />
     </Link>
   )
 }
