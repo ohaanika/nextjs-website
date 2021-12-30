@@ -21,6 +21,14 @@ const CustomImage = ({ src, ...otherProps }) => {
   return <Image src={src} {...otherProps} />
 }
 
+const CustomCodeBlock = ({ syntax = 'python', children }) => {
+  return (
+    <div style={{ margin: '40px -100px', padding: '20px 40px', overflowY: 'auto', backgroundColor: 'var(--color-primary-background)', borderRadius: '0.5em' }}>
+      <code className={`language-${syntax}`}>{children}</code>
+    </div>
+  )
+}
+
 const Post = ({ code, frontmatter }) => {
   const Component = React.useMemo(() => getMDXComponent(code), [code])
   return (
@@ -39,6 +47,7 @@ const Post = ({ code, frontmatter }) => {
           components={{
             a: CustomLink,
             img: CustomImage,
+            CodeBlock: CustomCodeBlock,
           }}
         />
         {/* <div dangerouslySetInnerHTML={{ __html: frontmatter.contentHtml }} /> */}

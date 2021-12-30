@@ -282,7 +282,7 @@ article code {
   color: var(--color-primary);
   background-color: var(--color-primary-background);
   border-radius: 0.5em;
-  padding: 0.2em;
+  padding: 0.2em 0.4em;
 }
 
 footer .icons {
