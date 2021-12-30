@@ -31,7 +31,7 @@ const CustomImageBlock = ({ children }) => {
 
 const CustomCodeBlock = ({ syntax = 'python', children }) => {
   return (
-    <div style={{ margin: '40px -100px', padding: '20px 40px', overflowY: 'auto', backgroundColor: 'var(--color-primary-background)', borderRadius: '0.5em' }}>
+    <div style={{ margin: '40px -100px', padding: '20px 40px', overflowY: 'auto', backgroundColor: 'var(--color-primary-background)' }}>
       <code className={`language-${syntax}`}>{children}</code>
     </div>
   )

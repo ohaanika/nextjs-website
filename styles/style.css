@@ -281,7 +281,6 @@ article code {
   font-weight: 500;
   color: var(--color-primary);
   background-color: var(--color-primary-background);
-  border-radius: 0.5em;
   padding: 0.2em 0.4em;
 }
 
