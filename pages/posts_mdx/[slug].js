@@ -21,6 +21,14 @@ const CustomImage = ({ src, ...otherProps }) => {
   return <Image src={src} {...otherProps} />
 }
 
+const CustomImageBlock = ({ children }) => {
+  return (
+    <div className="row" style={{ margin: '40px -100px' }}>
+      {children}
+    </div>
+  )
+}
+
 const CustomCodeBlock = ({ syntax = 'python', children }) => {
   return (
     <div style={{ margin: '40px -100px', padding: '20px 40px', overflowY: 'auto', backgroundColor: 'var(--color-primary-background)', borderRadius: '0.5em' }}>
@@ -47,6 +55,7 @@ const Post = ({ code, frontmatter }) => {
           components={{
             a: CustomLink,
             img: CustomImage,
+            ImageBlock: CustomImageBlock,
             CodeBlock: CustomCodeBlock,
           }}
         />
