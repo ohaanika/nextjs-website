@@ -50,7 +50,6 @@ const Post = ({ code, frontmatter }) => {
           </div>
         </div>
         <br />
-        <hr />
         <Component
           components={{
             a: CustomLink,
