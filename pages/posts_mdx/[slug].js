@@ -7,7 +7,6 @@ import Head from 'next/head'
 import Layout from '../../components/layout'
 import Meta from '../../components/meta'
 import Date from '../../components/posts/date'
-import postStyles from '../../components/posts/posts.module.css'
 
 const CustomLink = ({ as, href, ...otherProps }) => {
   return (
@@ -43,9 +42,9 @@ const Post = ({ code, frontmatter }) => {
     <Layout>
       <Meta title={frontmatter.title} description={frontmatter.title} />
       <article>
-        <div className={postStyles.metadata}>
-          <h1 className={postStyles.title}>{frontmatter.title}</h1>
-          <div className={postStyles.date}>
+        <div>
+          <h1>{frontmatter.title}</h1>
+          <div>
             <Date dateString={frontmatter.date} />
           </div>
         </div>

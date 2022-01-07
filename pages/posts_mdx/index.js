@@ -5,7 +5,6 @@ import Meta from '../../components/meta'
 import Section from '../../components/section'
 import SectionContentBlock from '../../components/sectionContentBlock'
 import Date from '../../components/posts/date'
-import postStyles from '../../components/posts/posts.module.css'
 
 export default function BlogList({ posts }) {
   return (
@@ -16,7 +15,7 @@ export default function BlogList({ posts }) {
           <h3>Blog</h3>
           <div>
             {posts.map((post, index) => (
-              <div key={index} style={{ margin: '20px 0', lineHeight: 1.5 }} className={postStyles.metadata}>
+              <div key={index} style={{ margin: '20px 0', lineHeight: 1.5 }}>
                 <Link href={`/posts_mdx/${post.slug}`}>
                   <a style={{ fontSize: '1rem', fontWeight: 'var(--font-weight-normal)', textDecoration: 'none', color: 'var(--color-text)' }}>
                     <div className="row" style={{ fontSize: '1.25em', fontWeight: 'var(--font-weight-bold)', color: 'var(--color-primary)' }}>
@@ -31,16 +30,16 @@ export default function BlogList({ posts }) {
             ))}
           </div>
         </div>
-        {/* <div className={`${postStyles.headingMd} ${postStyles.padding1px}`}>
+        {/* <div>
           <h2>Blog</h2>
-          <ul className={postStyles.list}>
+          <ul>
             {posts.map((post, index) => (
-              <li className={postStyles.listItem} key={index}>
+              <li key={index}>
                 <Link href={`/posts_mdx/${post.slug}`}>
                   <a>{post.frontmatter.title}</a>
                 </Link>
                 <br />
-                <small className={postStyles.lightText}>
+                <small>
                   <Date dateString={post.frontmatter.date} />
                 </small>
               </li>
