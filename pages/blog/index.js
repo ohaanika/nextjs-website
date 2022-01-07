@@ -23,12 +23,11 @@ const Blog = ({ posts }) => (
             <div key={index} style={{ margin: '20px 0', lineHeight: 1.5 }}>
               <Link href={`/blog/${post.slug}`}>
                 <a style={{ fontSize: '1rem', fontWeight: 'var(--font-weight-normal)', textDecoration: 'none', color: 'var(--color-text)' }}>
-                  <div className="row" style={{ fontSize: '1.25em', fontWeight: 'var(--font-weight-bold)' }}>
-                    {post.frontmatter.title}
-                  </div>
-                  <div className="row" style={{}}>
+                  <p style={{ fontSize: '1.25em', fontWeight: 'var(--font-weight-bold)' }}>{post.frontmatter.title}</p>
+                  <p style={{ color: 'var(--color-monotone)' }}>{post.frontmatter.subtitle}</p>
+                  <p style={{}}>
                     <Date dateString={post.frontmatter.date} />
-                  </div>
+                  </p>
                 </a>
               </Link>
             </div>

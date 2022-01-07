@@ -17,6 +17,9 @@
   --color-primary: #218380;
   --color-primary-light: #79bbb6;
   --color-primary-background: #d2e6e5;
+  --color-monotone: rgb(100, 100, 100);
+  --color-monotone-light: rgb(150, 150, 150);
+  --color-monotone-background: rgb(230, 230, 230);
   /* --color-primary: #62ad94; */
   /* --color-primary-light: #c1e2d7; */
   /* --color-primary-background: rgb(233, 243, 240); */
@@ -250,9 +253,10 @@ article {
   font-family: var(--font-family);
   font-size: 1.2em;
   line-height: 1.5em;
-  padding: 200px 20%;
+  padding: 200px 25%;
 }
 article p {
+  margin: 10px 0;
   line-height: 1.5em;
 }
 article h1 {
@@ -260,6 +264,7 @@ article h1 {
   font-weight: var(--font-weight-bold);
 }
 article h2 {
+  margin-top: 60px;
   font-size: 1.5em;
   font-weight: var(--font-weight-normal);
 }
@@ -267,14 +272,15 @@ article h3,
 article h4,
 article h5,
 article h6 {
+  margin-top: 40px;
   font-size: 1em;
   font-weight: var(--font-weight-bold);
 }
 article code {
   font-family: var(--font-family-monospace);
   font-weight: 500;
-  color: var(--color-primary);
-  background-color: var(--color-primary-background);
+  color: var(--color-text);
+  background-color: var(--color-monotone-background);
   padding: 0.2em 0.4em;
 }
 

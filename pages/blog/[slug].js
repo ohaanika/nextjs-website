@@ -36,7 +36,7 @@ const CustomImage = ({ src, ...otherProps }) => {
 
 const CustomImageBlock = ({ children }) => {
   return (
-    <div className="row" style={{ margin: '40px -100px' }}>
+    <div className="row" style={{ margin: '20px -10vw' }}>
       {children}
     </div>
   )
@@ -44,7 +44,7 @@ const CustomImageBlock = ({ children }) => {
 
 const CustomCodeBlock = ({ syntax = 'python', children }) => {
   return (
-    <div style={{ margin: '40px -100px', padding: '20px 40px', overflowY: 'auto', backgroundColor: 'var(--color-primary-background)' }}>
+    <div style={{ margin: '20px 0', padding: '10px 30px', overflowY: 'auto', backgroundColor: 'var(--color-monotone-background)' }}>
       <code className={`language-${syntax}`}>{children}</code>
     </div>
   )
@@ -54,15 +54,17 @@ const Post = ({ code, frontmatter }) => {
   const Component = useMemo(() => getMDXComponent(code), [code])
   return (
     <Layout>
-      <Meta title={frontmatter.title} description={frontmatter.title} />
+      <Meta title={frontmatter.title} description={frontmatter.subtitle} />
       <article>
-        <div>
+        <div style={{ margin: '0 0 60px 0' }}>
           <h1>{frontmatter.title}</h1>
+          <p className="row" style={{ fontStyle: 'italic', color: 'var(--color-monotone)' }}>
+            {frontmatter.subtitle}
+          </p>
           <div>
             <Date dateString={frontmatter.date} />
           </div>
         </div>
-        <br />
         <Component
           components={{
             a: CustomLink,
