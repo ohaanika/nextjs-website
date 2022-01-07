@@ -7,7 +7,7 @@ import { remarkMdxImages } from 'remark-mdx-images'
 const getAllPostSlugs = (category) => {
   const blogPath = path.join(process.cwd(), 'data', category)
 
-  // get directory names for each post
+  // get directory name as slug for each post
   return readdirSync(blogPath, { withFileTypes: true })
     .filter((dirent) => dirent.isDirectory())
     .map((dirent) => dirent.name)
@@ -16,7 +16,7 @@ const getAllPostSlugs = (category) => {
 export const getAllPostPaths = (category) => {
   const allSlugs = getAllPostSlugs(category)
 
-  // get paths for each post
+  // prepare path for each post
   return allSlugs.map((slug) => {
     return {
       params: {
