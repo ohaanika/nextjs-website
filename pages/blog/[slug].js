@@ -1,12 +1,26 @@
-import React from 'react'
+import { useMemo } from 'react'
+import { getMDXComponent } from 'mdx-bundler/client'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getMDXComponent } from 'mdx-bundler/client'
-import { getAllPosts, getSinglePost } from '../../utils/posts_mdx'
-import Head from 'next/head'
+import { getAllPostPaths, getSinglePostData } from '../../utils/blog'
 import Layout from '../../components/layout'
 import Meta from '../../components/meta'
-import Date from '../../components/posts/date'
+import Date from '../../components/blog/date'
+
+export const getStaticProps = async ({ params }) => {
+  const post = await getSinglePostData(params.slug)
+  return {
+    props: { ...post },
+  }
+}
+
+export const getStaticPaths = async () => {
+  const paths = getAllPostPaths()
+  return {
+    paths,
+    fallback: false,
+  }
+}
 
 const CustomLink = ({ as, href, ...otherProps }) => {
   return (
@@ -37,7 +51,7 @@ const CustomCodeBlock = ({ syntax = 'python', children }) => {
 }
 
 const Post = ({ code, frontmatter }) => {
-  const Component = React.useMemo(() => getMDXComponent(code), [code])
+  const Component = useMemo(() => getMDXComponent(code), [code])
   return (
     <Layout>
       <Meta title={frontmatter.title} description={frontmatter.title} />
@@ -57,25 +71,9 @@ const Post = ({ code, frontmatter }) => {
             CodeBlock: CustomCodeBlock,
           }}
         />
-        {/* <div dangerouslySetInnerHTML={{ __html: frontmatter.contentHtml }} /> */}
       </article>
     </Layout>
   )
-}
-
-export const getStaticProps = async ({ params }) => {
-  const post = await getSinglePost(params.slug)
-  return {
-    props: { ...post },
-  }
-}
-
-export const getStaticPaths = async () => {
-  const paths = getAllPosts().map(({ slug }) => ({ params: { slug } }))
-  return {
-    paths,
-    fallback: false,
-  }
 }
 
 export default Post
