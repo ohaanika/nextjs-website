@@ -3,6 +3,7 @@ import { readdirSync, readFileSync } from 'fs'
 import matter from 'gray-matter'
 import { bundleMDX } from 'mdx-bundler'
 import { remarkMdxImages } from 'remark-mdx-images'
+import readingTime from 'reading-time'
 
 const getAllPostSlugs = (category) => {
   const blogPath = path.join(process.cwd(), 'data', category)
@@ -41,17 +42,21 @@ export const getAllPostData = (category) => {
     const { data } = matter(fileContent)
 
     return {
-      frontmatter: data,
+      // add reading time and word count as frontmatter
+      frontmatter: {
+        wordCount: fileContent.split(/\s+/gu).length,
+        readingTime: readingTime(fileContent),
+        ...data,
+      },
       slug: slug,
-      date: data.date,
     }
   })
 
   // sort posts by date
-  return allPosts.sort(({ date: a }, { date: b }) => {
-    if (a < b) {
+  return allPosts.sort(({ frontmatter: a }, { frontmatter: b }) => {
+    if (a.date < b.date) {
       return 1
-    } else if (a > b) {
+    } else if (a.date > b.date) {
       return -1
     } else {
       return 0
@@ -90,7 +95,12 @@ export const getSinglePostData = async (category, slug) => {
   })
 
   return {
-    frontmatter,
-    code,
+    // add reading time and word count as frontmatter
+    frontmatter: {
+      wordCount: fileContent.split(/\s+/gu).length,
+      readingTime: readingTime(fileContent),
+      ...frontmatter,
+    },
+    code: code,
   }
 }
