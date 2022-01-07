@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import { getAllPostData } from '../../utils/blog'
+import { getAllPostData } from '../../utils/mdx'
 import Layout from '../../components/layout'
 import Section from '../../components/section'
 import Date from '../../components/blog/date'
 
 export const getStaticProps = async () => {
-  const posts = getAllPostData()
+  const posts = getAllPostData('blog')
   return {
     props: {
       posts,

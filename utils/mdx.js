@@ -4,9 +4,9 @@ import matter from 'gray-matter'
 import { bundleMDX } from 'mdx-bundler'
 import { remarkMdxImages } from 'remark-mdx-images'
 
-const blogPath = path.join(process.cwd(), 'data', 'blog')
+const getAllPostSlugs = (category) => {
+  const blogPath = path.join(process.cwd(), 'data', category)
 
-const getAllPostSlugs = () => {
   // get directory names for each post
   return fs
     .readdirSync(blogPath, { withFileTypes: true })
@@ -14,8 +14,8 @@ const getAllPostSlugs = () => {
     .map((dirent) => dirent.name)
 }
 
-export const getAllPostPaths = () => {
-  const allSlugs = getAllPostSlugs()
+export const getAllPostPaths = (category) => {
+  const allSlugs = getAllPostSlugs(category)
 
   // get paths for each post
   return allSlugs.map((slug) => {
@@ -27,8 +27,9 @@ export const getAllPostPaths = () => {
   })
 }
 
-export const getAllPostData = () => {
-  const allSlugs = getAllPostSlugs()
+export const getAllPostData = (category) => {
+  const blogPath = path.join(process.cwd(), 'data', category)
+  const allSlugs = getAllPostSlugs(category)
 
   // get data for each post
   const allPosts = allSlugs.map((slug) => {
@@ -59,7 +60,9 @@ export const getAllPostData = () => {
   })
 }
 
-export const getSinglePostData = async (slug) => {
+export const getSinglePostData = async (category, slug) => {
+  const blogPath = path.join(process.cwd(), 'data', category)
+
   // read markdown file as string
   const dirPath = path.join(blogPath, slug)
   const filePath = path.join(dirPath, 'index.mdx')

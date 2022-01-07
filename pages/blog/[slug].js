@@ -2,20 +2,20 @@ import { useMemo } from 'react'
 import { getMDXComponent } from 'mdx-bundler/client'
 import Link from 'next/link'
 import Image from 'next/image'
-import { getAllPostPaths, getSinglePostData } from '../../utils/blog'
+import { getAllPostPaths, getSinglePostData } from '../../utils/mdx'
 import Layout from '../../components/layout'
 import Meta from '../../components/meta'
 import Date from '../../components/blog/date'
 
 export const getStaticProps = async ({ params }) => {
-  const post = await getSinglePostData(params.slug)
+  const post = await getSinglePostData('blog', params.slug)
   return {
     props: { ...post },
   }
 }
 
 export const getStaticPaths = async () => {
-  const paths = getAllPostPaths()
+  const paths = getAllPostPaths('blog')
   return {
     paths,
     fallback: false,
