@@ -1,5 +1,5 @@
-import fs from 'fs'
 import path from 'path'
+import { readdirSync, readFileSync } from 'fs'
 import matter from 'gray-matter'
 import { bundleMDX } from 'mdx-bundler'
 import { remarkMdxImages } from 'remark-mdx-images'
@@ -8,8 +8,7 @@ const getAllPostSlugs = (category) => {
   const blogPath = path.join(process.cwd(), 'data', category)
 
   // get directory names for each post
-  return fs
-    .readdirSync(blogPath, { withFileTypes: true })
+  return readdirSync(blogPath, { withFileTypes: true })
     .filter((dirent) => dirent.isDirectory())
     .map((dirent) => dirent.name)
 }
@@ -36,7 +35,7 @@ export const getAllPostData = (category) => {
     // read markdown file as string
     const dirPath = path.join(blogPath, slug)
     const filePath = path.join(dirPath, 'index.mdx')
-    const fileContent = fs.readFileSync(filePath, 'utf-8').trim()
+    const fileContent = readFileSync(filePath, 'utf-8').trim()
 
     // use gray-matter to parse frontmatter
     const { data } = matter(fileContent)
@@ -66,7 +65,7 @@ export const getSinglePostData = async (category, slug) => {
   // read markdown file as string
   const dirPath = path.join(blogPath, slug)
   const filePath = path.join(dirPath, 'index.mdx')
-  const fileContent = fs.readFileSync(filePath, 'utf-8').trim()
+  const fileContent = readFileSync(filePath, 'utf-8').trim()
 
   // acknowledge remark and rehype plugins
   const remarkPlugins = [remarkMdxImages]
