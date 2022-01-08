@@ -1,6 +1,6 @@
 import Section from '../components/section'
 import SectionContentBlock from '../components/sectionContentBlock'
-import FormContact from '../components/formContact'
+import FormContact from '../components/forms/formContact'
 import CalloutCalendly from '../components/callouts/calloutCalendly'
 
 const Contact = () => (

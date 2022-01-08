@@ -143,6 +143,19 @@ button:hover a {
   color: var(--color-primary);
 }
 
+fieldset {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 1.5rem;
+  min-inline-size: min-content;
+  border: 0;
+}
+fieldset > * {
+  margin-top: 0.5rem;
+}
 label {
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
@@ -156,7 +169,7 @@ select {
   font-size: 1em;
   color: var(--color-text);
   background-color: var(--color-background-outer);
-  border: 2px solid var(--color-primary-light);
+  border: 0px solid var(--color-primary-light);
   padding: 10px;
   width: 100%;
 }
