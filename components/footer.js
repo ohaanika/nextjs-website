@@ -20,19 +20,18 @@ const SocialMediaIconInfo = [
 
 function displaySocialMediaIcon(SocialMediaIcon, i) {
   return (
-    <div
-      key={i}
-      style={{
-        position: 'relative',
-        height: '1.2em',
-        width: '1.2em',
-        marginLeft: '10px',
-      }}
-    >
-      <a href={SocialMediaIcon.link} target="_blank">
+    <a key={i} href={SocialMediaIcon.link} target="_blank">
+      <div
+        style={{
+          position: 'relative',
+          height: '1.2em',
+          width: '1.2em',
+          marginLeft: '10px',
+        }}
+      >
         <Image src={SocialMediaIcon.img} alt={SocialMediaIcon.name} layout="fill" objectFit="contain" objectPosition="right" />
-      </a>
-    </div>
+      </div>
+    </a>
   )
 }
 
