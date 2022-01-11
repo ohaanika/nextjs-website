@@ -45,6 +45,8 @@ const handler = async (req, res) => {
       console.log(`Email sent successfully: ${response}`)
     }
   })
+
+  res.status(200).end()
 }
 
 export const config = {
