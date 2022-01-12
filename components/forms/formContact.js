@@ -8,7 +8,7 @@ const FormContact = () => {
   const [affiliation, setAffiliation] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const [method, setMethod] = useState('default')
+  const [method, setMethod] = useState('')
   const [loading, setLoading] = useState(false)
 
   const sendEmail = async (e) => {
@@ -85,9 +85,9 @@ const FormContact = () => {
           <textarea id="message" name="message" type="text" placeholder="Write your message here..." required value={message} onChange={(e) => setMessage(e.target.value)} />
         </fieldset>
         <fieldset>
-          <label htmlFor="method">How did you hear about us?</label>
-          <select name="method" id="method" value={method} onChange={(e) => setMethod(e.target.value)}>
-            <option value="default" disabled>
+          <label htmlFor="method">How did you hear about us? {label_required}</label>
+          <select name="method" id="method" required value={method} onChange={(e) => setMethod(e.target.value)}>
+            <option value="" disabled>
               -- Select an Option --
             </option>
             <option value="Plotly">Plotly</option>
