@@ -60,7 +60,8 @@ const FormContact = () => {
       setMessage('')
       setMethod('')
     } catch (error) {
-      console.log('Error!')
+      console.log('Error:')
+      throw new Error(error.message)
     } finally {
       setLoading(false)
     }
