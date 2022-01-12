@@ -48,7 +48,6 @@ const FormContact = () => {
       const responseData = await response.json()
 
       if (responseData.error) {
-        console.log('Error:')
         throw new Error(responseData.error)
       }
 
@@ -60,7 +59,6 @@ const FormContact = () => {
       setMessage('')
       setMethod('')
     } catch (error) {
-      console.log('Error:')
       throw new Error(error.message)
     } finally {
       setLoading(false)
