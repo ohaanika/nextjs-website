@@ -1,11 +1,9 @@
-import Section from '../components/section'
-import SectionContentBlock from '../components/sectionContentBlock'
+import Section from '../components/section/section'
+import SectionContentBlock from '../components/section/sectionContentBlock'
 
 const About = () => (
   <Section id="about">
-    <SectionContentBlock 
-      heading="About"
-    />
+    <SectionContentBlock heading="About" />
   </Section>
 )
 

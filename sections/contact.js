@@ -1,5 +1,5 @@
-import Section from '../components/section'
-import SectionContentBlock from '../components/sectionContentBlock'
+import Section from '../components/section/section'
+import SectionContentBlock from '../components/section/sectionContentBlock'
 import FormContact from '../components/forms/formContact'
 import CalloutCalendly from '../components/callouts/calloutCalendly'
 

@@ -1,6 +1,6 @@
 import Layout from '../../components/layout'
-import Section from '../../components/section'
-import SectionContentBlock from '../../components/sectionContentBlock'
+import Section from '../../components/section/section'
+import SectionContentBlock from '../../components/section/sectionContentBlock'
 
 const Blog = () => (
   <Layout>

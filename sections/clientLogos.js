@@ -1,46 +1,42 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import PlaceholderClientLogo from '../components/placeholders/placeholderClientLogo'
-import Section from '../components/section'
+import Section from '../components/section/section'
 
 const clientLogoInfo = [
   {
     label: 'JaneStreet',
-    img: "/images/clients/logo-janestreet.png",
+    img: '/images/clients/logo-janestreet.png',
     link: 'https://www.janestreet.com/',
   },
   {
     label: 'RenMac',
-    img: "/images/clients/logo-renmac.png",
+    img: '/images/clients/logo-renmac.png',
     link: 'https://www.renmac.com/',
   },
   {
     label: 'Hydro-Québec',
-    img: "/images/clients/logo-hq.svg",
+    img: '/images/clients/logo-hq.svg',
     link: 'https://www.hydroquebec.com/',
   },
   {
     label: 'CarbonTracker',
-    img: "/images/clients/logo-ct.svg",
+    img: '/images/clients/logo-ct.svg',
     link: 'https://carbontracker.org/',
   },
   {
     label: 'Healthcare Integrative Solutions',
-    img: "/images/clients/logo-his.png",
+    img: '/images/clients/logo-his.png',
     link: 'https://healthcareintegrative.com/',
   },
 ]
 
 function displayClientLogo(ClientLogo, i) {
   let image = null
-  if (ClientLogo.img == "") {
-    image = <PlaceholderClientLogo/>
+  if (ClientLogo.img == '') {
+    image = <PlaceholderClientLogo />
   } else {
-    image = <Image
-      src={ClientLogo.img}
-      layout="fill" 
-      objectFit="contain"
-    />
+    image = <Image src={ClientLogo.img} layout="fill" objectFit="contain" />
   }
 
   return (
@@ -54,10 +50,10 @@ function displayClientLogo(ClientLogo, i) {
 
 const ClientLogos = () => (
   <Section backgroundColor="var(--color-background-inner)">
-    <center><h5>The Company We Keep</h5></center>
-      <div className="row no-gutters justify-content-around align-content-around flex-wrap mt-5">
-        {clientLogoInfo.map((ClientLogo, i) => displayClientLogo(ClientLogo, i))}
-      </div>
+    <center>
+      <h5>The Company We Keep</h5>
+    </center>
+    <div className="row no-gutters justify-content-around align-content-around flex-wrap mt-5">{clientLogoInfo.map((ClientLogo, i) => displayClientLogo(ClientLogo, i))}</div>
   </Section>
 )
 
@@ -65,8 +61,9 @@ export default ClientLogos
 
 const styles = {
   logoImage: {
-    filter: "gray", /* IE6-9 */
-    WebkitFilter: "grayscale(1) contrast(0) brightness(0)", /* Google Chrome, Safari 6+ & Opera 15+ */
-    filter: "grayscale(1) contrast(0) brightness(0)", /* Microsoft Edge and Firefox 35+ */
+    // position: 'relative',
+    filter: 'gray' /* IE6-9 */,
+    WebkitFilter: 'grayscale(1) contrast(0) brightness(0)' /* Google Chrome, Safari 6+ & Opera 15+ */,
+    filter: 'grayscale(1) contrast(0) brightness(0)' /* Microsoft Edge and Firefox 35+ */,
   },
 }
