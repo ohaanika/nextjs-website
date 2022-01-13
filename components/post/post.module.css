@@ -1,0 +1,25 @@
+.item {
+  margin: 30px 0;
+  line-height: 1.5;
+}
+
+.link {
+  font-size: 1rem;
+  font-weight: var(--font-weight-normal);
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.title {
+  font-size: 1.25em;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.subtitle {
+  color: var(--color-monotone);
+}
+
+.date {
+  color: var(--color-monotone);
+}

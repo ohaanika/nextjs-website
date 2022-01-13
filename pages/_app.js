@@ -1,11 +1,6 @@
-import '../styles/style.css'
-import '../styles/animate.min.css'
 import '../styles/bootstrap-grid.css'
-import '../styles/calendly-widget.css'
-import '../styles/google-fonts.css'
+import '../styles/style.css'
 
-const App = ({ Component, pageProps }) => (
-  <Component {...pageProps} />
-)
+const App = ({ Component, pageProps }) => <Component {...pageProps} />
 
 export default App

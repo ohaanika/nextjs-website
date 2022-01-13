@@ -1,70 +1,142 @@
+import Link from 'next/link'
+import Image from 'next/image'
+import PlaceholderImage from '../components/placeholders/placeholderImage'
+import Section from '../components/section/section'
+import SectionContentBlock from '../components/section/sectionContentBlock'
+
+const TeamCardInfo = [
+  {
+    name: 'Matthew Chan',
+    role: 'CEO',
+    bio: [
+      'Formerly a Solutions Engineer at Plotly, Matthew spent 2 years developing Dash applications and consulting to Fortune 500’s in industries ranging from Oil and Gas to Finance to Tech. While at the company, he led 5-figure workshops to high-value clients across the U.S. and Germany. Matthew also contributed to Plotly’s Dash Bio and Dash Enterprise.',
+      'He is currently wrapping up his BASc. in Electrical Engineering at The University of British Columbia.',
+    ],
+    icons: {
+      email: 'mailto:matthew@zyphr.ca',
+      github: 'https://github.com/mtwichan',
+      linkedin: 'https://www.linkedin.com/in/matthewichan/',
+    },
+    img: '/images/team/matt.jpg',
+  },
+  {
+    name: 'Adam Kulidjian',
+    role: 'CTO',
+    bio: [
+      "As Plotly's former lead and #2 highest contributor to Plotly's Python Library, Adam contributed many key features to the library including gantt charts, sploms, and county choropleths. He served as the core contributor of the Plotly Python library for 3 years, pushing the total downloads to over 3 million.",
+      'Adam holds a B.Sc. in Mathematics from McGill University. In his spare time, he likes to play jazz piano and draw short animations.',
+    ],
+    icons: {
+      email: 'mailto:adam@zyphr.ca',
+      github: 'https://github.com/Kully',
+      linkedin: 'https://www.linkedin.com/in/adam-kulidjian-59309467/',
+    },
+    img: '/images/team/adam.jpg',
+  },
+  {
+    name: 'Aanika Rahman',
+    role: 'Software Developer',
+    bio: ['Aanika has yet to figure out what to say about herself but for now...', 'She holds a B.Sc. in Mathematics and Computer Science from McGill University.'],
+    icons: {
+      email: 'mailto:aanika@zyphr.ca',
+      github: 'https://github.com/ohaanika',
+      linkedin: 'https://www.linkedin.com/in/aanikarahman/',
+    },
+    img: '/images/team/aanika.jpg',
+  },
+]
+
+function displayTeamCard(TeamCard, i) {
+  let image = null
+  if (TeamCard.img == '') {
+    image = <PlaceholderImage />
+  } else {
+    image = <Image src={TeamCard.img} width="100%" height="100%" layout="responsive" objectFit="cover" />
+  }
+
+  let bio = null
+  if (Array.isArray(TeamCard.bio)) {
+    bio = TeamCard.bio.map((bioPara, i) => (
+      <p key={i} style={styles.cardContentBioPara}>
+        {bioPara}
+      </p>
+    ))
+  }
+
+  let icons = []
+  if ('github' in TeamCard.icons && TeamCard.icons.github) {
+    icons.push(
+      <div style={{ paddingRight: '1em' }} key={1}>
+        <Link href={TeamCard.icons.github}>
+          <a>GitHub</a>
+        </Link>
+      </div>,
+    )
+  }
+  if ('linkedin' in TeamCard.icons && TeamCard.icons.linkedin) {
+    icons.push(
+      <div key={2}>
+        <Link href={TeamCard.icons.linkedin}>
+          <a>LinkedIn</a>
+        </Link>
+      </div>,
+    )
+  }
+
+  return (
+    <div className="col-lg-4 col-md-4 col-sm-12 fade-in pl-lg-5 pr-lg-0 pl-md-3 pr-md-3 pb-md-0 pb-sm-5 p-0" style={styles.card} key={i}>
+      <div style={styles.cardImage}>{image}</div>
+      <div style={styles.cardContent}>
+        <h5 style={styles.cardContentName}>{TeamCard.name}</h5>
+        <h6 style={styles.cardContentRole}>{TeamCard.role}</h6>
+        {bio}
+        <div className="row no-gutters justify-content-start">{icons}</div>
+      </div>
+    </div>
+  )
+}
+
 const Team = () => (
-  <section className="team-section" id="team">
-    <div className="container">
-      <div className="col team-header">
-        <h1>The Team</h1>
-        <h4>Meet our Executive Team</h4>
+  <Section id="team">
+    <div className="row no-gutters">
+      <div className="col-lg-3 col-md-12 col-sm-12">
+        <SectionContentBlock heading="Team" subheading="Meet the humans behind the sparkle sparkle." />
+      </div>
+      <div className="col-lg-9 col-md-12 col-sm-12">
+        <div className="row no-gutters">{TeamCardInfo.map((TeamCard, i) => displayTeamCard(TeamCard, i))}</div>
       </div>
     </div>
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-6 col-md-12">
-          <div className="team-box">
-            <img src="./images/matt.jpg"></img>
-            <div className="team-text">
-              <h3>Matthew Chan</h3>
-              <h4>CEO</h4>
-              <hr/>
-              <p>
-                Formerly a Solutions Engineer at Plotly, Matthew spent 2 years developing Dash
-                applications and consulting to Fortune 500’s in industries ranging from Oil and Gas to
-                Finance to Tech. While at the company, he led 5-figure workshops to high-value clients
-                across the U.S. and Germany. Matthew also contributed to Plotly’s Dash Bio and Dash
-                Enterprise.
-              </p>
-              <p>
-                He is currently wrapping up his BASc. in Electrical Engineering at The University of
-                British Columbia. 
-                {/* When given the luxury of spare time, Matthew can be found road cycling, 
-                or planning his next adventure. */}
-              </p>
-              <div>
-                <a href="https://github.com/mtwichan">
-                  <i className="team-social fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-6 col-md-12">
-          <div className="team-box">
-            <img src="./images/adam-2.jpg"></img>
-            <div className="team-text">
-              <h3>Adam Kulidjian</h3>
-              <h4>CTO</h4>
-              <hr/>
-              <p>
-                As Plotly's former lead and #2 highest contributor to Plotly's Python Library, Adam contributed 
-                many key features to the library including gantt charts, sploms, and county choropleths.
-                He served as the core contributor of the Plotly Python library for 3 years, pushing the
-                total downloads to over 3 million.
-              </p>
-              <p>
-                Adam holds a B.Sc. in Mathematics from McGill University. In his spare time, he likes
-                to play jazz piano and draw short animations.
-              </p>
-              <div>
-                <a href="https://github.com/Kully">
-                  <i className="team-social fab fa-github"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="team-bg"></div>
-  </section>
+  </Section>
 )
 
 export default Team
+
+const styles = {
+  card: {
+    // backgroundColor: 'var(--color-background-inner)',
+    transition: 'all 0.3s ease 0s',
+  },
+  cardImage: {
+    filter: 'gray' /* IE6-9 */,
+    WebkitFilter: 'grayscale(1)' /* Google Chrome, Safari 6+ & Opera 15+ */,
+    filter: 'grayscale(1)' /* Microsoft Edge and Firefox 35+ */,
+  },
+  cardContent: {
+    margin: '20px 0 0 0',
+  },
+  cardContentName: {
+    marginBottom: '5px',
+    textAlign: 'center',
+  },
+  cardContentRole: {
+    marginBottom: '10px',
+    color: 'var(--color-primary)',
+    textAlign: 'center',
+  },
+  cardContentBioPara: {
+    marginBottom: '10px',
+  },
+  cardContentIcons: {
+    // marginBottom: '10px',
+  },
+}
