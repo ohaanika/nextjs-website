@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { getAllPostPaths, getSinglePostData } from '../../utils/mdx'
 import Layout from '../../components/layout'
 import Meta from '../../components/meta'
-import Date from '../../components/blog/date'
+import Date from '../../components/post/date'
 
 export const getStaticProps = async ({ params }) => {
   const post = await getSinglePostData('blog', params.slug)
