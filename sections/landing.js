@@ -28,7 +28,7 @@ const Landing = () => (
         <br />
         <h2>
           <Link href="#contact">
-            <a>Contact us now</a>
+            <a>Get in touch</a>
           </Link>
         </h2>
       </div>
