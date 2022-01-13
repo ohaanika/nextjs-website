@@ -14,14 +14,14 @@ const FormContact = () => {
     method: '',
   })
 
-  const handleChange = (e) => {
+  const handleInputsChange = (e) => {
     setInputs((prev) => ({
       ...prev,
       [e.target.id]: e.target.value,
     }))
   }
 
-  const sendEmail = async (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault()
 
     if (inputs.name && inputs.affiliation && inputs.email && inputs.message && inputs.method) {
@@ -72,31 +72,26 @@ const FormContact = () => {
 
   return (
     <div className={styles.form}>
-      <form
-        // name="contact-form"
-        // method="POST"
-        // action="contact/?success=true"
-        onSubmit={sendEmail}
-      >
+      <form onSubmit={handleFormSubmit}>
         <fieldset>
           <label htmlFor="name">Name {label_required}</label>
-          <input id="name" name="name" type="text" placeholder="Your full name..." required value={inputs.name} onChange={handleChange} />
+          <input id="name" name="name" type="text" placeholder="Your full name..." required value={inputs.name} onChange={handleInputsChange} />
         </fieldset>
         <fieldset>
           <label htmlFor="affiliation">Affiliation {label_required}</label>
-          <input id="affiliation" name="affiliation" type="text" placeholder="Your affiliation..." required value={inputs.affiliation} onChange={handleChange} />
+          <input id="affiliation" name="affiliation" type="text" placeholder="Your affiliation..." required value={inputs.affiliation} onChange={handleInputsChange} />
         </fieldset>
         <fieldset>
           <label htmlFor="email">Email {label_required}</label>
-          <input id="email" name="email" type="email" placeholder="Your email address..." required value={inputs.email} onChange={handleChange} />
+          <input id="email" name="email" type="email" placeholder="Your email address..." required value={inputs.email} onChange={handleInputsChange} />
         </fieldset>
         <fieldset>
           <label htmlFor="message">Message {label_required}</label>
-          <textarea id="message" name="message" type="text" placeholder="Write your message here..." required value={inputs.message} onChange={handleChange} />
+          <textarea id="message" name="message" type="text" placeholder="Write your message here..." required value={inputs.message} onChange={handleInputsChange} />
         </fieldset>
         <fieldset>
           <label htmlFor="method">How did you hear about us? {label_required}</label>
-          <select name="method" id="method" required value={inputs.method} onChange={handleChange}>
+          <select name="method" id="method" required value={inputs.method} onChange={handleInputsChange}>
             <option value="" disabled>
               -- Select an Option --
             </option>
