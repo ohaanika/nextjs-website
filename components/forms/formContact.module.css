@@ -2,3 +2,9 @@
   padding: 3rem;
   background-color: var(--color-primary-light);
 }
+
+.alert {
+  margin-top: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}

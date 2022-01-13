@@ -24,33 +24,22 @@ const parseFormData = (req) => {
 }
 
 const handler = async (req, res) => {
-  try {
-    const { fields, files } = await parseFormData(req)
+  const { fields, files } = await parseFormData(req)
 
-    console.log(fields)
-
-    const mailOptions = {
-      from: process.env.SENDER_EMAIL_ADDRESS,
-      to: process.env.RECIEVER_EMAIL_ADDRESS,
-      replyTo: fields.email,
-      subject: `Inquiry: ${fields.affiliation} - ${fields.name}`,
-      text: `Email Address: ${fields.email} \n\nFound out about Zyphr by: ${fields.method} \n\n${fields.message}`,
-    }
-
-    console.log(mailOptions)
-
-    transporter.sendMail(mailOptions, function (error, response) {
-      if (error) {
-        console.log(`Cannot send email due to error: ${error}`)
-      } else {
-        console.log(`Email sent successfully: ${response}`)
-      }
-    })
-
-    res.status(200).json({})
-  } catch (error) {
-    res.status(500).json({ error: error.message })
+  const mailOptions = {
+    from: process.env.SENDER_EMAIL_ADDRESS,
+    to: process.env.RECIEVER_EMAIL_ADDRESS,
+    replyTo: fields.email,
+    subject: `Inquiry: ${fields.affiliation} - ${fields.name}`,
+    text: `Email Address: ${fields.email} \n\nFound out about Zyphr by: ${fields.method} \n\n${fields.message}`,
   }
+
+  try {
+    await transporter.sendMail(mailOptions)
+  } catch (error) {
+    return res.status(500).json({ error: error.message || error.toString() })
+  }
+  return res.status(200).json({ error: '' })
 }
 
 export const config = {
