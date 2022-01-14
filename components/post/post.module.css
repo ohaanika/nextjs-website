@@ -13,13 +13,18 @@
 .title {
   font-size: 1.25em;
   font-weight: var(--font-weight-bold);
+}
+
+.title,
+.subtitle {
   color: var(--color-text);
 }
 
-.subtitle {
+.info {
+  display: inline-flex;
   color: var(--color-monotone);
 }
 
-.date {
-  color: var(--color-monotone);
+.infoSeparator {
+  padding: 0 5px;
 }

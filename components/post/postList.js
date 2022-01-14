@@ -6,9 +6,26 @@ import styles from './post.module.css'
 const PostListItem = ({ category, post, index }) => {
   const title = <div className={styles.title}>{post.frontmatter.title}</div>
   const subtitle = <div className={styles.subtitle}>{post.frontmatter.subtitle}</div>
-  const date = (
-    <div className={styles.date}>
-      <Date dateString={post.frontmatter.date} />
+
+  const infoList = [
+    'author' in post.frontmatter ? post.frontmatter.author : '',
+    'date' in post.frontmatter ? <Date dateString={post.frontmatter.date} /> : '',
+    'readTime' in post.frontmatter ? post.frontmatter.readTime : '',
+  ]
+  const info = (
+    <div className={styles.info}>
+      {infoList.map((infoItem, i, infoList) => {
+        var infoSeparator = undefined
+        if (infoItem && i + 1 !== infoList.length) {
+          infoSeparator = <span className={styles.infoSeparator}>·</span>
+        }
+        return (
+          <div key={i}>
+            {infoItem}
+            {infoSeparator}
+          </div>
+        )
+      })}
     </div>
   )
 
@@ -18,7 +35,7 @@ const PostListItem = ({ category, post, index }) => {
         <a className={styles.link}>
           {title}
           {subtitle}
-          {date}
+          {info}
         </a>
       </Link>
     </div>
