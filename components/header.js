@@ -19,7 +19,7 @@ const navLinkInfo = [
     label: 'Stories',
   },
   {
-    path: '/#portfolio',
+    path: '/portfolio',
     label: 'Portfolio',
   },
   {
