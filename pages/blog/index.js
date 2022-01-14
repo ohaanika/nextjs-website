@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
   }
 }
 
-const Blog = ({ posts }) => (
+const BlogList = ({ posts }) => (
   <Layout>
     <Section id="blog">
       <PostList category="blog" posts={posts} />
@@ -20,4 +20,4 @@ const Blog = ({ posts }) => (
   </Layout>
 )
 
-export default Blog
+export default BlogList
