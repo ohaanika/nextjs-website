@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Section from '../section/section'
 import Date from './date'
 import styles from './post.module.css'
 
@@ -26,10 +27,12 @@ const PostListItem = ({ category, post, index }) => {
 
 const PostList = ({ category, posts }) => (
   <div>
-    <h1>{category}</h1>
-    {posts.map((post, index) => (
-      <PostListItem category={category} post={post} index={index} />
-    ))}
+    <Section>
+      <h1>{category}</h1>
+      {posts.map((post, index) => (
+        <PostListItem category={category} post={post} index={index} />
+      ))}
+    </Section>
   </div>
 )
 

@@ -1,6 +1,5 @@
 import { getAllPostData } from '../../utils/mdx'
 import Layout from '../../components/layout'
-import Section from '../../components/section/section'
 import PostList from '../../components/post/postList'
 
 export const getStaticProps = async () => {
@@ -14,9 +13,7 @@ export const getStaticProps = async () => {
 
 const BlogList = ({ posts }) => (
   <Layout>
-    <Section id="blog">
-      <PostList category="blog" posts={posts} />
-    </Section>
+    <PostList category="blog" posts={posts} />
   </Layout>
 )
 
