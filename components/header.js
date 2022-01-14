@@ -3,16 +3,16 @@ import Image from 'next/image'
 
 const navLinkInfo = [
   {
-    path: '/#services',
-    label: 'Services',
-  },
-  {
     path: '/#about',
     label: 'About',
   },
   {
     path: '/#team',
     label: 'Team',
+  },
+  {
+    path: '/#services',
+    label: 'Services',
   },
   {
     path: '/#stories',
