@@ -48,7 +48,12 @@ article .frontmatter .subtitle {
 }
 
 .page {
-  padding: calc(3 * var(--website-container-border));
+  padding: calc(3 * var(--website-container-border)) calc(4 * var(--website-container-border));
+}
+@media (max-width: 992px) {
+  .page {
+    padding: calc(3 * var(--website-container-border));
+  }
 }
 @media (max-width: 768px) {
   .page {
