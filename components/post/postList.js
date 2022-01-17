@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Section from '../section/section'
 import Frontmatter from './frontmatter'
 import styles from './post.module.css'
 
@@ -15,15 +14,31 @@ const PostListItem = ({ category, post, index }) => {
   )
 }
 
-const PostList = ({ category, posts }) => (
-  <div>
-    <Section>
+// METHOD 1
+const PostList = ({ category, posts }) => {
+  const Page = ({ backgroundColor = 'transparent', stretch = false, children }) => (
+    <div style={{ backgroundColor: backgroundColor, padding: 'calc(3 * var(--website-container-border)) 0' }}>
+      <div className={stretch === true ? '' : 'container'}>{children}</div>
+    </div>
+  )
+  return (
+    <Page>
       <h1>{category}</h1>
       {posts.map((post, index) => (
         <PostListItem category={category} post={post} index={index} />
       ))}
-    </Section>
-  </div>
-)
+    </Page>
+  )
+}
+
+// METHOD 2 (draft)
+// const PostList = ({ category, posts }) => (
+//   <div className={styles.page}>
+//     <h1>{category}</h1>
+//     {posts.map((post, index) => (
+//       <PostListItem category={category} post={post} index={index} />
+//     ))}
+//   </div>
+// )
 
 export default PostList

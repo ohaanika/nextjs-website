@@ -46,3 +46,12 @@ article .frontmatter .subtitle {
 .frontmatter .info .infoSeparator {
   padding: 0 5px;
 }
+
+.page {
+  padding: calc(3 * var(--website-container-border));
+}
+@media (max-width: 768px) {
+  .page {
+    padding: calc(var(--website-container-border));
+  }
+}
