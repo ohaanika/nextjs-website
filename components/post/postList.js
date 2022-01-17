@@ -8,9 +8,9 @@ const PostListItem = ({ category, post, index }) => {
   const subtitle = <div className={styles.subtitle}>{post.frontmatter.subtitle}</div>
 
   const infoList = [
-    'author' in post.frontmatter ? post.frontmatter.author : '',
-    'date' in post.frontmatter ? <Date dateString={post.frontmatter.date} /> : '',
-    'readTime' in post.frontmatter ? post.frontmatter.readTime : '',
+    'author' in post.frontmatter && post.frontmatter.author ? post.frontmatter.author : '',
+    'date' in post.frontmatter && post.frontmatter.date ? <Date dateString={post.frontmatter.date} /> : '',
+    'readTime' in post.frontmatter && post.frontmatter.readTime ? post.frontmatter.readTime : '',
   ]
   const info = (
     <div className={styles.info}>
