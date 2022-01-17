@@ -45,9 +45,7 @@ const Post = ({ code, frontmatter }) => {
           <p className="row" style={{ fontStyle: 'italic', color: 'var(--color-monotone)' }}>
             {frontmatter.subtitle}
           </p>
-          <div>
-            <Date dateString={frontmatter.date} />
-          </div>
+          <div>{'date' in frontmatter && frontmatter.date ? <Date dateString={frontmatter.date} /> : ''}</div>
         </div>
         <Component
           components={{
