@@ -98,7 +98,7 @@ export const getSinglePostData = async (category, slug) => {
     // add reading time and word count as frontmatter
     frontmatter: {
       wordCount: fileContent.split(/\s+/gu).length,
-      readingTime: readingTime(fileContent),
+      readTime: readingTime(fileContent),
       ...frontmatter,
     },
     code: code,

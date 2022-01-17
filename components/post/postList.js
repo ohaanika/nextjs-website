@@ -15,7 +15,7 @@ const PostListItem = ({ category, post, index }) => {
   const info = (
     <div className={styles.info}>
       {infoList.map((infoItem, i, infoList) => {
-        var infoSeparator = undefined
+        let infoSeparator = null
         if (infoItem && i + 1 !== infoList.length) {
           infoSeparator = <span className={styles.infoSeparator}>·</span>
         }
