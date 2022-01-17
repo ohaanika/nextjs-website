@@ -224,7 +224,7 @@ section:first-child {
 
 @media (max-width: 768px) {
   main {
-    margin: 0;
+    margin: var(--website-container-border) 0;
     min-height: calc(100vh - 2 * var(--website-container-border));
   }
   header,
