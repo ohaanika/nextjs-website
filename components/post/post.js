@@ -3,7 +3,7 @@ import { getMDXComponent } from 'mdx-bundler/client'
 import Link from 'next/link'
 import Image from 'next/image'
 import Meta from '../meta'
-import Date from './date'
+import Frontmatter from './frontmatter'
 import styles from './post.module.css'
 
 const CustomLink = ({ as, href, ...otherProps }) => {
@@ -40,13 +40,7 @@ const Post = ({ code, frontmatter }) => {
     <div>
       <Meta title={frontmatter.title} description={frontmatter.subtitle} />
       <article>
-        <div style={{ margin: '0 0 60px 0' }}>
-          <h1>{frontmatter.title}</h1>
-          <p className="row" style={{ fontStyle: 'italic', color: 'var(--color-monotone)' }}>
-            {frontmatter.subtitle}
-          </p>
-          <div>{'date' in frontmatter && frontmatter.date ? <Date dateString={frontmatter.date} /> : ''}</div>
-        </div>
+        <Frontmatter frontmatter={frontmatter} />
         <Component
           components={{
             a: CustomLink,
