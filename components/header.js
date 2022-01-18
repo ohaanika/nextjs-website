@@ -15,8 +15,8 @@ const navLinkInfo = [
     label: 'Services',
   },
   {
-    path: '/#stories',
-    label: 'Stories',
+    path: '/clients',
+    label: 'Clients',
   },
   {
     path: '/portfolio',
