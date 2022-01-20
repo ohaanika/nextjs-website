@@ -1,9 +1,14 @@
 .page {
-  padding: calc(3 * var(--website-container-border)) calc(4 * var(--website-container-border));
+  padding: calc(3 * var(--website-container-border));
+}
+@media (max-width: 1200px) {
+  .page {
+    padding: calc(2 * var(--website-container-border));
+  }
 }
 @media (max-width: 992px) {
   .page {
-    padding: calc(3 * var(--website-container-border));
+    padding: calc(var(--website-container-border));
   }
 }
 @media (max-width: 768px) {
@@ -12,19 +17,71 @@
   }
 }
 
-.item {
-  margin: 30px 0;
-  font-size: 1rem;
-  line-height: 1.5;
+.list {
+  margin: 30px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 }
 
-.item .link {
+.link {
   text-decoration: none;
+}
+
+.item {
+  min-height: 250px;
+  /* background-color: var(--color-monotone-background); */
+  /* border: 5px solid var(--color-primary-background); */
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 992px) {
+  .item {
+    flex-direction: column;
+  }
+}
+
+.item .image {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  border: 2px solid var(--color-monotone-background);
+  transition: 0.3s;
+}
+.item:hover .image {
+  width: 400px;
+  border: 2px solid var(--color-primary-background);
+  filter: 'gray'; /* IE6-9 */
+  -webkit-filter: 'grayscale(1)'; /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: 'grayscale(1)'; /* Microsoft Edge and Firefox 35+ */
+}
+@media (max-width: 992px) {
+  .item .image,
+  .item:hover .image {
+    width: calc(100%);
+  }
 }
 
 .frontmatter {
   font-weight: var(--font-weight-normal);
   color: var(--color-text);
+}
+.item .frontmatter {
+  padding: 20px;
+  width: calc(100% - 400px);
+  font-size: 1rem;
+  line-height: 1.5em;
+  /* overflow-y: auto; */
+}
+.item:hover .frontmatter {
+  color: var(--color-primary);
+}
+@media (max-width: 992px) {
+  .item .frontmatter,
+  .item:hover .frontmatter {
+    width: calc(100%);
+  }
 }
 article .frontmatter {
   margin: 0 0 60px 0;
@@ -32,21 +89,26 @@ article .frontmatter {
 
 .frontmatter .title {
   font-weight: var(--font-weight-bold);
-  color: var(--color-text);
+  /* color: var(--color-text); */
 }
 .item .frontmatter .title {
+  margin: 0 0 5px 0;
   font-size: 1.25em;
+  line-height: 1.3em;
 }
 article .frontmatter .title {
   margin: 0 0 10px 0;
   font-size: 2em;
+  line-height: 1.1em;
   text-transform: uppercase;
   letter-spacing: 2px;
-  line-height: 1.1;
 }
 
 .frontmatter .subtitle {
   color: var(--color-text);
+}
+.item .frontmatter .subtitle {
+  margin: 0 0 5px 0;
 }
 article .frontmatter .subtitle {
   margin: 0 0 10px 0;
