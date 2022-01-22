@@ -14,10 +14,10 @@ const navLinkInfo = [
     path: '/#services',
     label: 'Services',
   },
-  {
-    path: '/clients',
-    label: 'Clients',
-  },
+  // {
+  //   path: '/clients',
+  //   label: 'Clients',
+  // },
   {
     path: '/portfolio',
     label: 'Portfolio',
