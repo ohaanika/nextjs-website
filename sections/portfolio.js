@@ -9,7 +9,7 @@ const PortfolioCardInfo = [
     title: 'Minty Budget App',
     desc: 'Gain insights into your budgets and finances.',
     link: 'https://minty-budget-tool.herokuapp.com/',
-    img: '/images/portfolio/mint-app.png',
+    img: '/images/portfolio/budget-app.png',
   },
   {
     title: 'NYC Complaints',
@@ -27,7 +27,7 @@ const PortfolioCardInfo = [
     title: 'COVID-19 Interventions',
     desc: 'Simulate the impact of custom non-pharmaceutical interventions on the dynamics of COVID-19.',
     link: 'https://intervention-model.herokuapp.com/',
-    img: '/images/portfolio/brightbuilding-cropped.jpg',
+    img: '/images/portfolio/covid-app.jpg',
   },
 ]
 
