@@ -6,7 +6,7 @@ import styles from './post.module.css'
 const PostListItem = ({ category, post, index }) => {
   let image = null
   if ('image' in post.frontmatter) {
-    image = <Image src={`/images/portfolio/${post.slug}.png`} layout="fill" objectFit="cover" objectPosition="left top" />
+    image = <Image src={`/images/${category}/${post.slug}.png`} layout="fill" objectFit="cover" objectPosition="left top" />
   } else {
     image = <Image src={`/images/portfolio/admin-app.png`} layout="fill" objectFit="cover" objectPosition="left top" />
   }

@@ -27,7 +27,7 @@ const PortfolioCardInfo = [
     title: 'COVID-19 Interventions',
     desc: 'Simulate the impact of custom non-pharmaceutical interventions on the dynamics of COVID-19.',
     link: 'https://intervention-model.herokuapp.com/',
-    img: '/images/portfolio/covid-app.jpg',
+    img: '/images/portfolio/covid-app.png',
   },
 ]
 
