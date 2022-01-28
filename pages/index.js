@@ -1,4 +1,4 @@
-import Layout from '../components/layout'
+import Layout from '../components/layout/layout'
 import Meta from '../components/meta'
 import Landing from '../sections/landing'
 import ClientLogos from '../sections/clientLogos'

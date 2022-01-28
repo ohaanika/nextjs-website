@@ -1,5 +1,5 @@
 import { getAllPostPaths, getSinglePostData } from '../../utils/mdx'
-import Layout from '../../components/layout'
+import Layout from '../../components/layout/layout'
 import Post from '../../components/post/post'
 
 export const getStaticProps = async ({ params }) => {
