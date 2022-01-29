@@ -4,32 +4,32 @@ import styles from './layout.module.css'
 
 const NavLinkInfo = [
   {
+    name: 'About',
     path: '/#about',
-    label: 'About',
   },
   {
+    name: 'Team',
     path: '/#team',
-    label: 'Team',
   },
   {
+    name: 'Services',
     path: '/#services',
-    label: 'Services',
   },
   // {
+  //   name: 'Clients',
   //   path: '/clients',
-  //   label: 'Clients',
   // },
   {
+    name: 'Portfolio',
     path: '/portfolio',
-    label: 'Portfolio',
   },
   {
+    name: 'Blog',
     path: '/blog',
-    label: 'Blog',
   },
   {
+    name: 'Contact',
     path: '/#contact',
-    label: 'Contact',
   },
 ]
 
@@ -37,17 +37,17 @@ const SocialMediaIconInfo = [
   {
     name: 'LinkedIn',
     link: 'https://www.linkedin.com/company/zyphr-solutions-inc/',
-    img: '/images/icons/social-linkedin.svg',
+    image: '/images/icons/social-linkedin.svg',
   },
   {
     name: 'Medium',
     link: 'https://medium.com/zyphr-solutions',
-    img: '/images/icons/social-medium.svg',
+    image: '/images/icons/social-medium.svg',
   },
   {
     name: 'GitHub',
     link: 'https://github.com/zyphr-solutions/',
-    img: '/images/icons/social-github.svg',
+    image: '/images/icons/social-github.svg',
   },
 ]
 
@@ -55,7 +55,7 @@ function displayNavLink(navLink, i) {
   return (
     <li key={i}>
       <Link href={navLink.path}>
-        <a>{navLink.label}</a>
+        <a>{navLink.name}</a>
       </Link>
     </li>
   )
@@ -65,7 +65,7 @@ function displaySocialMediaIcon(SocialMediaIcon, i) {
   return (
     <a key={i} href={SocialMediaIcon.link} target="_blank">
       <div className={styles.icon}>
-        <Image src={SocialMediaIcon.img} alt={SocialMediaIcon.name} layout="fill" objectFit="contain" objectPosition="right" />
+        <Image src={SocialMediaIcon.image} alt={SocialMediaIcon.name} layout="fill" objectFit="contain" objectPosition="right" />
       </div>
     </a>
   )
