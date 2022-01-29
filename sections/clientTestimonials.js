@@ -135,14 +135,14 @@ function createClientStoryCard(ClientStoryCard, i) {
   )
 }
 
-const ClientStories = () => (
+const ClientTestimonials = () => (
   <Section id="stories" stretch={true} backgroundColor="var(--color-background-inner)">
     <SectionContentBlock heading="Are we worth it?" subheading="Hear what our clients have to say." />
     <Carousel carouselCardList={clientStoryInfo.map((ClientStoryCard, i) => createClientStoryCard(ClientStoryCard, i))} />
   </Section>
 )
 
-export default ClientStories
+export default ClientTestimonials
 
 const styles = {
   cardContent: {

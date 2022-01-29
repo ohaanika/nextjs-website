@@ -6,7 +6,7 @@ import Services from '../sections/services'
 import About from '../sections/about'
 import Team from '../sections/team'
 import Portfolio from '../sections/portfolio'
-import ClientStories from '../sections/clientStories'
+import ClientTestimonials from '../sections/clientTestimonials'
 import Contact from '../sections/contact'
 
 const Index = () => (
@@ -18,7 +18,7 @@ const Index = () => (
     {/* <ClientLogos /> */}
     <Services />
     <Portfolio />
-    {/* <ClientStories /> */}
+    {/* <ClientTestimonials /> */}
     <Contact />
   </Layout>
 )
