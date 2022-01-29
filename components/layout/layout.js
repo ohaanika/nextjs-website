@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './layout.module.css'
@@ -51,40 +52,61 @@ const SocialMediaIconInfo = [
   },
 ]
 
-function displayNavLink(navLink, i) {
-  return (
-    <li key={i}>
-      <Link href={navLink.path}>
-        <a>{navLink.name}</a>
-      </Link>
-    </li>
-  )
-}
-
-function displaySocialMediaIcon(SocialMediaIcon, i) {
-  return (
-    <a key={i} href={SocialMediaIcon.link} target="_blank">
-      <div className={styles.icon}>
-        <Image src={SocialMediaIcon.image} alt={SocialMediaIcon.name} layout="fill" objectFit="contain" objectPosition="right" />
-      </div>
-    </a>
-  )
-}
-
-function displayCopyrightMessage() {
-  let currentYear = new Date().getFullYear()
-  return <p>© {currentYear} Zyphr Solutions Inc. All Rights Reserved.</p>
-}
-
-function displayEmail() {
-  return (
-    <a style={{ textDecoration: 'none', color: 'var(--color-text)' }} href="mailto:zyphr.form@gmail.com">
-      zyphr.form@gmail.com
-    </a>
-  )
-}
-
 const Layout = (props) => {
+  const [showModal, setShowModal] = useState(false)
+
+  const logoContent = (
+    <Link href="/">
+      <a>
+        <div className={styles.logo}>
+          <Image src={'/images/logos/logo-name-black.svg'} layout="fill" objectFit="contain" objectPosition="left" />
+        </div>
+      </a>
+    </Link>
+  )
+
+  const navContent = (
+    <nav>
+      <ul>
+        {NavLinkInfo.map((navLink, i) => (
+          <li key={i}>
+            <Link href={navLink.path}>
+              <a>{navLink.name}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+  const navBar = <div className={styles.navbar}>{navContent}</div>
+
+  const navToggle = (
+    <div className={styles.navtoggle} onClick={() => setShowModal(!showModal)}>
+      {showModal ? <div>✕</div> : null}
+      {!showModal ? <div>☰</div> : null}
+    </div>
+  )
+
+  const navModal = <div className={styles.navmodal}>{navContent}</div>
+
+  const emailContent = (
+    <div>
+      <a href="mailto:zyphr.form@gmail.com">zyphr.form@gmail.com</a>
+    </div>
+  )
+
+  const socialContent = (
+    <div className={styles.icons}>
+      {SocialMediaIconInfo.map((SocialMediaIcon, i) => (
+        <a key={i} href={SocialMediaIcon.link} target="_blank">
+          <div className={styles.icon}>
+            <Image src={SocialMediaIcon.image} alt={SocialMediaIcon.name} layout="fill" objectFit="contain" objectPosition="right" />
+          </div>
+        </a>
+      ))}
+    </div>
+  )
+
   // const handleScrollBottom = (e) => {
   //   if(e.target.scrollTop() < 100) {
   //       e.target.fadeOut(1000);
@@ -92,26 +114,27 @@ const Layout = (props) => {
   //       e.target.fadeIn(1000);
   //   }
   // }
+  // const currentYear = new Date().getFullYear()
+  // const copyrightContent = (
+  //   <div onScroll={handleScrollBottom}>
+  //     <p>© {currentYear} Zyphr Solutions Inc. All Rights Reserved.</p>
+  //   </div>
+  // )
 
   return (
     <div>
       <header className={styles.header}>
-        <Link href="/">
-          <a>
-            <div className={styles.logo}>
-              <Image src={'/images/logos/logo-name-black.svg'} layout="fill" objectFit="contain" objectPosition="left" />
-            </div>
-          </a>
-        </Link>
-        <nav>
-          <ul>{NavLinkInfo.map((navLink, i) => displayNavLink(navLink, i))}</ul>
-        </nav>
+        {logoContent}
+        {navBar}
+        {navToggle}
       </header>
-      <main className={styles.main}>{props.children}</main>
+      <main className={styles.main}>
+        {showModal ? <div>{navModal}</div> : null}
+        {!showModal ? <div>{props.children}</div> : null}
+      </main>
       <footer className={styles.footer}>
-        <div>{displayEmail()}</div>
-        {/* <div onScroll={handleScrollBottom}>{displayCopyrightMessage()}</div> */}
-        <div className={styles.icons}>{SocialMediaIconInfo.map((SocialMediaIcon, i) => displaySocialMediaIcon(SocialMediaIcon, i))}</div>
+        {emailContent}
+        {socialContent}
       </footer>
     </div>
   )

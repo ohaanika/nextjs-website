@@ -25,7 +25,6 @@
 .footer {
   bottom: 0;
 }
-
 @media (max-width: 768px) {
   .main {
     margin: var(--website-container-border) 0;
@@ -40,32 +39,82 @@
   }
 }
 
-.header ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.navbar {
+  display: inline;
+}
+.navtoggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.navmodal {
+  display: none;
+  width: calc(100%);
+  height: calc(100% - 2 * var(--website-container-border));
+  position: fixed;
   align-items: center;
-  margin: 0;
+  justify-content: center;
+  background-color: var(--color-background-outer);
+  text-align: center;
+  transition: 0.3s;
 }
-.header li {
-  display: block;
-  margin-left: 20px;
-}
-.header a {
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--color-text);
-}
-.header a:hover {
-  letter-spacing: 2px;
-  color: var(--color-primary);
-}
-.header button a {
-  color: var(--color-background-outer);
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  .navtoggle {
+    display: inline;
+  }
+  .navmodal {
+    display: flex;
+  }
 }
 
+.header ul,
+.navmodal ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.header ul {
+  flex-direction: row;
+}
+.navmodal ul {
+  flex-direction: column;
+}
+.header li,
+.navmodal li {
+  display: block;
+}
+.header li {
+  margin-left: 20px;
+}
+.navmodal li {
+  margin: 10px 0;
+}
+
+.header a,
+.navmodal a {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.header a,
+.navmodal a,
+.footer a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+.header a:hover,
+.navmodal a:hover,
+.footer a:hover {
+  color: var(--color-primary);
+}
+.header button a,
+.navmodal button a,
+.footer button a {
+  color: var(--color-background-outer);
+}
 .header .logo {
   height: calc(var(--website-container-border) - 20px);
   width: 100px;
@@ -77,7 +126,6 @@
   flex-direction: row;
   align-items: center;
 }
-
 .footer .icons .icon {
   position: relative;
   height: 1.2em;
