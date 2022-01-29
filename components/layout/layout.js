@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import styles from './layout.module.css'
 
 const NavLinkInfo = [
   {
@@ -63,14 +64,7 @@ function displayNavLink(navLink, i) {
 function displaySocialMediaIcon(SocialMediaIcon, i) {
   return (
     <a key={i} href={SocialMediaIcon.link} target="_blank">
-      <div
-        style={{
-          position: 'relative',
-          height: '1.2em',
-          width: '1.2em',
-          marginLeft: '10px',
-        }}
-      >
+      <div className={styles.icon}>
         <Image src={SocialMediaIcon.img} alt={SocialMediaIcon.name} layout="fill" objectFit="contain" objectPosition="right" />
       </div>
     </a>
@@ -100,17 +94,11 @@ const Layout = (props) => {
   // }
 
   return (
-    <div className="layout">
-      <header>
+    <div>
+      <header className={styles.header}>
         <Link href="/">
           <a>
-            <div
-              style={{
-                height: 'calc(var(--website-container-border) - 20px)',
-                width: '100px',
-                position: 'relative',
-              }}
-            >
+            <div className={styles.logo}>
               <Image src={'/images/logos/logo-name-black.svg'} layout="fill" objectFit="contain" objectPosition="left" />
             </div>
           </a>
@@ -119,11 +107,11 @@ const Layout = (props) => {
           <ul>{NavLinkInfo.map((navLink, i) => displayNavLink(navLink, i))}</ul>
         </nav>
       </header>
-      <main>{props.children}</main>
-      <footer>
+      <main className={styles.main}>{props.children}</main>
+      <footer className={styles.footer}>
         <div>{displayEmail()}</div>
         {/* <div onScroll={handleScrollBottom}>{displayCopyrightMessage()}</div> */}
-        <div className="icons">{SocialMediaIconInfo.map((SocialMediaIcon, i) => displaySocialMediaIcon(SocialMediaIcon, i))}</div>
+        <div className={styles.icons}>{SocialMediaIconInfo.map((SocialMediaIcon, i) => displaySocialMediaIcon(SocialMediaIcon, i))}</div>
       </footer>
     </div>
   )
