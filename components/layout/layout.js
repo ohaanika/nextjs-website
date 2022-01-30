@@ -71,7 +71,7 @@ const Layout = (props) => {
         {NavLinkInfo.map((navLink, i) => (
           <li key={i}>
             <Link href={navLink.path}>
-              <a>{navLink.name}</a>
+              <a onClick={() => setShowModal(false)}>{navLink.name}</a>
             </Link>
           </li>
         ))}
