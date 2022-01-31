@@ -117,6 +117,7 @@ const styles = {
     transition: 'all 0.3s ease 0s',
   },
   cardImage: {
+    boxShadow: '0 0 20px rgba(0, 0, 0, 0.05)',
     filter: 'gray' /* IE6-9 */,
     WebkitFilter: 'grayscale(1)' /* Google Chrome, Safari 6+ & Opera 15+ */,
     filter: 'grayscale(1)' /* Microsoft Edge and Firefox 35+ */,
