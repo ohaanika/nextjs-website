@@ -4,94 +4,23 @@ import Carousel from '../components/carousel/carousel'
 
 const clientTestimonialInfo = [
   {
-    name: 'Bob Ross',
-    role: 'Painter',
+    name: 'Laurier',
+    role: 'Network Engineer at Hydro-Quebec',
     testimonial: [
-      'Donec semper in sapien tincidunt accumsan. Pellentesque dignissim ante eu eros malesuada bibendum.',
-      'Nunc quis mollis velit, in bibendum ipsum. Mauris non nulla eu eros finibus rutrum. Nam a facilisis est, nec feugiat purus.',
-      'Suspendisse scelerisque nec nisi eu tempus. Nulla vehicula velit sit amet metus interdum venenatis. Curabitur ornare consequat nisi non iaculis.',
+      'With the clever algorithm and component Zyphr delivered, I feel like I have all the tools at my disposal to make [my] vision a reality. I am still amazed at everything that has been done in such a short time.',
     ],
-    company: 'Jane Street',
   },
   {
-    name: 'Elon Musk',
-    role: 'CEO',
-    testimonial: [
-      'Donec semper in sapien tincidunt accumsan. Pellentesque dignissim ante eu eros malesuada bibendum.',
-      'Nunc quis mollis velit, in bibendum ipsum. Mauris non nulla eu eros finibus rutrum. Nam a facilisis est, nec feugiat purus.',
-    ],
-    company: 'HydroQuebec',
+    name: "Niall O'Dowd Ph.D",
+    role: 'CEO of Additive Monitoring Systems',
+    testimonial: ['Zyphr worked with us to understand the kernel of the needed application, and aided in the brainstorming process to deliver a product which smartly used system constraints'],
   },
   {
-    name: 'Chelsea Kauai',
-    role: 'Creative',
+    name: 'Kyle Owens',
+    role: 'CEO at Trendline',
     testimonial: [
-      'Suspendisse scelerisque nec nisi eu tempus. Nulla vehicula velit sit amet metus interdum venenatis. Curabitur ornare consequat nisi non iaculis.',
-      'Donec semper in sapien tincidunt accumsan. Pellentesque dignissim ante eu eros malesuada bibendum.',
-      'Nunc quis mollis velit, in bibendum ipsum. Mauris non nulla eu eros finibus rutrum. Nam a facilisis est, nec feugiat purus.',
-      'Suspendisse scelerisque nec nisi eu tempus. Nulla vehicula velit sit amet metus interdum venenatis. Curabitur ornare consequat nisi non iaculis.',
+      "It's not hyperbole to say that we would not be where we are as a company without Zyphr's support. Their thorough understanding of the platform is a key asset, but it's their obsessive attention to detail that sets them apart.",
     ],
-    company: 'Carbon Tracker',
-  },
-  {
-    name: 'Bob Ross',
-    role: 'Painter',
-    testimonial: [
-      'Donec semper in sapien tincidunt accumsan. Pellentesque dignissim ante eu eros malesuada bibendum.',
-      'Nunc quis mollis velit, in bibendum ipsum. Mauris non nulla eu eros finibus rutrum. Nam a facilisis est, nec feugiat purus.',
-      'Suspendisse scelerisque nec nisi eu tempus. Nulla vehicula velit sit amet metus interdum venenatis. Curabitur ornare consequat nisi non iaculis.',
-    ],
-    company: 'Jane Street',
-  },
-  {
-    name: 'Elon Musk',
-    role: 'CEO',
-    testimonial: [
-      'Donec semper in sapien tincidunt accumsan. Pellentesque dignissim ante eu eros malesuada bibendum.',
-      'Nunc quis mollis velit, in bibendum ipsum. Mauris non nulla eu eros finibus rutrum. Nam a facilisis est, nec feugiat purus.',
-    ],
-    company: 'HydroQuebec',
-  },
-  {
-    name: 'Chelsea Kauai',
-    role: 'Creative',
-    testimonial: [
-      'Suspendisse scelerisque nec nisi eu tempus. Nulla vehicula velit sit amet metus interdum venenatis. Curabitur ornare consequat nisi non iaculis.',
-      'Donec semper in sapien tincidunt accumsan. Pellentesque dignissim ante eu eros malesuada bibendum.',
-      'Nunc quis mollis velit, in bibendum ipsum. Mauris non nulla eu eros finibus rutrum. Nam a facilisis est, nec feugiat purus.',
-      'Suspendisse scelerisque nec nisi eu tempus. Nulla vehicula velit sit amet metus interdum venenatis. Curabitur ornare consequat nisi non iaculis.',
-    ],
-    company: 'Carbon Tracker',
-  },
-  {
-    name: 'Bob Ross',
-    role: 'Painter',
-    testimonial: [
-      'Donec semper in sapien tincidunt accumsan. Pellentesque dignissim ante eu eros malesuada bibendum.',
-      'Nunc quis mollis velit, in bibendum ipsum. Mauris non nulla eu eros finibus rutrum. Nam a facilisis est, nec feugiat purus.',
-      'Suspendisse scelerisque nec nisi eu tempus. Nulla vehicula velit sit amet metus interdum venenatis. Curabitur ornare consequat nisi non iaculis.',
-    ],
-    company: 'Jane Street',
-  },
-  {
-    name: 'Elon Musk',
-    role: 'CEO',
-    testimonial: [
-      'Donec semper in sapien tincidunt accumsan. Pellentesque dignissim ante eu eros malesuada bibendum.',
-      'Nunc quis mollis velit, in bibendum ipsum. Mauris non nulla eu eros finibus rutrum. Nam a facilisis est, nec feugiat purus.',
-    ],
-    company: 'HydroQuebec',
-  },
-  {
-    name: 'Chelsea Kauai',
-    role: 'Creative',
-    testimonial: [
-      'Suspendisse scelerisque nec nisi eu tempus. Nulla vehicula velit sit amet metus interdum venenatis. Curabitur ornare consequat nisi non iaculis.',
-      'Donec semper in sapien tincidunt accumsan. Pellentesque dignissim ante eu eros malesuada bibendum.',
-      'Nunc quis mollis velit, in bibendum ipsum. Mauris non nulla eu eros finibus rutrum. Nam a facilisis est, nec feugiat purus.',
-      'Suspendisse scelerisque nec nisi eu tempus. Nulla vehicula velit sit amet metus interdum venenatis. Curabitur ornare consequat nisi non iaculis.',
-    ],
-    company: 'Carbon Tracker',
   },
 ]
 
