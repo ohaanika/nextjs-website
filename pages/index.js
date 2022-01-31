@@ -9,7 +9,18 @@ import Portfolio from '../sections/portfolio'
 import ClientTestimonials from '../sections/clientTestimonials'
 import Contact from '../sections/contact'
 
-const Index = () => (
+import { getAllPostData } from '../utils/mdx'
+
+export const getStaticProps = async () => {
+  const portfolioPosts = getAllPostData('portfolio')
+  return {
+    props: {
+      portfolioPosts,
+    },
+  }
+}
+
+const Index = ({ portfolioPosts }) => (
   <Layout>
     <Meta />
     <Landing />
@@ -17,7 +28,7 @@ const Index = () => (
     <Team />
     {/* <ClientLogos /> */}
     <Services />
-    <Portfolio />
+    <Portfolio posts={portfolioPosts} />
     <ClientTestimonials />
     <Contact />
   </Layout>
