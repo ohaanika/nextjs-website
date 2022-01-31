@@ -8,6 +8,7 @@
 @media only screen and (max-width: 992px) {
   .cardList {
     grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
   }
 }
 
