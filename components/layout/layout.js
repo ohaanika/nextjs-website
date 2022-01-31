@@ -108,16 +108,17 @@ const Layout = (props) => {
   )
 
   // const handleScrollBottom = (e) => {
-  //   if(e.target.scrollTop() < 100) {
-  //       e.target.fadeOut(1000);
+  //   if (e.target.scrollTop() < 100) {
+  //     e.target.fadeOut(1000)
   //   } else {
-  //       e.target.fadeIn(1000);
+  //     e.target.fadeIn(1000)
   //   }
   // }
   // const currentYear = new Date().getFullYear()
   // const copyrightContent = (
   //   <div onScroll={handleScrollBottom}>
   //     <p>© {currentYear} Zyphr Solutions Inc. All Rights Reserved.</p>
+  //     <p>Coded with 💛 by Aanika Rahman</p>
   //   </div>
   // )
 
