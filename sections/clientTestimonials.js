@@ -28,9 +28,14 @@ const ClientTestimonials = () => (
     <div className={styles.cardList}>
       {ClientTestimonialInfo.map((ClientTestimonialCard, i) => (
         <div className={styles.card} key={i}>
-          <p>{ClientTestimonialCard.testimonial}</p>
-          <h6>{ClientTestimonialCard.name}</h6>
-          <h6 style={{ color: 'var(--color-primary)' }}>{ClientTestimonialCard.role}</h6>
+          <p className={styles.testimonial}>
+            {/* <span className={styles.quotes}>”</span>  */}
+            {ClientTestimonialCard.testimonial}
+          </p>
+          <div>
+            <h6>{ClientTestimonialCard.name}</h6>
+            <h6 style={{ color: 'var(--color-primary)' }}>{ClientTestimonialCard.role}</h6>
+          </div>
         </div>
       ))}
     </div>
