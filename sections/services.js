@@ -1,5 +1,6 @@
 import Section from '../components/section/section'
 import SectionContentBlock from '../components/section/sectionContentBlock'
+import styles from './services.module.css'
 
 const ServiceCardInfo = [
   {
@@ -16,37 +17,18 @@ const ServiceCardInfo = [
   },
 ]
 
-function displayServiceCard(ServiceCard, i) {
-  return (
-    <div className="col-lg-3 col-md-6 col-sm-12 pl-md-3 pr-md-3 pt-sm-3 pb-sm-3" style={styles.card} key={i}>
-      <div style={styles.cardContent}>
-        <h5 style={styles.cardContentTitle}>{ServiceCard.title}</h5>
-        <p style={styles.cardContentDesc}>{ServiceCard.desc}</p>
-      </div>
-    </div>
-  )
-}
-
 const Services = () => (
   <Section id="services">
     <SectionContentBlock heading="Services" />
-    <div className="row no-gutters">{ServiceCardInfo.map((ServiceCard, i) => displayServiceCard(ServiceCard, i))}</div>
+    <div className={styles.cardList}>
+      {ServiceCardInfo.map((ServiceCard, i) => (
+        <div className={styles.card} key={i}>
+          <h5>{ServiceCard.title}</h5>
+          <p>{ServiceCard.desc}</p>
+        </div>
+      ))}
+    </div>
   </Section>
 )
 
 export default Services
-
-const styles = {
-  card: {
-    transition: 'all 0.3s ease 0s',
-  },
-  cardContent: {
-    margin: '20px 0 0 0',
-  },
-  cardContentTitle: {
-    marginBottom: '5px',
-  },
-  cardContentDesc: {
-    marginBottom: '10px',
-  },
-}
