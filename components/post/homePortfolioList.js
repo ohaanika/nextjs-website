@@ -47,16 +47,16 @@ const HomePortfolioList = ({ category, posts }) => {
       className="row no-gutters"
       style={{ margin: '30px 0 0 0', width: '100%', height: '400px', padding: '30px', backgroundColor: 'var(--color-background-outer)', boxShadow: '0 0 20px rgba(0, 0, 0, 0.05)' }}
     >
-      <div className="col-4" style={{ paddingRight: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+      <div className="col-4" style={{ padding: '0 30px 0 0', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           {/* <Frontmatter frontmatter={posts[selectedPostIndex].frontmatter} /> */}
           <h5>{posts[selectedPostIndex].frontmatter.title}</h5>
           <p>{posts[selectedPostIndex].frontmatter.subtitle}</p>
-          <Link href={posts[selectedPostIndex].frontmatter.link}>Check out app →</Link>
-          <Link href={`/${category}/${posts[selectedPostIndex].slug}`}>Read more →</Link>
+          <Link href={posts[selectedPostIndex].frontmatter.link}>Check out app</Link>
+          <Link href={`/${category}/${posts[selectedPostIndex].slug}`}>Read more</Link>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <button style={{ backgroundColor: 'var(--color-primary-light)' }} onClick={handleLeftClick}>
+        <div style={{ display: 'flex' }}>
+          <button style={{ backgroundColor: 'var(--color-primary-light)', marginRight: '30px' }} onClick={handleLeftClick}>
             ←
           </button>
           <button style={{ backgroundColor: 'var(--color-primary-light)' }} onClick={handleRightClick}>
