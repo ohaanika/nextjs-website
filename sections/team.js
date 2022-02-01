@@ -33,17 +33,6 @@ const TeamCardInfo = [
     },
     img: '/images/team/adam.jpg',
   },
-  {
-    name: 'Aanika Rahman',
-    role: 'Software Developer',
-    bio: ['Aanika has yet to figure out what to say about herself but for now...', 'She holds a B.Sc. in Mathematics and Computer Science from McGill University.'],
-    icons: {
-      email: 'mailto:aanika@zyphr.ca',
-      github: 'https://github.com/ohaanika',
-      linkedin: 'https://www.linkedin.com/in/aanikarahman/',
-    },
-    img: '/images/team/aanika.jpg',
-  },
 ]
 
 function displayTeamCard(TeamCard, i) {
@@ -84,7 +73,7 @@ function displayTeamCard(TeamCard, i) {
   }
 
   return (
-    <div className="col-lg-4 col-md-4 col-sm-12 fade-in pl-lg-5 pr-lg-0 pl-md-3 pr-md-3 pb-md-0 pb-sm-5 p-0" style={styles.card} key={i}>
+    <div className="col-lg-6 col-md-6 col-sm-12 fade-in pl-lg-5 pr-lg-0 pl-md-3 pr-md-3 pb-md-0 pb-sm-5 p-0" style={styles.card} key={i}>
       <div style={styles.cardImage}>{image}</div>
       <div style={styles.cardContent}>
         <h5 style={styles.cardContentName}>{TeamCard.name}</h5>
@@ -99,10 +88,10 @@ function displayTeamCard(TeamCard, i) {
 const Team = () => (
   <Section id="team">
     <div className="row no-gutters">
-      <div className="col-lg-3 col-md-12 col-sm-12">
+      <div className="col-lg-4 col-md-12 col-sm-12">
         <SectionContentBlock heading="Team" subheading="Meet the humans behind the sparkle sparkle." />
       </div>
-      <div className="col-lg-9 col-md-12 col-sm-12">
+      <div className="col-lg-8 col-md-12 col-sm-12">
         <div className="row no-gutters">{TeamCardInfo.map((TeamCard, i) => displayTeamCard(TeamCard, i))}</div>
       </div>
     </div>
