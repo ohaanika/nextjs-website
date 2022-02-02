@@ -20,6 +20,12 @@ const ClientTestimonialInfo = [
     testimonial:
       "It's not hyperbole to say that we would not be where we are as a company without Zyphr's support. Their thorough understanding of the platform is a key asset, but it's their obsessive attention to detail that sets them apart.",
   },
+  {
+    name: 'Nagarajan Sankrithi Ph.D',
+    role: 'CTO at Healthcare Integrative Solutions',
+    testimonial:
+      'We got a referral from Plotly to work with Zyphr when we were looking for expert Dash Enterprise Solutions Partners. Zyphr team has incredibly talented Python developers that can guide you and help you realize your product vision. They cleaned up and brought structure and clarity to our stack with only high level requirements. We have benefitted from their structured thinking and this has enabled us to develop scalable solutions much faster. In essense, Zyphr is a great find.',
+  },
 ]
 
 const ClientTestimonials = () => (
