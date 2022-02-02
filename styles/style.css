@@ -7,7 +7,7 @@
   --font-family-serif: 'Georgia', serif;
   --font-family-sans-serif: 'Poppins', 'Open Sans', sans-serif;
   --font-family-monospace: 'Source Code Pro', monospace;
-  --font-size: 14px;
+  --font-size: 16px;
   --font-weight-normal: 300;
   --font-weight-bold: 600;
   --color-text: rgb(0, 0, 0);
@@ -131,6 +131,7 @@ button {
 button:hover {
   color: var(--color-primary);
   background-color: var(--color-primary-light);
+  cursor: pointer;
 }
 
 button a {
@@ -184,33 +185,6 @@ textarea {
   resize: vertical;
 }
 
-main {
-  background-color: var(--color-background-inner);
-  margin: var(--website-container-border);
-  min-height: calc(100vh - 2 * var(--website-container-border));
-}
-header,
-footer {
-  font-size: 0.9em;
-  background-color: var(--color-background-outer);
-  height: var(--website-container-border);
-  width: calc(100% - 2 * var(--website-container-border));
-  margin: 0 var(--website-container-border);
-  padding: var(--font-size) 0;
-  position: fixed;
-  z-index: 9998;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-}
-header {
-  top: 0;
-}
-footer {
-  bottom: 0;
-}
 section {
   padding: calc(2 * var(--website-container-border)) 0;
 }
@@ -220,46 +194,6 @@ section:first-child {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-}
-
-@media (max-width: 768px) {
-  main {
-    margin: 0;
-    min-height: calc(100vh - 2 * var(--website-container-border));
-  }
-  header,
-  footer {
-    height: var(--website-container-border);
-    width: 100%;
-    margin: 0;
-    padding: 10px;
-  }
-}
-
-header ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 0;
-}
-header li {
-  display: block;
-  margin-left: 20px;
-}
-header a {
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--color-text);
-}
-header a:hover {
-  letter-spacing: 2px;
-  color: var(--color-primary);
-}
-header button a {
-  color: var(--color-background-outer);
 }
 
 article {
@@ -295,10 +229,4 @@ article code {
   color: var(--color-text);
   background-color: var(--color-monotone-background);
   padding: 0.2em 0.4em;
-}
-
-footer .icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }

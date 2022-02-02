@@ -1,4 +1,4 @@
-import Layout from '../components/layout'
+import Layout from '../components/layout/layout'
 import Meta from '../components/meta'
 import Landing from '../sections/landing'
 import ClientLogos from '../sections/clientLogos'
@@ -6,19 +6,30 @@ import Services from '../sections/services'
 import About from '../sections/about'
 import Team from '../sections/team'
 import Portfolio from '../sections/portfolio'
-import ClientStories from '../sections/clientStories'
+import ClientTestimonials from '../sections/clientTestimonials'
 import Contact from '../sections/contact'
 
-const Index = () => (
+import { getAllPostData } from '../utils/mdx'
+
+export const getStaticProps = async () => {
+  const portfolioPosts = getAllPostData('portfolio')
+  return {
+    props: {
+      portfolioPosts,
+    },
+  }
+}
+
+const Index = ({ portfolioPosts }) => (
   <Layout>
     <Meta />
     <Landing />
     <About />
     <Team />
-    <ClientLogos />
+    {/* <ClientLogos /> */}
     <Services />
-    <Portfolio />
-    <ClientStories />
+    <Portfolio posts={portfolioPosts} />
+    <ClientTestimonials />
     <Contact />
   </Layout>
 )

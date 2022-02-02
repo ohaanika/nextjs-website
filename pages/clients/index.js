@@ -3,7 +3,7 @@ import Layout from '../../components/layout/layout'
 import PostList from '../../components/post/postList'
 
 export const getStaticProps = async () => {
-  const posts = getAllPostData('blog')
+  const posts = getAllPostData('clients')
   return {
     props: {
       posts,
@@ -11,10 +11,10 @@ export const getStaticProps = async () => {
   }
 }
 
-const BlogList = ({ posts }) => (
+const ClientList = ({ posts }) => (
   <Layout>
-    <PostList category="blog" posts={posts} />
+    <PostList category="clients" posts={posts} />
   </Layout>
 )
 
-export default BlogList
+export default ClientList

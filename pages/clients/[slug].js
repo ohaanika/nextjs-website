@@ -3,21 +3,21 @@ import Layout from '../../components/layout/layout'
 import Post from '../../components/post/post'
 
 export const getStaticProps = async ({ params }) => {
-  const post = await getSinglePostData('blog', params.slug)
+  const post = await getSinglePostData('clients', params.slug)
   return {
     props: { ...post },
   }
 }
 
 export const getStaticPaths = async () => {
-  const paths = getAllPostPaths('blog')
+  const paths = getAllPostPaths('clients')
   return {
     paths,
     fallback: false,
   }
 }
 
-const BlogPost = ({ code, frontmatter }) => {
+const ClientPost = ({ code, frontmatter }) => {
   return (
     <Layout>
       <Post code={code} frontmatter={frontmatter} />
@@ -25,4 +25,4 @@ const BlogPost = ({ code, frontmatter }) => {
   )
 }
 
-export default BlogPost
+export default ClientPost

@@ -1,15 +1,20 @@
-import Layout from '../../components/layout'
-import Section from '../../components/section/section'
-import SectionContentBlock from '../../components/section/sectionContentBlock'
+import { getAllPostData } from '../../utils/mdx'
+import Layout from '../../components/layout/layout'
+import PostList from '../../components/post/postList'
 
-const Portfolio = () => (
+export const getStaticProps = async () => {
+  const posts = getAllPostData('portfolio')
+  return {
+    props: {
+      posts,
+    },
+  }
+}
+
+const PortfolioList = ({ posts }) => (
   <Layout>
-    <Section id="portfolio">
-      <div className="row no-gutters">
-        <SectionContentBlock heading="Portfolio" />
-      </div>
-    </Section>
+    <PostList category="portfolio" posts={posts} />
   </Layout>
 )
 
-export default Portfolio
+export default PortfolioList
