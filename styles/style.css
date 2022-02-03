@@ -14,12 +14,12 @@
   --color-placeholder: var(--color-text);
   --color-background-outer: rgb(255, 255, 255);
   --color-background-inner: rgb(245, 245, 245);
-  --color-primary: #218380;
-  --color-primary-light: #79bbb6;
-  --color-primary-background: #d2e6e5;
   --color-monotone: rgb(100, 100, 100);
   --color-monotone-light: rgb(150, 150, 150);
   --color-monotone-background: rgb(230, 230, 230);
+  --color-primary: rgb(33, 131, 128);
+  --color-primary-light: rgb(121, 187, 182);
+  --color-primary-background: rgb(210, 230, 229);
   /* --color-primary: #62ad94; */
   /* --color-primary-light: #c1e2d7; */
   /* --color-primary-background: rgb(233, 243, 240); */
