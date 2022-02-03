@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import PlaceholderClientLogo from '../components/placeholders/placeholderClientLogo'
 import Section from '../components/section/section'
+import styles from './clientLogos.module.css'
 
 const clientLogoInfo = [
   {
@@ -24,17 +24,15 @@ const clientLogoInfo = [
 function displayClientLogo(ClientLogo, i) {
   let image = null
   if (ClientLogo.image) {
-    image = <Image src={ClientLogo.image} layout="fill" objectFit="contain" />
+    image = <Image src={ClientLogo.image} width="100%" height="100%" layout="responsive" objectFit="contain" />
   } else {
     image = <PlaceholderClientLogo />
   }
 
   return (
-    <div key={i}
-    className="col-md-2 col-sm-12 mt-md-0 mb-md-0 ml-sm-0 mr-sm-0 m-2 justify-content-center align-content-center align-items-center"
-    style={styles.logoImage}>
-      <Link href={ClientLogo.link}><a target="_blank">{image}</a></Link>
-    </div>
+    <a key={i} href={ClientLogo.link} target="_blank">
+      <div className={styles.card}>{image}</div>
+    </a>
   )
 }
 
@@ -43,17 +41,8 @@ const ClientLogos = () => (
     <center>
       <h5>The Company We Keep</h5>
     </center>
-    <div className="row no-gutters justify-content-around align-content-around flex-wrap mt-5">{clientLogoInfo.map((ClientLogo, i) => displayClientLogo(ClientLogo, i))}</div>
+    <div className={styles.cardList}>{clientLogoInfo.map((ClientLogo, i) => displayClientLogo(ClientLogo, i))}</div>
   </Section>
 )
 
 export default ClientLogos
-
-const styles = {
-  logoImage: {
-    // position: 'relative',
-    filter: 'gray' /* IE6-9 */,
-    WebkitFilter: 'grayscale(1) contrast(0) brightness(0)' /* Google Chrome, Safari 6+ & Opera 15+ */,
-    filter: 'grayscale(1) contrast(0) brightness(0)' /* Microsoft Edge and Firefox 35+ */,
-  },
-}

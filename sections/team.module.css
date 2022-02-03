@@ -9,7 +9,6 @@
     margin: 0;
   }
 }
-
 @media only screen and (max-width: 768px) {
   .cardList {
     grid-template-columns: repeat(1, 1fr);

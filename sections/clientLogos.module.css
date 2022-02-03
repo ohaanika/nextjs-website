@@ -1,0 +1,23 @@
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  margin: 30px 0 0 0;
+}
+@media only screen and (max-width: 768px) {
+  .cardList {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  max-height: 80px;
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1) contrast(0) brightness(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1) contrast(0) brightness(0); /* Microsoft Edge and Firefox 35+ */
+}
