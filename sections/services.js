@@ -1,5 +1,5 @@
 import Section from '../components/section/section'
-import SectionContentBlock from '../components/section/sectionContentBlock'
+import SectionHeading from '../components/section/sectionHeading'
 import styles from './services.module.css'
 
 const ServiceCardInfo = [
@@ -19,7 +19,7 @@ const ServiceCardInfo = [
 
 const Services = () => (
   <Section id="services">
-    <SectionContentBlock heading="Services" />
+    <SectionHeading>Services</SectionHeading>
     <div className={styles.cardList}>
       {ServiceCardInfo.map((ServiceCard, i) => (
         <div className={styles.card} key={i}>

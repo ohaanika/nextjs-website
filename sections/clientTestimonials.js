@@ -1,5 +1,6 @@
 import Section from '../components/section/section'
-import SectionContentBlock from '../components/section/sectionContentBlock'
+import SectionHeading from '../components/section/sectionHeading'
+import SectionContent from '../components/section/sectionContent'
 import styles from './clientTestimonials.module.css'
 
 const ClientTestimonialInfo = [
@@ -30,7 +31,10 @@ const ClientTestimonialInfo = [
 
 const ClientTestimonials = () => (
   <Section id="stories" backgroundColor="var(--color-background-inner)">
-    <SectionContentBlock heading="Are we worth it?" subheading="Hear what our clients have to say." />
+    <SectionHeading>Are we worth it?</SectionHeading>
+    <SectionContent>
+      <p>Hear what our clients have to say.</p>
+    </SectionContent>
     <div className={styles.cardList}>
       {ClientTestimonialInfo.map((ClientTestimonialCard, i) => (
         <div className={styles.card} key={i}>

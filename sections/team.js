@@ -2,7 +2,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import PlaceholderImage from '../components/placeholders/placeholderImage'
 import Section from '../components/section/section'
-import SectionContentBlock from '../components/section/sectionContentBlock'
+import SectionHeading from '../components/section/sectionHeading'
+import SectionContent from '../components/section/sectionContent'
 
 const TeamCardInfo = [
   {
@@ -89,7 +90,10 @@ const Team = () => (
   <Section id="team">
     <div className="row no-gutters">
       <div className="col-lg-4 col-md-12 col-sm-12">
-        <SectionContentBlock heading="Team" subheading="Meet the humans behind the sparkle sparkle." />
+        <SectionHeading>Team</SectionHeading>
+        <SectionContent>
+          <p>Meet the humans behind the sparkle sparkle.</p>
+        </SectionContent>
       </div>
       <div className="col-lg-8 col-md-12 col-sm-12">
         <div className="row no-gutters">{TeamCardInfo.map((TeamCard, i) => displayTeamCard(TeamCard, i))}</div>
