@@ -4,6 +4,7 @@ import PlaceholderImage from '../components/placeholders/placeholderImage'
 import Section from '../components/section/section'
 import SectionHeading from '../components/section/sectionHeading'
 import SectionContent from '../components/section/sectionContent'
+import styles from './team.module.css'
 
 const TeamCardInfo = [
   {
@@ -47,10 +48,12 @@ function displayTeamCard(TeamCard, i) {
   let bio = null
   if (Array.isArray(TeamCard.bio)) {
     bio = TeamCard.bio.map((bioPara, i) => (
-      <p key={i} style={styles.cardContentBioPara}>
+      <p key={i} className={styles.cardContentBioPara}>
         {bioPara}
       </p>
     ))
+  } else {
+    bio = <p>{TeamCard.bio}</p>
   }
 
   let icons = []
@@ -74,13 +77,15 @@ function displayTeamCard(TeamCard, i) {
   }
 
   return (
-    <div className="col-lg-6 col-md-6 col-sm-12 fade-in pl-lg-5 pr-lg-0 pl-md-3 pr-md-3 pb-md-0 pb-sm-5 p-0" style={styles.card} key={i}>
-      <div style={styles.cardImage}>{image}</div>
-      <div style={styles.cardContent}>
-        <h5 style={styles.cardContentName}>{TeamCard.name}</h5>
-        <h6 style={styles.cardContentRole}>{TeamCard.role}</h6>
+    <div className={styles.card} key={i}>
+      <div className={styles.cardImage}>{image}</div>
+      <div className={styles.cardContent}>
+        <div>
+          <h5 className={styles.cardContentName}>{TeamCard.name}</h5>
+          <h6 className={styles.cardContentRole}>{TeamCard.role}</h6>
+        </div>
         {bio}
-        <div className="row no-gutters justify-content-start">{icons}</div>
+        <div className={styles.cardContentIcons}>{icons}</div>
       </div>
     </div>
   )
@@ -89,48 +94,17 @@ function displayTeamCard(TeamCard, i) {
 const Team = () => (
   <Section id="team">
     <div className="row no-gutters">
-      <div className="col-lg-4 col-md-12 col-sm-12">
+      <div className="col-lg-4 col-md-12 col-sm-12 pr-lg-5 p-0">
         <SectionHeading>Team</SectionHeading>
         <SectionContent>
           <p>Meet the humans behind the sparkle sparkle.</p>
         </SectionContent>
       </div>
-      <div className="col-lg-8 col-md-12 col-sm-12">
-        <div className="row no-gutters">{TeamCardInfo.map((TeamCard, i) => displayTeamCard(TeamCard, i))}</div>
+      <div className="col-lg-8 col-md-12 col-sm-12 p-0">
+        <div className={styles.cardList}>{TeamCardInfo.map((TeamCard, i) => displayTeamCard(TeamCard, i))}</div>
       </div>
     </div>
   </Section>
 )
 
 export default Team
-
-const styles = {
-  card: {
-    // backgroundColor: 'var(--color-background-inner)',
-    transition: 'all 0.3s ease 0s',
-  },
-  cardImage: {
-    boxShadow: '0 0 20px rgba(0, 0, 0, 0.05)',
-    filter: 'gray' /* IE6-9 */,
-    WebkitFilter: 'grayscale(1)' /* Google Chrome, Safari 6+ & Opera 15+ */,
-    filter: 'grayscale(1)' /* Microsoft Edge and Firefox 35+ */,
-  },
-  cardContent: {
-    margin: '20px 0 0 0',
-  },
-  cardContentName: {
-    marginBottom: '5px',
-    textAlign: 'center',
-  },
-  cardContentRole: {
-    marginBottom: '10px',
-    color: 'var(--color-primary)',
-    textAlign: 'center',
-  },
-  cardContentBioPara: {
-    marginBottom: '10px',
-  },
-  cardContentIcons: {
-    // marginBottom: '10px',
-  },
-}
