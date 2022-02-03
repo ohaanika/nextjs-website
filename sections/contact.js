@@ -11,8 +11,8 @@ const Contact = () => (
         <SectionHeading>Contact Us</SectionHeading>
         <SectionContent>
           <p>Want to work with us? Message us here or book a call to let us know what you have in mind.</p>
+          <CalloutCalendly url="https://calendly.com/zyphr-form/15min" text="Book a call on Calendly" />
         </SectionContent>
-        <CalloutCalendly url="https://calendly.com/zyphr-form/15min" text="Book a call on Calendly" />
       </div>
       <div className="col-lg-6 col-md-12 col-sm-12">
         <FormContact />
