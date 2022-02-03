@@ -31,6 +31,7 @@
   /* --color-2-light: #c3dbf0; */
   /* --color-3: #d47f5e; */
   /* --color-3-light: #f8e1d6; */
+  --box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   --website-container-border: 50px;
   --media-sm: 576px;
   --media-md: 768px;
