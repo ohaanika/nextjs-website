@@ -5,29 +5,19 @@ import Section from '../components/section/section'
 
 const clientLogoInfo = [
   {
-    label: 'JaneStreet',
-    img: '/images/clients/logo-janestreet.png',
-    link: 'https://www.janestreet.com/',
-  },
-  {
-    label: 'RenMac',
-    img: '/images/clients/logo-renmac.png',
-    link: 'https://www.renmac.com/',
-  },
-  {
-    label: 'Hydro-Québec',
-    img: '/images/clients/logo-hq.svg',
-    link: 'https://www.hydroquebec.com/',
-  },
-  {
-    label: 'CarbonTracker',
-    img: '/images/clients/logo-ct.svg',
-    link: 'https://carbontracker.org/',
+    label: 'Trendline',
+    img: '/images/clients/logo-trendline.png',
+    link: 'https://www.trendlineinsights.com/',
   },
   {
     label: 'Healthcare Integrative Solutions',
     img: '/images/clients/logo-his.png',
     link: 'https://healthcareintegrative.com/',
+  },
+  {
+    label: 'Home Nursing and Therapy Services',
+    img: '/images/clients/logo-hnts.png',
+    link: 'https://www.hnts.org/',
   },
 ]
 
