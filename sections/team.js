@@ -18,7 +18,7 @@ const TeamCardInfo = [
       github: 'https://github.com/mtwichan',
       linkedin: 'https://www.linkedin.com/in/matthewichan/',
     },
-    img: '/images/team/matt.jpg',
+    image: '/images/team/matt.jpg',
   },
   {
     name: 'Adam Kulidjian',
@@ -32,16 +32,16 @@ const TeamCardInfo = [
       github: 'https://github.com/Kully',
       linkedin: 'https://www.linkedin.com/in/adam-kulidjian-59309467/',
     },
-    img: '/images/team/adam.jpg',
+    image: '/images/team/adam.jpg',
   },
 ]
 
 function displayTeamCard(TeamCard, i) {
   let image = null
-  if (TeamCard.img == '') {
-    image = <PlaceholderImage />
+  if (TeamCard.image) {
+    image = <Image src={TeamCard.image} width="100%" height="100%" layout="responsive" objectFit="cover" />
   } else {
-    image = <Image src={TeamCard.img} width="100%" height="100%" layout="responsive" objectFit="cover" />
+    image = <PlaceholderImage />
   }
 
   let bio = null
@@ -54,7 +54,7 @@ function displayTeamCard(TeamCard, i) {
   }
 
   let icons = []
-  if ('github' in TeamCard.icons && TeamCard.icons.github) {
+  if (TeamCard.icons.github) {
     icons.push(
       <div style={{ paddingRight: '1em' }} key={1}>
         <Link href={TeamCard.icons.github}>
@@ -63,7 +63,7 @@ function displayTeamCard(TeamCard, i) {
       </div>,
     )
   }
-  if ('linkedin' in TeamCard.icons && TeamCard.icons.linkedin) {
+  if (TeamCard.icons.linkedin) {
     icons.push(
       <div key={2}>
         <Link href={TeamCard.icons.linkedin}>

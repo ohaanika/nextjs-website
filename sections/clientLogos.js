@@ -6,27 +6,27 @@ import Section from '../components/section/section'
 const clientLogoInfo = [
   {
     label: 'Trendline',
-    img: '/images/clients/logo-trendline.png',
+    image: '/images/clients/logo-trendline.png',
     link: 'https://www.trendlineinsights.com/',
   },
   {
     label: 'Healthcare Integrative Solutions',
-    img: '/images/clients/logo-his.png',
+    image: '/images/clients/logo-his.png',
     link: 'https://healthcareintegrative.com/',
   },
   {
     label: 'Home Nursing and Therapy Services',
-    img: '/images/clients/logo-hnts.png',
+    image: '/images/clients/logo-hnts.png',
     link: 'https://www.hnts.org/',
   },
 ]
 
 function displayClientLogo(ClientLogo, i) {
   let image = null
-  if (ClientLogo.img == '') {
-    image = <PlaceholderClientLogo />
+  if (ClientLogo.image) {
+    image = <Image src={ClientLogo.image} layout="fill" objectFit="contain" />
   } else {
-    image = <Image src={ClientLogo.img} layout="fill" objectFit="contain" />
+    image = <PlaceholderClientLogo />
   }
 
   return (
