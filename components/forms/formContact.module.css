@@ -2,6 +2,12 @@
   padding: 3rem;
   background-color: var(--color-primary-light);
 }
+@media only screen and (max-width: 768px) {
+  .form {
+    padding: 0rem;
+    background-color: transparent;
+  }
+}
 
 .alert {
   margin-top: 1.5rem;
