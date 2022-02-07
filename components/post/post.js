@@ -14,21 +14,28 @@ const CustomLink = ({ as, href, ...otherProps }) => {
   )
 }
 
-const CustomImage = ({ src, ...otherProps }) => {
-  return <Image src={src} {...otherProps} />
-}
-
-const CustomImageBlock = ({ children }) => {
+const CustomImage = ({ src, caption, ...otherProps }) => {
   return (
-    <div className="row" style={{ margin: '20px -10vw' }}>
-      {children}
+    <div className={styles.customImageCard}>
+      <div className={styles.customImage}>
+        <Image src={src} width="100%" height="100%" layout="responsive" objectFit="contain" objectPosition="center" {...otherProps} />
+      </div>
+      <div className={styles.customImageCaption}>{'heere goes caption'}</div>
     </div>
   )
 }
 
+// const CustomImage = ({ src, ...otherProps }) => {
+//   return <Image src={src} width="100%" height="100%" layout="responsive" objectFit="contain" objectPosition="top" {...otherProps} />
+// }
+
+const CustomImageBlock = ({ children }) => {
+  return <div className={styles.customImageBlock}>{children}</div>
+}
+
 const CustomCodeBlock = ({ syntax = 'python', children }) => {
   return (
-    <div style={{ margin: '20px 0', padding: '10px 30px', overflowY: 'auto', backgroundColor: 'var(--color-monotone-background)' }}>
+    <div className={styles.customCodeBlock}>
       <code className={`language-${syntax}`}>{children}</code>
     </div>
   )
@@ -37,19 +44,20 @@ const CustomCodeBlock = ({ syntax = 'python', children }) => {
 const Post = ({ code, frontmatter }) => {
   const Component = useMemo(() => getMDXComponent(code), [code])
   return (
-    <div>
+    <div className={styles.page}>
       <Meta title={frontmatter.title} description={frontmatter.subtitle} />
-      <article>
+      <div className={styles.article}>
         <Frontmatter frontmatter={frontmatter} />
         <Component
           components={{
             a: CustomLink,
             img: CustomImage,
+            Image: CustomImage,
             ImageBlock: CustomImageBlock,
             CodeBlock: CustomCodeBlock,
           }}
         />
-      </article>
+      </div>
     </div>
   )
 }
