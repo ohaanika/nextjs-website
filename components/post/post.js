@@ -20,7 +20,7 @@ const CustomImage = ({ src, caption, ...otherProps }) => {
       <div className={styles.customImage}>
         <Image src={src} width="100%" height="100%" layout="responsive" objectFit="contain" objectPosition="center" {...otherProps} />
       </div>
-      <div className={styles.customImageCaption}>{'heere goes caption'}</div>
+      <div className={styles.customImageCaption}>{caption}</div>
     </div>
   )
 }
