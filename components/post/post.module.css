@@ -159,7 +159,7 @@
     width: calc(100%);
   }
 }
-article .frontmatter {
+.article .frontmatter {
   margin: 0 0 60px 0;
 }
 
@@ -172,7 +172,7 @@ article .frontmatter {
   font-size: 1.25em;
   line-height: 1.3em;
 }
-article .frontmatter .title {
+.article .frontmatter .title {
   margin: 0 0 10px 0;
   font-size: 2em;
   line-height: 1.1em;
@@ -186,7 +186,7 @@ article .frontmatter .title {
 .item .frontmatter .subtitle {
   margin: 0 0 5px 0;
 }
-article .frontmatter .subtitle {
+.article .frontmatter .subtitle {
   margin: 0 0 10px 0;
   font-style: italic;
 }
@@ -197,4 +197,107 @@ article .frontmatter .subtitle {
 }
 .frontmatter .info .infoSeparator {
   padding: 0 5px;
+}
+
+.article {
+  font-family: var(--font-family);
+  font-size: 1.2em;
+  line-height: 1.5em;
+  padding: 0 calc(3 * var(--website-container-border));
+}
+@media (max-width: 1200px) {
+  .article {
+    padding: 0 calc(2 * var(--website-container-border));
+  }
+}
+@media (max-width: 992px) {
+  .article {
+    padding: 0 var(--website-container-border);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .article {
+    padding: 0;
+  }
+}
+
+.article p {
+  margin: 10px 0;
+  line-height: 1.5em;
+}
+.article h1 {
+  font-size: 2em;
+  font-weight: var(--font-weight-bold);
+}
+.article h2 {
+  margin-top: 60px;
+  font-size: 1.5em;
+  font-weight: var(--font-weight-normal);
+}
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
+  margin-top: 40px;
+  font-size: 1em;
+  font-weight: var(--font-weight-bold);
+}
+.article code {
+  font-family: var(--font-family-monospace);
+  font-weight: 500;
+  color: var(--color-text);
+  background-color: var(--color-monotone-background);
+  padding: 0.2em 0.4em;
+}
+
+.customCodeBlock {
+  margin: 20px 0;
+  padding: 10px 30px;
+  overflow-y: auto;
+  background-color: var(--color-monotone-background);
+  box-shadow: var(--box-shadow);
+}
+@media (max-width: 992px) {
+  .customCodeBlock {
+    margin: 20px calc(-1 * var(--website-container-border));
+    box-shadow: none;
+  }
+}
+
+.customImageBlock {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 30px calc(-2 * var(--website-container-border));
+}
+@media (max-width: 1200px) {
+  .customImageBlock {
+    margin: 20px calc(-1 * var(--website-container-border));
+  }
+}
+@media (max-width: 992px) {
+  .customImageBlock {
+    margin: 20px calc(-1 * var(--website-container-border));
+  }
+}
+@media only screen and (max-width: 768px) {
+  .customImageBlock {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    margin: 30px calc(-1 * var(--website-container-border));
+  }
+}
+
+.customImageCard {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--color-background-outer);
+}
+.customImageCaption {
+  font-size: 0.8em;
+  font-style: italic;
+  margin: 10px 0 0 0;
+  text-align: center;
+  background-color: var(--color-background-outer);
 }

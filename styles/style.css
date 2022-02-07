@@ -200,38 +200,3 @@ section:first-child {
   justify-content: center;
   align-content: center;
 }
-
-article {
-  font-family: var(--font-family);
-  font-size: 1.2em;
-  line-height: 1.5em;
-  padding: 200px 25%;
-}
-article p {
-  margin: 10px 0;
-  line-height: 1.5em;
-}
-article h1 {
-  font-size: 2em;
-  font-weight: var(--font-weight-bold);
-}
-article h2 {
-  margin-top: 60px;
-  font-size: 1.5em;
-  font-weight: var(--font-weight-normal);
-}
-article h3,
-article h4,
-article h5,
-article h6 {
-  margin-top: 40px;
-  font-size: 1em;
-  font-weight: var(--font-weight-bold);
-}
-article code {
-  font-family: var(--font-family-monospace);
-  font-weight: 500;
-  color: var(--color-text);
-  background-color: var(--color-monotone-background);
-  padding: 0.2em 0.4em;
-}
