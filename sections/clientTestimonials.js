@@ -8,7 +8,7 @@ const ClientTestimonialInfo = [
     name: 'Laurier',
     role: 'Network Engineer at Hydro-Quebec',
     testimonial:
-      'With the clever algorithm and component Zyphr delivered, I feel like I have all the tools at my disposal to make [my] vision a reality. I am still amazed at everything that has been done in such a short time.',
+      'Coming soon to a website near you!',
   },
   {
     name: "Niall O'Dowd Ph.D",
