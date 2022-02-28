@@ -5,8 +5,8 @@ import styles from './clientTestimonials.module.css'
 
 const ClientTestimonialInfo = [
   {
-    name: 'Laurier',
-    role: 'Network Engineer at Hydro-Quebec',
+    name: 'Laurier Demers',
+    role: 'Engineer at Hydro-Québec',
     testimonial:
       'Coming soon to a website near you!',
   },
