@@ -25,7 +25,8 @@ const ClientTestimonialInfo = [
     name: 'Nagarajan Sankrithi Ph.D',
     role: 'CTO, Healthcare Integrative Solutions',
     testimonial:
-      'We got a referral from Plotly to work with Zyphr when we were looking for expert Dash Enterprise Solutions Partners. Zyphr team has incredibly talented Python developers that can guide you and help you realize your product vision. They cleaned up and brought structure and clarity to our stack with only high level requirements. We have benefitted from their structured thinking and this has enabled us to develop scalable solutions much faster. In essense, Zyphr is a great find.',
+      "Zyphr team has incredibly talented Python developers that can guide you and help you realize your product vision. It was their structured thinking that enabled us to develop scalable solutions much faster. In essense, Zyphr is a great find.",
+      // 'We got a referral from Plotly to work with Zyphr when we were looking for expert Dash Enterprise Solutions Partners. Zyphr team has incredibly talented Python developers that can guide you and help you realize your product vision. They cleaned up and brought structure and clarity to our stack with only high level requirements. We have benefitted from their structured thinking and this has enabled us to develop scalable solutions much faster. In essense, Zyphr is a great find.',
   },
 ]
 
