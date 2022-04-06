@@ -200,3 +200,16 @@ section:first-child {
   justify-content: center;
   align-content: center;
 }
+
+.landing-page-canvas {
+  position: absolute;
+  left: -100px;
+  top: -220px;
+  /*width: 400px;
+  height: 400px;*/
+  /*background-color: red;*/
+  /*opacity: 0.5;*/
+  /*outline: 2px solid blue;*/
+  user-select: none;
+  z-index: -2;
+}
