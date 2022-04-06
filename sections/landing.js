@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Script from 'next/script'
 import Section from '../components/section/section'
 // import CircleText from '../components/visuals/circleText'
 // import GridDots from '../components/visuals/gridDots'
@@ -6,6 +7,7 @@ import Section from '../components/section/section'
 
 const Landing = () => (
   <Section backgroundColor="var(--color-primary-background)">
+    <canvas id="my-canvas" className="landing-page-canvas"></canvas>
     <div className="row no-gutters">
       {/* <div className="col-lg-6 col-md-12 col-sm-12 pr-2 p-0 pt-sm-5 d-lg-block d-md-none d-sm-none align-items-center">
         <h3>
