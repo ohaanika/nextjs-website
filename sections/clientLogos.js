@@ -10,6 +10,11 @@ const clientLogoInfo = [
     link: 'https://www.trendlineinsights.com/',
   },
   {
+    label: 'CarbonTracker',
+    image: '/images/clients/logo-ct.png',
+    link: 'https://carbontracker.org/',
+  },
+  {
     label: 'Healthcare Integrative Solutions',
     image: '/images/clients/logo-his.png',
     link: 'https://healthcareintegrative.com/',
