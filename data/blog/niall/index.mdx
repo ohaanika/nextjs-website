@@ -1,0 +1,58 @@
+---
+title: '1,000 Images in a Glance'
+subtitle: 'A User Story'
+author: 'Adam Kulidjian'
+date: '2022-04-19'
+image: 'xaxis-tickets.png'
+---
+
+import niall_four_brains from './niall_four_brains.png'
+
+<ImageBlock>
+  <Image src={niall_four_brains}/> 
+</ImageBlock>
+
+The demand for speed in the world of software has been trending upwards from being a nice to have to a full-blown necessity. Our ever-increasing demand for lag-less experiences, smooth scrolling, and fast loading times is common to all industries that touch software; 3D printing is no exception.
+
+
+## The Problem
+
+Niall’s world of 3D printing perhaps an exemplar in its necessity for speed. His team is in the business of working with large volumes of streaming data, where the key to insight often resides in the details.
+
+<div style={{borderLeft: '0.6rem solid #aaa'}}>
+<div style={{backgroundColor: '#ddd'}}>
+<div style={{padding: '1rem 2rem'}}>
+  "In industrial 3d printing, a huge challenge is the real-time delivery of in-process data, which may hold the power to substantially reduce the overall cost of 3d printing. However, the sheer amounts of data being delivered by most real time monitoring systems creates a considerable challenge: information distillation."
+ 
+  <i>Niall, CEO of Additive Monitoring Systems</i>
+</div>
+</div>  
+</div>
+
+The Zyphr team worked with Niall in the summer of 2021 to solve one of his problems. The final product featured a web app where a user can use a slider to sift through 1,000 images in less than a second.
+
+[Click for GIF](https://youtube.com/shorts/yR8mVbVg37Q?feature=share)
+
+<u>Caption</u>: The brain scans are not the true images that appear in Niall’s version of the app. This demonstration data only.
+
+
+## The Solution
+
+While the MVP that Zyphr delivered was build on a solid foundation of Plotly and Dash, a popular Python web framework, it was their fine-tuned Javascript code that was the heart of the solution.
+
+The trick behind the fast scroll was the idea of pre-computations. When optimizing for speed, you can’t have your cake and eat it too. If one part of the pipeline or process speeds up, it is usually coupled with a slow down in other parts.
+
+The specific problem at hand was to allow a user to quickly scroll from image to image with a slider. Rather than letting the app process the raw data for each image, one at a time, the solution the team landed on was to preprocess all the data slices ahead of time, create individual JPEG files from each of the 1,000 slices, and finally hookup each of the images to the app and connect to the slider’s movement.
+
+And voila: 1,000 images as fast as your heart desires.
+
+<div style={{borderLeft: '0.6rem solid #aaa'}}>
+<div style={{backgroundColor: '#ddd'}}>
+<div style={{padding: '1rem 2rem'}}>
+  "The Zyphr team used Plotly to creatively manage large amounts of data, via an pplication which rapidly shares important features to 3d printing technicians. The information storage and visualization that they have created allows our system to provide actionable data in real time, a crucial pillar of our value-add."
+
+  <i>Niall, CEO of Additive Monitoring Systems</i>
+</div>
+</div>
+</div>
+
