@@ -1,6 +1,6 @@
 .cardList {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 100px;
   margin: 30px 0 0 0;
 }
@@ -17,7 +17,13 @@
   justify-content: center;
   position: relative;
   max-height: 80px;
-  filter: gray; /* IE6-9 */
-  -webkit-filter: grayscale(1) contrast(0) brightness(0); /* Google Chrome, Safari 6+ & Opera 15+ */
-  filter: grayscale(1) contrast(0) brightness(0); /* Microsoft Edge and Firefox 35+ */
+
+  /* IE6-9 */
+  filter: gray;
+
+  /* Google Chrome, Safari 6+ & Opera 15+ */
+  -webkit-filter: grayscale(1) brightness(1);
+
+  /* Microsoft Edge and Firefox 35+ */
+  filter: grayscale(1) brightness(1);
 }
