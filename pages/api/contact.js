@@ -1,16 +1,21 @@
 import nodemailer from 'nodemailer'
 import formidable from 'formidable'
+import Cors from 'cors'
+
+const cors = Cors({
+  methods: ["GET", "POST"],
+  origin: "*",
+  optionsSuccessStatus: 200,
+})
 
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
   auth: {
-    type: 'OAuth2',
-    user: process.env.SENDER_EMAIL_ADDRESS,
-    pass: process.env.SENDER_EMAIL_PASSWORD,
-    clientId: process.env.OAUTH_CLIENT_ID,
-    clientSecret: process.env.OAUTH_CLIENT_SECRET,
-    refreshToken: process.env.OAUTH_REFRESH_TOKEN,
-  },
+    user: process.env.NEXT_PUBLIC_SENDER_EMAIL_ADDRESS,
+    pass: process.env.NEXT_PUBLIC_SENDER_EMAIL_PASSWORD,
+  }
 })
 
 const parseFormData = (req) => {
@@ -23,12 +28,25 @@ const parseFormData = (req) => {
   })
 }
 
+const runMiddleware = (req, res, fn) => {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result) => {
+      if (result instanceof Error) {
+        return reject(result)
+      }
+
+      return resolve(result)
+    })
+  })
+}
+
 const handler = async (req, res) => {
   const { fields, files } = await parseFormData(req)
+  await runMiddleware(req, res, cors)
 
   const mailOptions = {
-    from: process.env.SENDER_EMAIL_ADDRESS,
-    to: process.env.RECIEVER_EMAIL_ADDRESS,
+    from: process.env.NEXT_PUBLIC_SENDER_EMAIL_ADDRESS,
+    to: [process.env.NEXT_PUBLIC_ADAM_EMAIL_ADDRESS, process.env.NEXT_PUBLIC_MATTHEW_EMAIL_ADDRESS],
     replyTo: fields.email,
     subject: `Inquiry: ${fields.affiliation} - ${fields.name}`,
     text: `Email Address: ${fields.email} \n\nFound out about Zyphr by: ${fields.method} \n\n${fields.message}`,

@@ -12,7 +12,7 @@ const TeamCardInfo = [
     role: 'CEO',
     bio: [
       'Formerly a Solutions Engineer at Plotly, Matthew spent 2 years developing Dash applications and consulting to Fortune 500’s in industries ranging from Oil and Gas to Finance to Tech. While at the company, he led 5-figure workshops to high-value clients across the U.S. and Germany. Matthew also contributed to Plotly’s Dash Bio and Dash Enterprise.',
-      'He is currently wrapping up his BASc. in Electrical Engineering at The University of British Columbia.',
+      'Matthew holds a BASc. in Electrical Engineering from The University of British Columbia. Outside of work, he enjoys climbing, road cycling, and hiking.',
     ],
     icons: {
       email: 'mailto:matthew@zyphr.ca',

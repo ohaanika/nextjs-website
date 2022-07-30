@@ -23,7 +23,6 @@ const FormContact = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault()
-
     if (inputs.name && inputs.affiliation && inputs.email && inputs.message && inputs.method) {
       setForm({ state: 'loading', message: 'Sending...' })
       try {
@@ -33,7 +32,7 @@ const FormContact = () => {
         formData.append('email', inputs.email)
         formData.append('message', inputs.message)
         formData.append('method', inputs.method)
-
+        
         const res = await fetch(`api/contact`, {
           method: 'POST',
           body: formData,
