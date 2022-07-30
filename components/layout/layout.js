@@ -22,7 +22,7 @@ const NavLinkInfo = [
   // },
   {
     name: 'Portfolio',
-    path: '/portfolio',
+    path: '/#portfolio',
   },
   {
     name: 'Blog',
