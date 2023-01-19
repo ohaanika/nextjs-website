@@ -4,7 +4,7 @@ import SectionContent from '../components/section/sectionContent'
 import HomePortfolioList from '../components/post/homePortfolioList'
 
 const Portfolio = ({ posts }) => (
-  <Section id="portfolio">
+  <Section id="portfolio" backgroundColor="var(--color-secondary-lite)">
     <SectionHeading>Portfolio</SectionHeading>
     <SectionContent>
       <p>Check out some of our interactive apps.</p>

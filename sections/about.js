@@ -3,7 +3,7 @@ import SectionHeading from '../components/section/sectionHeading'
 import SectionContent from '../components/section/sectionContent'
 
 const About = () => (
-  <Section id="about">
+  <Section id="about" backgroundColor="var(--color-secondary-lite)">
     <SectionHeading>About</SectionHeading>
     <SectionContent>
       <p>We get it. You don't want to be bogged down styling CSS, fixing bugs or buried in documentation. You'd rather hit your next deadline and prepare for the big presentation.</p>
