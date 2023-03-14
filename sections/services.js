@@ -18,7 +18,7 @@ const ServiceCardInfo = [
 ]
 
 const Services = () => (
-  <Section id="services">
+  <Section id="services" backgroundColor="var(--color-primary-background)">
     <SectionHeading>Services</SectionHeading>
     <div className={styles.cardList}>
       {ServiceCardInfo.map((ServiceCard, i) => (

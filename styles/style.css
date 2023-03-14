@@ -20,17 +20,8 @@
   --color-primary: rgb(33, 131, 128);
   --color-primary-light: rgb(121, 187, 182);
   --color-primary-background: rgb(210, 230, 229);
-  /* --color-primary: #62ad94; */
-  /* --color-primary-light: #c1e2d7; */
-  /* --color-primary-background: rgb(233, 243, 240); */
-  /* --color-primary: #6371bd; */
-  /* --color-primary-light: #aebfe0; */
-  /* --color-primary-background: #E7EBF3; */
-  /* --color-secondary-background: rgb(231, 219, 241); */
-  /* --color-2: #5e9bd4; */
-  /* --color-2-light: #c3dbf0; */
-  /* --color-3: #d47f5e; */
-  /* --color-3-light: #f8e1d6; */
+  --color-secondary: rgb(222, 133, 60);
+  --color-secondary-lite: rgb(222, 133, 60, 0.08);
   --box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   --website-container-border: 50px;
   --media-sm: 576px;
