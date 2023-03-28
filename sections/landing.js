@@ -12,7 +12,7 @@ const Landing = () => (
       <div className="col-lg-7 col-md-12 col-sm-12">
         <h2>Dash Apps <br/> by the Experts</h2>
         <h3 style={{ fontWeight: 300, textTransform: 'none', fontSize: '1.4rem', lineHeight: '1.9rem', paddingTop: '2rem'}}>
-          With over 5 years of leading industry experience, we’re here to help you build production-ready, mobile-friendly, scalable Dash applications.
+          We design, code, and deploy your Dash apps,<br/> with 7+ years of leading insights and <br/> interdisciplinary experience.
         </h3>
         <br />
         <br />
@@ -27,3 +27,6 @@ const Landing = () => (
 )
 
 export default Landing
+
+
+// With over 7 years of leading industry experience, we design, code, and scale your Dash apps. production-ready, mobile-friendly, scalable Dash applications.
