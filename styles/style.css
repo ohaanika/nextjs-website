@@ -226,6 +226,12 @@ section:first-child {
   filter: hue-rotate(-40deg);
 }
 
+@media (max-width: 992px) {
+  .landing-page-logo {
+    visibility: hidden;
+  }
+}
+
 section#landing-page {
   background-Image: linear-gradient(to right, hsl(77, 22%, 87%), hsl(176, 40%, 87%));
 }
