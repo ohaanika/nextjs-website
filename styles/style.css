@@ -1,5 +1,8 @@
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+- Base Styles
+- Landing Page
 */
 
 :root {
@@ -30,6 +33,9 @@
   --media-xl: 1200px;
 }
 
+/* Base Styles
+-----------------------------------*/
+
 * {
   margin: 0;
   padding: 0;
@@ -54,7 +60,7 @@ h4,
 h5,
 h6 {
   font-weight: var(--font-weight-bold);
-  text-transform: uppercase;
+/*  text-transform: uppercase;*/
   letter-spacing: 2px;
   line-height: 1;
 }
@@ -76,6 +82,11 @@ h5 {
 h6 {
   font-size: 1em;
 }
+h1, h2 {
+  font-family: 'Halant';
+}
+
+
 @media (max-width: 576px) {
   h1,
   h2 {
@@ -190,4 +201,31 @@ section:first-child {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+}
+
+/* Landing Page
+-----------------------------------*/
+
+.cta-button-landing-page {
+  font-size: 1.4rem;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: white;
+  text-transform: uppercase;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.3rem;
+  font-family: 'Poppins';
+  box-shadow: 4px 4px 0 var(--color-text);
+}
+
+.landing-page-logo-container {
+  background-color: #F3EDE7;
+}
+
+.landing-page-logo {
+  filter: hue-rotate(-40deg);
+}
+
+section#landing-page {
+  background-image: linear-gradient(to right, hsl(86, 22%, 87%), hsl(190, 40%, 87%));
 }
