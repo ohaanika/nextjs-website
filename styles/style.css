@@ -224,6 +224,7 @@ section:first-child {
 
 .landing-page-logo {
   filter: hue-rotate(-40deg);
+  pointer-events: none;
 }
 
 @media (max-width: 992px) {
