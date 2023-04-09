@@ -218,18 +218,16 @@ section:first-child {
   box-shadow: 4px 4px 0 #000;
 }
 
-.landing-page-logo-container {
-  background-color: #F3EDE7;
-}
-
 .landing-page-logo {
-  filter: hue-rotate(-40deg);
   pointer-events: none;
+  transform: scale(2);
 }
 
 @media (max-width: 992px) {
-  .landing-page-logo {
+  .landing-page-logo, #landing-page-logo-box {
     visibility: hidden;
+    height: 0 !important;
+    width: 0 !important;
   }
 }
 

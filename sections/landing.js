@@ -5,16 +5,14 @@ import Section from '../components/section/section'
 const Landing = () => (
   <Section id="landing-page" backgroundColor="var(--color-primary-background)">
     <div className="row no-gutters">
-      <div className="col-lg-5 col-md-12 col-sm-12">
-        <div className="landing-page-logo-container">
+      <div id="landing-page-logo-box" className="col-lg-5 col-md-12 col-sm-12">
           <Image
             className="landing-page-logo"
-            src={'/images/logos/textured-logo.svg'}
+            src={'/images/logos/logo-textured-with-backdrop.svg'}
             alt="logo"
             layout="fill"
             objectPosition="right"
           />
-        </div>
       </div>
 
       <div className="col-lg-7 col-md-12 col-sm-12">
