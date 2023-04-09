@@ -226,6 +226,4 @@ section:first-child {
   filter: hue-rotate(-40deg);
 }
 
-section#landing-page {
-  background-image: linear-gradient(to right, hsl(86, 22%, 87%), hsl(190, 40%, 87%));
-}
+section#landing-page {}
