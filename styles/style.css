@@ -215,7 +215,7 @@ section:first-child {
   padding: 0.4rem 0.5rem;
   border-radius: 0.3rem;
   font-family: 'Poppins';
-  box-shadow: 4px 4px 0 var(--color-text);
+  box-shadow: 4px 4px 0 #000;
 }
 
 .landing-page-logo-container {
@@ -226,4 +226,6 @@ section:first-child {
   filter: hue-rotate(-40deg);
 }
 
-section#landing-page {}
+section#landing-page {
+  background-Image: linear-gradient(to right, hsl(77, 22%, 87%), hsl(176, 40%, 87%));
+}
