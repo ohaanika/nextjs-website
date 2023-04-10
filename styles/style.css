@@ -232,5 +232,6 @@ section:first-child {
 }
 
 section#landing-page {
-  background-Image: linear-gradient(to right, hsl(77, 22%, 87%), hsl(176, 40%, 87%));
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100%, 100%;
 }

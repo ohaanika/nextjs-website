@@ -34,6 +34,7 @@ const Index = ({ portfolioPosts }) => (
     <Contact />
     <Script id="show-banner">
 {`
+
 let landingPage = document.getElementById("landing-page");
 let ctaBtn = document.getElementById("cta-button-landing-page");
 
@@ -51,16 +52,18 @@ landingPage.addEventListener("mousemove", (e) => {
 
   let newLeftHue = leftHue + subX * delta;
   let newRightHue = rightHue - subX * delta;
-
   newLeftHue = parseInt(newLeftHue);
   newRightHue = parseInt(newRightHue);
-  landingPage.style.backgroundImage = "linear-gradient(to right, hsl(" + newLeftHue + ", 22%, 87%), hsl(" + newRightHue + ", 40%, 87%))";
 
-  // shift shadow of the cta button to simulate light hitting it
+  // update the color gradient in the background
+  let firstBkgdImg = "linear-gradient(to right, hsl(" + newLeftHue + ", 22%, 87%), hsl(" + newRightHue + ", 40%, 87%))";
+  landingPage.style.backgroundImage = firstBkgdImg;
+
+  // update the drop shadow of the cta button
   let boxShadowLeft = 4 - subX * 8;
   ctaBtn.style.boxShadow = boxShadowLeft + "px 4px 0 #000";
-
 })
+
 `}
     </Script>
   </Layout>
