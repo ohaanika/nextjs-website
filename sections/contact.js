@@ -5,12 +5,14 @@ import FormContact from '../components/forms/formContact'
 import CalloutCalendly from '../components/callouts/calloutCalendly'
 
 const Contact = () => (
-  <Section id="contact" backgroundColor="var(--color-primary-background)">
+  <Section id="contact">
     <div className="row no-gutters">
       <div className="col-lg-6 col-md-12 col-sm-12 pr-lg-5">
         <SectionHeading>Contact Us</SectionHeading>
         <SectionContent>
-          <p>Want to work with us? Message us here or book a call to let us know what you have in mind.</p>
+          <p>
+          Let’s talk about your project! 🤝<br/><br/>Book a call or message us here and let us know what you have in mind.
+          </p>
           <CalloutCalendly url="https://calendly.com/zyphr-form/15min" text="Book a call on Calendly" />
         </SectionContent>
       </div>

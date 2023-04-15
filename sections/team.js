@@ -97,7 +97,7 @@ const Team = () => (
       <div className="col-lg-4 col-md-12 col-sm-12 pr-lg-5 p-0">
         <SectionHeading>Team</SectionHeading>
         <SectionContent>
-          <p>Meet the humans behind the sparkle sparkle.</p>
+          <p>Meet the humans behind the sparkle sparkle. ✨</p>
         </SectionContent>
       </div>
       <div className="col-lg-8 col-md-12 col-sm-12 p-0">

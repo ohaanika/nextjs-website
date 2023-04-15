@@ -25,7 +25,7 @@ const PostListItem = ({ category, post, index }) => {
 
 const PostList = ({ category, posts }) => (
   <div className={styles.page}>
-    <h1>{category}</h1>
+    <h1 style={{textTransform: "uppercase"}}>{category}</h1>
     <div className={styles.list}>
       {posts.map((post, index) => (
         <PostListItem category={category} post={post} index={index} />

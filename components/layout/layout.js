@@ -9,17 +9,13 @@ const NavLinkInfo = [
     path: '/#about',
   },
   {
-    name: 'Team',
-    path: '/#team',
-  },
-  {
     name: 'Services',
     path: '/#services',
   },
-  // {
-  //   name: 'Clients',
-  //   path: '/clients',
-  // },
+  {
+    name: 'Team',
+    path: '/#team',
+  },
   {
     name: 'Portfolio',
     path: '/#portfolio',
@@ -91,7 +87,7 @@ const Layout = (props) => {
 
   const emailContent = (
     <div>
-      <a href="mailto:zyphr.form@gmail.com">zyphr.form@gmail.com</a>
+      <a style={{visibility: "hidden"}} href="mailto:zyphr.form@gmail.com">zyphr.form@gmail.com</a>
     </div>
   )
 

@@ -42,7 +42,7 @@ function displayClientLogo(ClientLogo, i) {
 }
 
 const ClientLogos = () => (
-  <Section backgroundColor="var(--color-secondary-lite)">
+  <Section id="clientlogos">
     <center>
       <h5>The Company We Keep</h5>
     </center>

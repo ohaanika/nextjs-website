@@ -16,10 +16,18 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 30px;
-  min-height: 300px;
+  min-height: 200px;
   background-color: rgb(255, 255, 255);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow-heavy);
+  border-radius: var(--border-radius-heavy);
 }
+.card p::before {
+  content: '"';
+}
+.card p::after {
+  content: '"';
+}
+
 @media only screen and (max-width: 992px) {
   .card {
     min-height: auto;

@@ -3,14 +3,11 @@ import SectionHeading from '../components/section/sectionHeading'
 import SectionContent from '../components/section/sectionContent'
 
 const About = () => (
-  <Section id="about" backgroundColor="var(--color-secondary-lite)">
+  <Section id="about">
     <SectionHeading>About</SectionHeading>
     <SectionContent>
-      <p>We get it. You don't want to be bogged down styling CSS, fixing bugs or buried in documentation. You'd rather hit your next deadline and prepare for the big presentation.</p>
-      <p>
-        Maybe you are looking to launch an all-in-one analytics tool, add a secure login page, or brainstorm that mission-critical feature for your app. Our team of dedicated software developers and
-        consultants collaborate with you to take your ideas to production.
-      </p>
+      <p>We are a boutique consulting and software development company specializing in the Dash and Plotly frameworks. Our clients consist of Fortune 500 companies and start-ups across several industries: Healthcare, Fintech, NGOs, Solar Power, Oil & Gas, Integrated Circuits, and more.</p>
+      <p>As the Plotly and Dash frameworks have risen in popularity, a need for expert consulting and software development emerged in the space. Zyphr was created to fill this gap.</p>
     </SectionContent>
   </Section>
 )
