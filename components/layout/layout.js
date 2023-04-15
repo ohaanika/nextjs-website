@@ -91,7 +91,7 @@ const Layout = (props) => {
 
   const emailContent = (
     <div>
-      <a href="mailto:zyphr.form@gmail.com">zyphr.form@gmail.com</a>
+      <a style={{visibility: "hidden"}} href="mailto:zyphr.form@gmail.com">zyphr.form@gmail.com</a>
     </div>
   )
 
