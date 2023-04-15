@@ -233,6 +233,7 @@ section:first-child {
 }
 
 section#landing-page {
+    background-color: #D4E8D6 !important;
     background-repeat: no-repeat, no-repeat;
     background-size: 100%, 100%;
 }

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Section from '../components/section/section'
 
 const Landing = () => (
-  <Section id="landing-page" backgroundColor="var(--color-primary-background)">
+  <Section id="landing-page">
     <div className="row no-gutters">
       <div id="landing-page-logo-box" className="col-lg-5 col-md-12 col-sm-12">
           <Image
