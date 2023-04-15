@@ -240,7 +240,7 @@ section#landing-page {
 section#services, section#portfolio, section#contact {
   background-image: linear-gradient(to right, hsl(77, 22%, 87%), hsl(176, 40%, 87%));
 }
-section#about, section#team, section#stories, section#clientlogos {
+section#about, section#stories, section#clientlogos {
   background-image: linear-gradient(to right, var(--color-secondary-lite), var(--color-secondary-vlite));
 }
 
