@@ -17,9 +17,9 @@ const Landing = () => (
 
       <div className="col-lg-7 col-md-12 col-sm-12">
         <h2>Dash Apps by the Experts</h2>
-        <h3 style={{ fontWeight: 300, textTransform: 'none', fontSize: '1.4rem', lineHeight: '1.9rem', paddingTop: '2rem'}}>
-          We design, code, and deploy your Dash apps,<br/> with 7+ years of leading insights and <br/> an interdisciplinary approach.
-        </h3>
+        <p style={{fontSize: '1.5rem'}}>
+          Building out your vision with interdisciplinary precision and a <span className="highlighted-text">dash</span> of creativity.
+        </p>
         <br />
         <br />
         <h2>

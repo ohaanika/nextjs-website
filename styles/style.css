@@ -25,6 +25,7 @@
   --color-primary-background: rgb(210, 230, 229);
   --color-secondary: rgb(222, 133, 60);
   --color-secondary-lite: rgb(222, 133, 60, 0.08);
+  --color-highlight: #EDE5AD;
   --box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   --website-container-border: 50px;
   --media-sm: 576px;
@@ -223,15 +224,22 @@ section:first-child {
   transform: scale(2);
 }
 
+section#landing-page {
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100%, 100%;
+}
+
+.highlighted-text {
+  background-color: var(--color-highlight);
+  text-decoration: underline;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 @media (max-width: 992px) {
   .landing-page-logo, #landing-page-logo-box {
     visibility: hidden;
     height: 0 !important;
     width: 0 !important;
   }
-}
-
-section#landing-page {
-    background-repeat: no-repeat, no-repeat;
-    background-size: 100%, 100%;
 }
