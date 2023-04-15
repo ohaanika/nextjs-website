@@ -233,7 +233,7 @@ section#landing-page {
 
 .highlighted-text {
   background-color: var(--color-highlight);
-  text-decoration: underline;
+  font-style: italic;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
