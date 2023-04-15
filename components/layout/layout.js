@@ -9,17 +9,13 @@ const NavLinkInfo = [
     path: '/#about',
   },
   {
-    name: 'Team',
-    path: '/#team',
-  },
-  {
     name: 'Services',
     path: '/#services',
   },
-  // {
-  //   name: 'Clients',
-  //   path: '/clients',
-  // },
+  {
+    name: 'Team',
+    path: '/#team',
+  },
   {
     name: 'Portfolio',
     path: '/#portfolio',
