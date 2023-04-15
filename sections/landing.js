@@ -27,6 +27,3 @@ const Landing = () => (
 )
 
 export default Landing
-
-
-// With over 7 years of leading industry experience, we design, code, and scale your Dash apps. production-ready, mobile-friendly, scalable Dash applications.
