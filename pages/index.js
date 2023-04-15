@@ -25,12 +25,12 @@ const Index = ({ portfolioPosts }) => (
   <Layout>
     <Meta />
     <Landing />
-    <ClientLogos />
     <About />
-    <Team />
     <Services />
+    <Team />
     <Portfolio posts={portfolioPosts} />
     <ClientTestimonials />
+    <ClientLogos />
     <Contact />
     <Script id="show-banner">
 {`
