@@ -3,9 +3,9 @@
   font-family: 'Halant';
   font-weight: var(--font-weight-bold);
   letter-spacing: 2px;
-  margin: 0 0 20px 0;
-  
+  margin: 0 0 20px 0; 
 }
+
 @media only screen and (max-width: 576px) {
   .heading {
     font-size: 2em;

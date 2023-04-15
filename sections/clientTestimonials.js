@@ -26,15 +26,14 @@ const ClientTestimonialInfo = [
     role: 'CTO, Healthcare Integrative Solutions',
     testimonial:
       "Zyphr team has incredibly talented Python developers that can guide you and help you realize your product vision. It was their structured thinking that enabled us to develop scalable solutions much faster. In essense, Zyphr is a great find.",
-      // 'We got a referral from Plotly to work with Zyphr when we were looking for expert Dash Enterprise Solutions Partners. Zyphr team has incredibly talented Python developers that can guide you and help you realize your product vision. They cleaned up and brought structure and clarity to our stack with only high level requirements. We have benefitted from their structured thinking and this has enabled us to develop scalable solutions much faster. In essense, Zyphr is a great find.',
   },
 ]
 
 const ClientTestimonials = () => (
-  <Section id="stories" backgroundColor="var(--color-background-inner)">
+  <Section id="stories">
     <SectionHeading>Are we worth it?</SectionHeading>
     <SectionContent>
-      <p>Hear what our clients have to say.</p>
+      <p>Hear what our clients have to say. 💃</p>
     </SectionContent>
     <div className={styles.cardList}>
       {ClientTestimonialInfo.map((ClientTestimonialCard, i) => (

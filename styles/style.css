@@ -27,6 +27,7 @@
   --color-primary-background: rgb(210, 230, 229);
   --color-secondary: rgb(222, 133, 60);
   --color-secondary-lite: rgb(222, 133, 60, 0.08);
+  --color-secondary-vlite: rgb(222, 133, 60, 0.15);
   --color-highlight: #EDE5AD;
   --box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   --website-container-border: 50px;
@@ -86,6 +87,9 @@ h6 {
   font-size: 1em;
 }
 h1, h2 {
+  font-family: 'Halant';
+}
+section#services h5 {
   font-family: 'Halant';
 }
 
@@ -196,7 +200,7 @@ textarea {
 }
 
 section {
-  padding: calc(2 * var(--website-container-border)) 0;
+  padding: calc(1.5 * var(--website-container-border)) 0;
 }
 section:first-child {
   min-height: calc(100vh - 2 * var(--website-container-border));
@@ -236,6 +240,15 @@ section#landing-page {
   font-style: italic;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.services-icon-container {
+  float: left;
+  position: relative;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  transform: translate(0, -0.1rem);
+  width: 1.5rem;
 }
 
 @media (max-width: 992px) {
