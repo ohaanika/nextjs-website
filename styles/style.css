@@ -1,5 +1,8 @@
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+- Base Styles
+- Landing Page
 */
 
 :root {
@@ -22,6 +25,7 @@
   --color-primary-background: rgb(210, 230, 229);
   --color-secondary: rgb(222, 133, 60);
   --color-secondary-lite: rgb(222, 133, 60, 0.08);
+  --color-highlight: #EDE5AD;
   --box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   --website-container-border: 50px;
   --media-sm: 576px;
@@ -29,6 +33,9 @@
   --media-lg: 992px;
   --media-xl: 1200px;
 }
+
+/* Base Styles
+-----------------------------------*/
 
 * {
   margin: 0;
@@ -54,7 +61,7 @@ h4,
 h5,
 h6 {
   font-weight: var(--font-weight-bold);
-  text-transform: uppercase;
+/*  text-transform: uppercase;*/
   letter-spacing: 2px;
   line-height: 1;
 }
@@ -76,6 +83,11 @@ h5 {
 h6 {
   font-size: 1em;
 }
+h1, h2 {
+  font-family: 'Halant';
+}
+
+
 @media (max-width: 576px) {
   h1,
   h2 {
@@ -190,4 +202,44 @@ section:first-child {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+}
+
+/* Landing Page
+-----------------------------------*/
+
+.cta-button-landing-page {
+  font-size: 1.4rem;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: white;
+  text-transform: uppercase;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.3rem;
+  font-family: 'Poppins';
+  box-shadow: 4px 4px 0 #000;
+}
+
+.landing-page-logo {
+  pointer-events: none;
+  transform: scale(2);
+}
+
+section#landing-page {
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100%, 100%;
+}
+
+.highlighted-text {
+  background-color: var(--color-highlight);
+  text-decoration: underline;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+@media (max-width: 992px) {
+  .landing-page-logo, #landing-page-logo-box {
+    visibility: hidden;
+    height: 0 !important;
+    width: 0 !important;
+  }
 }
