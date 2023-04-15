@@ -215,6 +215,12 @@ section:first-child {
 /* Landing Page
 -----------------------------------*/
 
+.calendly-button, .cta-button-landing-page {
+  font-family: 'Poppins';
+  border-radius: var(--border-radius-heavy);
+  box-shadow: var(--box-shadow-heavy);
+}
+
 .cta-button-landing-page {
   font-size: 1.4rem;
   text-decoration: none;
@@ -222,9 +228,6 @@ section:first-child {
   color: white;
   text-transform: uppercase;
   padding: 0.4rem 0.5rem;
-  font-family: 'Poppins';
-  border-radius: var(--border-radius-heavy);
-  box-shadow: var(--box-shadow-heavy);
 }
 
 .landing-page-logo {
