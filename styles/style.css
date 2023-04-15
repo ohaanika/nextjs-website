@@ -30,6 +30,8 @@
   --color-secondary-vlite: rgb(222, 133, 60, 0.15);
   --color-highlight: #EDE5AD;
   --box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  --box-shadow-heavy: 4px 4px 0 var(--color-text);
+  --border-radius-heavy: 0.3rem;
   --website-container-border: 50px;
   --media-sm: 576px;
   --media-md: 768px;
@@ -220,9 +222,9 @@ section:first-child {
   color: white;
   text-transform: uppercase;
   padding: 0.4rem 0.5rem;
-  border-radius: 0.3rem;
   font-family: 'Poppins';
-  box-shadow: 4px 4px 0 #000;
+  border-radius: var(--border-radius-heavy);
+  box-shadow: var(--box-shadow-heavy);
 }
 
 .landing-page-logo {
@@ -233,6 +235,12 @@ section:first-child {
 section#landing-page {
     background-repeat: no-repeat, no-repeat;
     background-size: 100%, 100%;
+}
+section#services, section#portfolio, section#contact {
+  background-image: linear-gradient(to right, hsl(77, 22%, 87%), hsl(176, 40%, 87%));
+}
+section#about, section#team, section#stories, section#clientlogos {
+  background-image: linear-gradient(to right, var(--color-secondary-lite), var(--color-secondary-vlite));
 }
 
 .highlighted-text {
