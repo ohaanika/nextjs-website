@@ -10,7 +10,7 @@ const ServiceCardInfo = [
   {
     title: "Dashboard Development",
     icon: "/images/icons/tablet-screen-button-solid.svg",
-    desc: "We code up your Dash apps from start to finish: MVPs, dashboards, and scientific tools, are among our products. We even use Dash Design Kit for power users.",
+    desc: "We code up your Dash apps from start to finish: MVPs, dashboards, and scientific tools are among our products. We even use Dash Design Kit for power users.",
   },
   {
     title: "Data-Driven Design",
