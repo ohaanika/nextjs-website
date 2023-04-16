@@ -273,7 +273,7 @@ section#about, section#stories, section#clientlogos {
   margin: auto;
   background-color: #F3E8E0;
   border-radius: 50%;
-  box-shadow: 40px 40px 0 black;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.18);
 }
 
 @media (max-width: 992px) {
