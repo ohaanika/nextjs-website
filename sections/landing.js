@@ -6,13 +6,7 @@ const Landing = () => (
   <Section id="landing-page">
     <div className="row no-gutters">
       <div id="landing-page-logo-box" className="col-lg-5 col-md-12 col-sm-12">
-          <Image
-            className="landing-page-logo"
-            src={'/images/logos/logo-textured-with-backdrop.svg'}
-            alt="logo"
-            layout="fill"
-            objectPosition="right"
-          />
+        <img id="landingPageImg" src="/images/logos/newTexture.png"></img>
       </div>
 
       <div className="col-lg-7 col-md-12 col-sm-12">

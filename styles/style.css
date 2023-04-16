@@ -263,6 +263,19 @@ section#about, section#stories, section#clientlogos {
   width: 1.5rem;
 }
 
+#landing-page-logo-box {
+  height: 300px;
+}
+
+#landing-page-logo-box img#landingPageImg {
+  display: flex;
+  height: 100%;
+  margin: auto;
+  background-color: #F3E8E0;
+  border-radius: 50%;
+  box-shadow: 40px 40px 0 black;
+}
+
 @media (max-width: 992px) {
   .landing-page-logo, #landing-page-logo-box {
     visibility: hidden;
