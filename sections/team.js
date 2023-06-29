@@ -8,25 +8,14 @@ import styles from './team.module.css'
 
 const TeamCardInfo = [
   {
-    name: 'Matthew Chan',
-    role: 'CEO',
-    bio: [
-      'Formerly a Solutions Engineer at Plotly, Matthew spent 2 years developing Dash applications and consulting to Fortune 500’s in industries ranging from Oil and Gas to Finance to Tech. While at the company, he led 5-figure workshops to high-value clients across the U.S. and Germany. Matthew also contributed to Plotly’s Dash Bio and Dash Enterprise.',
-      'Matthew holds a BASc. in Electrical Engineering from The University of British Columbia. Outside of work, he enjoys climbing, road cycling, and hiking.',
-    ],
-    icons: {
-      email: 'mailto:matthew@zyphr.ca',
-      github: 'https://github.com/mtwichan',
-      linkedin: 'https://www.linkedin.com/in/matthewichan/',
-    },
-    image: '/images/team/matt.jpg',
+    icons: {},
   },
   {
     name: 'Adam Kulidjian',
-    role: 'CTO',
+    role: 'CEO',
     bio: [
-      "As Plotly's former lead and #2 highest contributor to Plotly's Python Library, Adam contributed many key features to the library including gantt charts, sploms, and county choropleths. He served as the core contributor of the Plotly Python library for 3 years, pushing the total downloads to over 3 million.",
-      'Adam holds a B.Sc. in Mathematics from McGill University. In his spare time, he likes to play jazz piano and draw short animations.',
+      "As Plotly's former lead and #3 highest contributor to Plotly's Python Library, Adam contributed many key features to the library including gantt charts, sploms, and county choropleths. He served as the core contributor of the Plotly Python library for 3 years, pushing the total downloads to over 3 million.",
+      'Adam holds a B.Sc. in Mathematics from McGill University.',
     ],
     icons: {
       email: 'mailto:adam@zyphr.ca',
@@ -97,7 +86,7 @@ const Team = () => (
       <div className="col-lg-4 col-md-12 col-sm-12 pr-lg-5 p-0">
         <SectionHeading>Team</SectionHeading>
         <SectionContent>
-          <p>Meet the humans behind the sparkle sparkle. ✨</p>
+          <p>Meet the human behind the sparkle sparkle. ✨</p>
         </SectionContent>
       </div>
       <div className="col-lg-8 col-md-12 col-sm-12 p-0">

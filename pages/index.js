@@ -27,7 +27,6 @@ const Index = ({ portfolioPosts }) => (
     <Landing />
     <About />
     <Services />
-    <Team />
     <Portfolio posts={portfolioPosts} />
     <ClientTestimonials />
     <ClientLogos />

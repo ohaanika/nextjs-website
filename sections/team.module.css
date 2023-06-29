@@ -16,6 +16,12 @@
   }
 }
 
+.card:first-child {
+  outline: 2px solid red;
+  visibility: hidden;
+  height: 0;
+}
+
 .card {
   display: flex;
   flex-direction: column;
