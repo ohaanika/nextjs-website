@@ -24,6 +24,11 @@ const clientLogoInfo = [
     image: '/images/clients/logo-hnts.png',
     link: 'https://www.hnts.org/',
   },
+  {
+    label: 'Deloitte',
+    image: '/images/clients/logo-deloitte.svg',
+    link: 'https://www2.deloitte.com/ca/en/pages/about-deloitte/articles/home.html?icid=site_selector_ca',
+  },
 ]
 
 function displayClientLogo(ClientLogo, i) {
