@@ -39,9 +39,17 @@ function displayClientLogo(ClientLogo, i) {
     image = <PlaceholderClientLogo />
   }
 
+  let cardStyle;
+  if (ClientLogo.label == "Deloitte") {
+    cardStyle = styles.dimCard;
+  }
+  else {
+    cardStyle = styles.card;
+  }
+
   return (
     <a key={i} href={ClientLogo.link} target="_blank">
-      <div className={styles.card}>{image}</div>
+      <div className={cardStyle}>{image}</div>
     </a>
   )
 }
