@@ -26,7 +26,7 @@ const clientLogoInfo = [
   },
   {
     label: 'Deloitte',
-    image: '/images/clients/logo-deloitte.svg',
+    image: '/images/clients/deloitte-logo-black-alt.png',
     link: 'https://www2.deloitte.com/ca/en/pages/about-deloitte/articles/home.html?icid=site_selector_ca',
   },
 ]
