@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import PlaceholderClientLogo from '../components/placeholders/placeholderClientLogo'
 import Section from '../components/section/section'
+import SectionContent from '../components/section/sectionContent'
 import styles from './clientLogos.module.css'
 
 const clientLogoInfo = [
@@ -58,7 +59,10 @@ const ClientLogos = () => (
   <Section id="clientlogos">
     <center>
       <h5>The Company We Keep</h5>
-      <p>Some of our current and former clients.</p>
+    <SectionContent>
+      <p>Our clients consist of Fortune 500 companies and start-ups across several industries: Healthcare, Fintech, NGOs, Solar Power, Oil & Gas, Integrated Circuits, and more.</p>
+      <p>Here are some of our current and former clients:</p>
+    </SectionContent>
     </center>
     <div className={styles.cardList}>{clientLogoInfo.map((ClientLogo, i) => displayClientLogo(ClientLogo, i))}</div>
   </Section>
