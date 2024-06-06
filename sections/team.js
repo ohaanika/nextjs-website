@@ -12,7 +12,7 @@ const TeamCardInfo = [
   },
   {
     name: 'Adam Kulidjian',
-    role: 'CEO',
+    role: 'CEO/CTO',
     bio: [
       "As Plotly's former lead and #3 highest contributor to Plotly's Python Library, Adam contributed many key features to the library including gantt charts, sploms, and county choropleths. He served as the core contributor of the Plotly Python library for 3 years, pushing the total downloads to over 3 million.",
       'Adam holds a B.Sc. in Mathematics from McGill University.',
@@ -89,7 +89,7 @@ const Team = () => (
           <p>Meet the human behind the sparkle sparkle. ✨</p>
         </SectionContent>
       </div>
-      <div className="col-lg-8 col-md-12 col-sm-12 p-0">
+      <div className="col-sm-12 p-0">
         <div className={styles.cardList}>{TeamCardInfo.map((TeamCard, i) => displayTeamCard(TeamCard, i))}</div>
       </div>
     </div>

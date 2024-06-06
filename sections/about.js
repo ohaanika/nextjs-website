@@ -6,8 +6,9 @@ const About = () => (
   <Section id="about">
     <SectionHeading>About</SectionHeading>
     <SectionContent>
-      <p>We are a boutique consulting and software development company specializing in the Dash and Plotly frameworks. Our clients consist of Fortune 500 companies and start-ups across several industries: Healthcare, Fintech, NGOs, Solar Power, Oil & Gas, Integrated Circuits, and more.</p>
-      <p>As the Plotly and Dash frameworks have risen in popularity, a need for expert consulting and software development emerged in the space. Zyphr was created to fill this gap.</p>
+      <p>We are a boutique consulting and software development company specializing in the Dash and Plotly frameworks.</p>
+      <p>As the Plotly and Dash frameworks have risen in popularity, a need for expert consulting and software development emerged in the space.</p>
+      <p>Zyphr was created to fill this gap.</p>
     </SectionContent>
   </Section>
 )
