@@ -12,10 +12,10 @@ const NavLinkInfo = [
     name: 'Services',
     path: '/#services',
   },
-  // {
-  //   name: 'Team',
-  //   path: '/#team',
-  // },
+  {
+    name: 'Team',
+    path: '/#team',
+  },
   {
     name: 'Portfolio',
     path: '/#portfolio',
