@@ -63,14 +63,18 @@
 .slideshow .frontmatter .info {
   display: none;
 }
+
+/* .slideshowArrows is used when not in mobile display */
 .slideshow .slideshowArrows {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+/* .slideshowArrowsColumn is used when in mobile display */
 .slideshow .slideshowArrowsColumn {
   display: none;
 }
+
 @media (max-width: 768px) {
   .slideshow {
     flex-direction: column;
