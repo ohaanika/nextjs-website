@@ -58,6 +58,7 @@ const ClientLogos = () => (
   <Section id="clientlogos">
     <center>
       <h5>The Company We Keep</h5>
+      <p>Some of our current and former clients.</p>
     </center>
     <div className={styles.cardList}>{clientLogoInfo.map((ClientLogo, i) => displayClientLogo(ClientLogo, i))}</div>
   </Section>
