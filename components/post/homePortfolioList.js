@@ -28,7 +28,11 @@ const HomePortfolioList = ({ category, posts }) => {
         <div className={styles.slideshowText}>
           <Frontmatter frontmatter={posts[selectedPostIndex].frontmatter} />
           <Link href={`/${category}/${posts[selectedPostIndex].slug}`}>Read more</Link>
-          <Link href={posts[selectedPostIndex].frontmatter.link}>Check out app</Link>
+          <a
+             href={posts[selectedPostIndex].frontmatter.link}
+             target={"_blank"}
+             rel={"noreferrer"}>Check out app
+           </a>
         </div>
         <div className={styles.slideshowArrows}>
           <button onClick={handleLeftClick}>←</button>
