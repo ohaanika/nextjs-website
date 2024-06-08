@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import PlaceholderClientLogo from '../components/placeholders/placeholderClientLogo'
 import Section from '../components/section/section'
+import SectionContent from '../components/section/sectionContent'
 import styles from './clientLogos.module.css'
 
 const clientLogoInfo = [
@@ -26,7 +27,7 @@ const clientLogoInfo = [
   },
   {
     label: 'Deloitte',
-    image: '/images/clients/logo-deloitte.svg',
+    image: '/images/clients/deloitte-logo-black-alt.png',
     link: 'https://www2.deloitte.com/ca/en/pages/about-deloitte/articles/home.html?icid=site_selector_ca',
   },
 ]
@@ -39,9 +40,17 @@ function displayClientLogo(ClientLogo, i) {
     image = <PlaceholderClientLogo />
   }
 
+  let cardStyle;
+  if (ClientLogo.label == "Deloitte") {
+    cardStyle = styles.dimCard;
+  }
+  else {
+    cardStyle = styles.card;
+  }
+
   return (
     <a key={i} href={ClientLogo.link} target="_blank">
-      <div className={styles.card}>{image}</div>
+      <div className={cardStyle}>{image}</div>
     </a>
   )
 }
@@ -50,6 +59,10 @@ const ClientLogos = () => (
   <Section id="clientlogos">
     <center>
       <h5>The Company We Keep</h5>
+    <SectionContent>
+      <p>Our clients consist of Fortune 500 companies and start-ups across several industries: Healthcare, Fintech, NGOs, Solar Power, Oil & Gas, Integrated Circuits, and more.</p>
+      <p>Here are some of our current and former clients:</p>
+    </SectionContent>
     </center>
     <div className={styles.cardList}>{clientLogoInfo.map((ClientLogo, i) => displayClientLogo(ClientLogo, i))}</div>
   </Section>

@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "NODE_OPTIONS='--openssl-legacy-provider' next dev",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' next build",
+    "start": "next start",
+    "debug": "NODE_OPTIONS='--openssl-legacy-provider' next dev -p 5000"
   },
   "dependencies": {
     "cors": "^2.8.5",

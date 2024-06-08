@@ -12,7 +12,7 @@ const Landing = () => (
       <div className="col-lg-7 col-md-12 col-sm-12">
         <h2>Dash Apps by the Experts</h2>
         <p style={{fontSize: '1.5rem'}}>
-          Building out your vision with interdisciplinary precision and a <span className="highlighted-text">dash</span> of creativity.
+          Building out your vision with precision and creativity.
         </p>
         <br />
         <br />

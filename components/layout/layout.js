@@ -21,6 +21,10 @@ const NavLinkInfo = [
     path: '/#portfolio',
   },
   {
+    name: 'Clients',
+    path: '/#stories',
+  },
+  {
     name: 'Blog',
     path: '/blog',
   },
