@@ -6,6 +6,11 @@ import styles from './clientLogos.module.css'
 
 const clientLogoInfo = [
   {
+    label: 'Deloitte',
+    image: '/images/clients/deloitte-logo-black-alt.png',
+    link: 'https://www2.deloitte.com/ca/en/pages/about-deloitte/articles/home.html?icid=site_selector_ca',
+  },
+  {
     label: 'Trendline',
     image: '/images/clients/logo-trendline.png',
     link: 'https://www.trendlineinsights.com/',
@@ -24,11 +29,6 @@ const clientLogoInfo = [
     label: 'Home Nursing and Therapy Services',
     image: '/images/clients/logo-hnts.png',
     link: 'https://www.hnts.org/',
-  },
-  {
-    label: 'Deloitte',
-    image: '/images/clients/deloitte-logo-black-alt.png',
-    link: 'https://www2.deloitte.com/ca/en/pages/about-deloitte/articles/home.html?icid=site_selector_ca',
   },
   {
     label: 'GMet',
