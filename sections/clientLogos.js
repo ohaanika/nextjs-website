@@ -30,6 +30,11 @@ const clientLogoInfo = [
     image: '/images/clients/deloitte-logo-black-alt.png',
     link: 'https://www2.deloitte.com/ca/en/pages/about-deloitte/articles/home.html?icid=site_selector_ca',
   },
+  {
+    label: 'GMet',
+    image: '/images/clients/logo-gmet.png',
+    link: 'https://generalmetabolics.com/',
+  },
 ]
 
 function displayClientLogo(ClientLogo, i) {
