@@ -49,6 +49,10 @@ function displayClientLogo(ClientLogo, i) {
   if (ClientLogo.label == "Deloitte") {
     cardStyle = styles.dimCard;
   }
+  else if (ClientLogo.label == "Trendline")
+  {
+    cardStyle = styles.trendlineCard;
+  }
   else {
     cardStyle = styles.card;
   }
